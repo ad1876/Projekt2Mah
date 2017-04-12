@@ -12,20 +12,20 @@
 #include <time.h>
 
 //DigitalPin 22
-//#define TriggerPin IOPORT_CREATE_PIN(PORTB,26)
+#define TriggerPin IOPORT_CREATE_PIN(PORTB,26)
 //DigitalPin 23
-//#define EchoPin IOPORT_CREATE_PIN(PORTA,14)
+#define EchoPin IOPORT_CREATE_PIN(PORTA,14)
 
 
 void init_sensor(){
 	ioport_init();
 	
-	//ioport_set_pin_dir(TriggerPin,IOPORT_DIR_OUTPUT);
-	//ioport_set_pin_dir(EchoPin,IOPORT_DIR_INPUT);
+	ioport_set_pin_dir(TriggerPin,IOPORT_DIR_OUTPUT);
+	ioport_set_pin_dir(EchoPin,IOPORT_DIR_INPUT);
 }
 
 int readSensorValue(){
-	/*
+	
 	long duration,distance;
 	ioport_set_pin_level(TriggerPin,LOW);
 	delay_ms(2);
@@ -33,12 +33,12 @@ int readSensorValue(){
 	delay_ms(10);
 	ioport_set_pin_level(TriggerPin,LOW);
 	duration = pulsein();
-	*/
+	
 	return NULL;
 }
 
 int pulsein(){
-	/*
+	
 	int state = 1;
 	int flag = 0,clocktime;
 	while(state){
@@ -47,6 +47,6 @@ int pulsein(){
 			flag = 1;
 		}
 	}
-	*/
+	
 	return NULL;
 }
