@@ -34,7 +34,6 @@
 #include "task.h"
 #include <ioport.h>
 #include "FreeRTOSConfig.h"
-#include "FreeRTOS.h"
 #include "delay.h"
 #include "task_LED.h"
 

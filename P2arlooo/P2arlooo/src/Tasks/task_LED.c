@@ -25,4 +25,5 @@ void task_LED(void *pvParameters)
 				delayMicroseconds(500000);
 		
 	}
+	vTaskDelete( NULL );
 }
