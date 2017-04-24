@@ -147,7 +147,8 @@ src/main.d src/main.o: ../src/main.c ../src/asf.h \
  ../src/config/conf_uart_serial.h ../src/ASF/sam/drivers/tc/tc.h \
  ../src/ASF/sam/drivers/wdt/wdt.h \
  ../src/ASF/sam/drivers/pio/pio_handler.h ../src/delay.h \
- ../src/task_LED.h ../src/task_BLINKA.h ../src/task_VinkelGivare.h
+ ../src/task_LED.h ../src/task_BLINKA.h ../src/task_VinkelGivare.h \
+ ../src/config/conf_board.h
 
 ../src/asf.h:
 
@@ -466,3 +467,5 @@ c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu
 ../src/task_BLINKA.h:
 
 ../src/task_VinkelGivare.h:
+
+../src/config/conf_board.h:
