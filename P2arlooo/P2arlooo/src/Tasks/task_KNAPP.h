@@ -9,7 +9,7 @@
 
 #ifndef TASK_KNAPP_H_
 #define TASK_KNAPP_H_
-#define TASK_KNAPP_STACK_SIZE     (2048/sizeof(portSTACK_TYPE))
+#define TASK_KNAPP_STACK_SIZE     (1024/sizeof(portSTACK_TYPE))
 #define TASK_KNAPP_STACK_PRIORITY    (5)//tskIDLE_PRIORITY
 
 

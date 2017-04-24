@@ -21,9 +21,10 @@
 
 //	Definierar pinnar som jag använder.
 #define LED PIO_PB27_IDX			//Digital Pinne 13 / Amber LED "L"
-#define Blinkared PIO_PB26_IDX		//Digital Pinne 22
-#define Blinkayellow PIO_PA14_IDX	//Digital Pinne 23
-#define Knapp PIO_PD0_IDX			//Digital Pinne 25
+#define BlinkaGreen PIO_PA15_IDX	//Digital Pinne 24
+#define BlinkaYellow PIO_PD1_IDX	//Digital Pinne 26
+#define BlinkaRed PIO_PD3_IDX		//Digital Pinne 28
+#define Knapp PIO_PD9_IDX			//Digital Pinne 30
 
 /*Tillåter feedback till terminafönstret */
 static void configure_console(void)
@@ -52,14 +53,15 @@ int main (void)
 	configure_console();
 	
 	// Sätter direction för pinnar, Utgångar / Ingångar.
-	ioport_set_pin_dir(Blinkared,IOPORT_DIR_OUTPUT);	//Utgång
-	ioport_set_pin_dir(Blinkayellow,IOPORT_DIR_OUTPUT);	//Utgång
+	ioport_set_pin_dir(BlinkaGreen,IOPORT_DIR_OUTPUT);	//Utgång
+	ioport_set_pin_dir(BlinkaYellow,IOPORT_DIR_OUTPUT);	//Utgång
+	ioport_set_pin_dir(BlinkaRed,IOPORT_DIR_OUTPUT);	//Utgång
 	ioport_set_pin_dir(LED,IOPORT_DIR_OUTPUT);			//Utgång
 	ioport_set_pin_dir(Knapp,IOPORT_DIR_INPUT);			//Ingång
 	
 	//Skapar tasken nedan.
 	//Task med högst prioritet
-	xTaskCreate(task_KNAPP, (const signed char * const) "KNAPP", TASK_KNAPP_STACK_SIZE, NULL, TASK_KNAPP_STACK_PRIORITY, NULL);
+	xTaskCreate(task_KNAPP, (const signed char * const) "KNAPP", TASK_KNAPP_STACK_SIZE, NULL, TASK_KNAPP_STACK_PRIORITY, xTaskHandle);
 	
 	//Task med näst högst prioritet
 	if (xTaskCreate(task_VinkelGivare, (const signed char * const) "VINKELGIVARE", TASK_VINKELGIVARE_STACK_SIZE, NULL, TASK_VINKELGIVARE_STACK_PRIORITY, NULL) != pdPASS) {
