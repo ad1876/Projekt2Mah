@@ -20,9 +20,9 @@ void task_LED(void *pvParameters)
 		//gpio_toggle_pin(LED0_GPIO); // För ledlampan på kortet
 		if(xSemaphoreTake(signal_semafor,100)){
 			ioport_set_pin_level(LED,HIGH);
-			delayMicroseconds(500000);
+			delayMicroseconds(100000);
 			ioport_set_pin_level(LED,LOW);
-			delayMicroseconds(500000);
+			delayMicroseconds(100000);
 			xSemaphoreGive(signal_semafor);
 		}
 		else{

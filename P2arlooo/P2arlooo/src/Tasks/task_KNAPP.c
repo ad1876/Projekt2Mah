@@ -19,12 +19,13 @@ void task_KNAPP(void *pvParameters)
 	while(1){
 		vTaskDelayUntil(&xLastWakeTime, xTimeIncrement); /*Wait for the next cycle. */
 		if(xSemaphoreTake(signal_semafor,100)&& (ioport_get_pin_level(Knapp)==HIGH)){
-			ioport_set_pin_level(BLINKAKNAPP,LOW);
+			printf("Bara testar");
+			ioport_set_pin_level(BLINKAKNAPP,HIGH);
 			delayMicroseconds(500000);
 			xSemaphoreGive(signal_semafor);
 		}
 		else{
-				printf("Hej");
+				printf("Testtest");
 		}
 		vTaskDelay(xTimeIncrement);
 	}

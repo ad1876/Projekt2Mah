@@ -60,6 +60,7 @@ int main (void)
 	//Skapar tasken nedan.
 	//Task med högst prioritet
 	xTaskCreate(task_KNAPP, (const signed char * const) "KNAPP", TASK_KNAPP_STACK_SIZE, NULL, TASK_KNAPP_STACK_PRIORITY, NULL);
+	
 	//Task med näst högst prioritet
 	if (xTaskCreate(task_VinkelGivare, (const signed char * const) "VINKELGIVARE", TASK_VINKELGIVARE_STACK_SIZE, NULL, TASK_VINKELGIVARE_STACK_PRIORITY, NULL) != pdPASS) {
 		printf("Failed the VinkelGivare Task\r\n");
