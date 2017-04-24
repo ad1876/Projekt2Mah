@@ -4,6 +4,8 @@
 
 src\Delays\delay.c
 
+src\Tasks\task_BLINKA.c
+
 src\Tasks\task_LED.c
 
 src\Tasks\task_VinkelGivare.c

@@ -474,6 +474,12 @@
     <Compile Include="src\Delays\delay.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\Tasks\task_BLINKA.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Tasks\task_BLINKA.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\Tasks\task_LED.c">
       <SubType>compile</SubType>
     </Compile>
