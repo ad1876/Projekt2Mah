@@ -2,39 +2,38 @@
  * soundSensor.c
  *
  * Created: 2017-04-10 12:41:08
- *  Author: Jounne
+ *  Author: Jonatan Fridsten
  */ 
 
-
+#include "asf.h"
 #include "soundSensor.h"
+#include "DelayFunctions.h"
 #include <ioport.h>
 #include <delay.h>
 #include <time.h>
 
-//DigitalPin 22
-#define TriggerPin IOPORT_CREATE_PIN(PORTB,26)
 //DigitalPin 23
-#define EchoPin IOPORT_CREATE_PIN(PORTA,14)
+#define EchoPin PIO_PA14_IDX
+//DigitalPin 24
+#define TriggerPin PIO_PA15_IDX
 
 
 void init_sensor(){
 	ioport_init();
-	
 	ioport_set_pin_dir(TriggerPin,IOPORT_DIR_OUTPUT);
 	ioport_set_pin_dir(EchoPin,IOPORT_DIR_INPUT);
 }
 
 int readSensorValue(){
-	
 	long duration,distance;
 	ioport_set_pin_level(TriggerPin,LOW);
-	delay_ms(2);
+	delayMicroseconds(2000);
 	ioport_set_pin_level(TriggerPin,HIGH);
-	delay_ms(10);
+	delayMicroseconds(10000);
 	ioport_set_pin_level(TriggerPin,LOW);
 	duration = pulsein();
-	
-	return NULL;
+	distance = duration/58.2;
+	return distance;
 }
 
 int pulsein(){
@@ -43,10 +42,23 @@ int pulsein(){
 	int flag = 0,clocktime;
 	while(state){
 		if(ioport_get_pin_level(EchoPin) && !flag){
-			
+			tc_start(TC1,1);
 			flag = 1;
 		}
+		if(!ioport_get_pin_level(EchoPin) && flag)
+		{
+			clocktime = tc_read_cv(TC1,1);
+			tc_stop(TC1,1);
+			flag = 0;
+			state = 0;
+		}
 	}
-	
-	return NULL;
+	return clocktime;
+}
+
+void sensorClck(){
+	pmc_enable_periph_clk(ID_TC1);
+	tc_init(TC1,1,0);
+	tc_set_block_mode(TC1,1);
+	tc_stop(TC1,1);
 }

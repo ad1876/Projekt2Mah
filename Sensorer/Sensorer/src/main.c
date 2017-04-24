@@ -29,8 +29,11 @@
  * Support and FAQ: visit <a href="http://www.atmel.com/design-support/">Atmel Support</a>
  */
 #include <asf.h>
+#include <stdio.h>
 #include <ioport.h>
 #include "DelayFunctions.h"
+#include "Sensor/soundSensor.h"
+#include "consoleFunctions.h"
 
 #define LED PIO_PB27_IDX
 int main (void)
@@ -40,14 +43,22 @@ int main (void)
 	board_init();
 	ioport_init();
 	delayInit();
-	ioport_set_pin_dir(LED,IOPORT_DIR_OUTPUT);
+	init_sensor();
+	sensorClck();
+	configureConsole();
+	
+	//ioport_set_pin_dir(LED,IOPORT_DIR_OUTPUT);
+			
+	int sensorValue = 10;
+	char *str[20];	
 		
 	while (1)
 	{
-		ioport_set_pin_level(LED,HIGH);
-		delayMicroseconds(500000);
-		ioport_set_pin_level(LED,LOW);	
-		delayMicroseconds(500000);
+		//sensorValue = readSensorValue();
+		sprintf(str, "%d",sensorValue);
+		printf(str);
+		printf("TESING\n");
+		delayMicroseconds(1000000);
 	}
 	
 }

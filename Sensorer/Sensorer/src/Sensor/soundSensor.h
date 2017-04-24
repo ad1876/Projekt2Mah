@@ -12,6 +12,7 @@
 void init_sensor();
 int readSensorValue();
 int pulsein();
+void sensorClck();
 
 
 #endif /* SOUNDSENSOR_H_ */
