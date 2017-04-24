@@ -1,5 +1,5 @@
-src/main.d src/main.o: ../src/main.c ../src/asf.h \
- ../src/ASF/sam/utils/compiler.h \
+src/Tasks/task_KNAPP.d src/Tasks/task_KNAPP.o: ../src/Tasks/task_KNAPP.c \
+ ../src/asf.h ../src/ASF/sam/utils/compiler.h \
  c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include\stddef.h \
  ../src/ASF/common/utils/parts.h \
  ../src/ASF/sam/utils/preprocessor/preprocessor.h \
@@ -146,9 +146,7 @@ src/main.d src/main.o: ../src/main.c ../src/asf.h \
  ../src/ASF/sam/drivers/uart/uart.h ../src/ASF/sam/drivers/usart/usart.h \
  ../src/config/conf_uart_serial.h ../src/ASF/sam/drivers/tc/tc.h \
  ../src/ASF/sam/drivers/wdt/wdt.h \
- ../src/ASF/sam/drivers/pio/pio_handler.h ../src/delay.h \
- ../src/config/conf_board.h ../src/task_LED.h ../src/task_BLINKA.h \
- ../src/task_VinkelGivare.h ../src/task_KNAPP.h
+ ../src/ASF/sam/drivers/pio/pio_handler.h ../src/Tasks/task_KNAPP.h
 
 ../src/asf.h:
 
@@ -460,14 +458,4 @@ c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu
 
 ../src/ASF/sam/drivers/pio/pio_handler.h:
 
-../src/delay.h:
-
-../src/config/conf_board.h:
-
-../src/task_LED.h:
-
-../src/task_BLINKA.h:
-
-../src/task_VinkelGivare.h:
-
-../src/task_KNAPP.h:
+../src/Tasks/task_KNAPP.h:

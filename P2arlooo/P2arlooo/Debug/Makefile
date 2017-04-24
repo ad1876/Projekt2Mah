@@ -103,6 +103,7 @@ SUBDIRS :=  \
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../src/Delays/delay.c \
+../src/Tasks/task_KNAPP.c \
 ../src/Tasks/task_BLINKA.c \
 ../src/Tasks/task_LED.c \
 ../src/Tasks/task_VinkelGivare.c \
@@ -143,6 +144,7 @@ ASM_SRCS +=
 
 OBJS +=  \
 src/Delays/delay.o \
+src/Tasks/task_KNAPP.o \
 src/Tasks/task_BLINKA.o \
 src/Tasks/task_LED.o \
 src/Tasks/task_VinkelGivare.o \
@@ -176,6 +178,7 @@ src/main.o
 
 OBJS_AS_ARGS +=  \
 src/Delays/delay.o \
+src/Tasks/task_KNAPP.o \
 src/Tasks/task_BLINKA.o \
 src/Tasks/task_LED.o \
 src/Tasks/task_VinkelGivare.o \
@@ -209,6 +212,7 @@ src/main.o
 
 C_DEPS +=  \
 src/Delays/delay.d \
+src/Tasks/task_KNAPP.d \
 src/Tasks/task_BLINKA.d \
 src/Tasks/task_LED.d \
 src/Tasks/task_VinkelGivare.d \
@@ -242,6 +246,7 @@ src/main.d
 
 C_DEPS_AS_ARGS +=  \
 src/Delays/delay.d \
+src/Tasks/task_KNAPP.d \
 src/Tasks/task_BLINKA.d \
 src/Tasks/task_LED.d \
 src/Tasks/task_VinkelGivare.d \
@@ -288,6 +293,8 @@ LINKER_SCRIPT_DEP+=  \
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 

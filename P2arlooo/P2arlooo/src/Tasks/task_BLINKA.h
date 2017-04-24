@@ -2,7 +2,7 @@
 * task_BLINKA.h
 *
 * Created: 2017-04-12 13:33:32
-*  Author: Elias
+*  Author: Elias Hussein
 */
 
 #ifndef TASK_BLINKA_H_

@@ -2,7 +2,7 @@
  * task_VinkelGivare.h
  *
  * Created: 2017-04-10 10:44:55
- *  Author: Elias
+ *  Author: Elias Hussein
  */ 
 
 #ifndef TASK_VINKELGIVARE_H_

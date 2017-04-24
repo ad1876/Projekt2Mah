@@ -2,7 +2,7 @@
 * task_LED.c
 *
 * Created: 2017-04-12 22:47:02
-*  Author: Elias
+*  Author: Elias Hussein
 */
 #include <asf.h>
 #include "task_LED.h"
@@ -28,7 +28,7 @@ void task_LED(void *pvParameters)
 		else{
 			printf("Failed");
 		}
-		vTaskDelay(100);
+		vTaskDelay(xTimeIncrement);
 	}
 	vTaskDelete( NULL );  // För en clean exit av tasken ( Kanske ej behövs)
 }

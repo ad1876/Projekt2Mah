@@ -1,15 +1,15 @@
 /*
-* task_BLINKA.c
+* task_KNAPP.c
 *
-* Created: 2017-04-15 13:03:31
+* Created: 2017-04-17 15:50:22
 *  Author: Elias Hussein
 */
 #include <asf.h>
-#include "task_BLINKA.h"
+#include "task_KNAPP.h"
 
-#define Blinkared PIO_PB26_IDX
-#define Blinkayellow PIO_PA14_IDX
-void task_BLINKA(void *pvParameters)
+void task_KNAPP(void *pvParameters)
+#define Knapp PIO_PD0_IDX
+#define BLINKAKNAPP PIO_PB26_IDX
 {
 	xSemaphoreHandle signal_semafor = 0;
 	signal_semafor = xSemaphoreCreateMutex();
@@ -18,19 +18,13 @@ void task_BLINKA(void *pvParameters)
 	xLastWakeTime = xTaskGetTickCount(); /* Initialise the xLastWakeTime variable with the current time. */
 	while(1){
 		vTaskDelayUntil(&xLastWakeTime, xTimeIncrement); /*Wait for the next cycle. */
-		if(xSemaphoreTake(signal_semafor,1000)){
-			ioport_set_pin_level(Blinkared,HIGH);
-			delayMicroseconds(100000);
-			ioport_set_pin_level(Blinkared,LOW);
-			delayMicroseconds(100000);
-			ioport_set_pin_level(Blinkayellow,HIGH);
-			delayMicroseconds(100000);
-			ioport_set_pin_level(Blinkayellow,LOW);
-			delayMicroseconds(100000);
+		if(xSemaphoreTake(signal_semafor,100)&& (ioport_get_pin_level(Knapp)==HIGH)){
+			ioport_set_pin_level(BLINKAKNAPP,LOW);
+			delayMicroseconds(500000);
 			xSemaphoreGive(signal_semafor);
 		}
 		else{
-			printf("Failed");
+				printf("Hej");
 		}
 		vTaskDelay(xTimeIncrement);
 	}
