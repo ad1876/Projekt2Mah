@@ -9,9 +9,7 @@
 #define TASK_VINKELGIVARE_H_
 #define TASK_VINKELGIVARE_STACK_SIZE     (1024/sizeof(portSTACK_TYPE))
 #define TASK_VINKELGIVARE_STACK_PRIORITY    (4)//tskIDLE_PRIORITY
-
 #define M 3
-
 void task_VinkelGivare(void *pvParameters);
 
 
