@@ -13,7 +13,8 @@
 
 void initMotor();
 void P_regulator(int b);
-void pulseOut(int p);
+void pulseLeft(int p1);
+void pulseRight(int p2);
 void turn(int a);
 void moveForward();
 

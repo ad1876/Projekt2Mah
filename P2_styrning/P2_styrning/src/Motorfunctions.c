@@ -10,7 +10,8 @@
 #include <inttypes.h>
 #include "DelayFunctions.h"
 #include "Motorfunctions.h"
-#define FORWARD PIO_PC4_IDX
+#define LEFT PIO_PC4_IDX
+#define RIGHT PIO_PC5_IDX
 //högra räknare
 #define R0 PIO_PA15_IDX
 #define R1 PIO_PD1_IDX
@@ -32,9 +33,13 @@ int r_count=0;
 int counter = 0;
 int l_count=0;
 int Kp = 5;
-int angle=250;
+int angle=0;
+int speed=1650;
+int r_speed=0;
+int l_speed=0;
 void initMotor(){
-		ioport_set_pin_dir(FORWARD,IOPORT_DIR_OUTPUT);
+		ioport_set_pin_dir(LEFT,IOPORT_DIR_OUTPUT);
+		ioport_set_pin_dir(RIGHT,IOPORT_DIR_OUTPUT);
 		ioport_set_pin_dir(R_RESET,IOPORT_DIR_OUTPUT);
 		ioport_set_pin_dir(L_RESET,IOPORT_DIR_OUTPUT);
 		ioport_set_pin_dir(R0,IOPORT_DIR_INPUT);
@@ -76,24 +81,50 @@ void P_regulator(int b)
 	char str[20];
 	sprintf(str,"högerhjul: %d\n",r_count);
 	printf (str);
-	//int e = b-(r_count - l_count); //räkna felvärde
-	//angle = (Kp*e)+250; //adderar medelvärde för att köra fram, funktionen för p-regulator
-	//printf (" Felvarde:%d\n",e);
-	sprintf(str,"Vänsterhjul: %d\n",l_count);
+	r_speed=speed;
+	l_speed=speed;
+	int e = b-(r_count - l_count); //räkna felvärde
+		if(e>0){
+		r_speed=speed-(e*Kp);
+		l_speed=speed+(e*6);
+	//	speed =	speed-(e*Kp);
+	}else if (e<0)
+	{
+		r_speed=speed+(e*Kp);
+		l_speed=speed-(e*6);
+		//moveForward((speed-e*Kp),(speed+e*Kp));
+	//	speed =	speed+(e*Kp);
+	}
+	sprintf(str,"felvärde: %d\n",e);
 	printf (str);
-	moveForward();
+	//pulseRight(speed);
+	moveForward(l_speed,r_speed);
+	delayMicroseconds(200000);
+	moveForward(speed,speed);
+	//printf (" Felvarde:%d\n",e);
+	sprintf(str,"r-speed: %d\n",r_speed);
+	printf (str);
+		sprintf(str,"l-speed: %d\n",l_speed);
+		printf (str);
+	//moveForward(speed,speed);
 //	turn(angle); // anropar turn med den nya vinkeln
 	ioport_set_pin_level(R_RESET,LOW);
 	ioport_set_pin_level(L_RESET,LOW);
 	//delayMicroseconds(10000);
 }
 
-void pulseOut(int p){					//Gives signal out for "p" microseconds
-	ioport_set_pin_level(FORWARD,HIGH);
-	delayMicroseconds(p);
-	ioport_set_pin_level(FORWARD,LOW);
-}
 
+void pulseLeft(int p1){
+	ioport_set_pin_level(LEFT,HIGH);
+	delayMicroseconds(p1);
+	ioport_set_pin_level(LEFT,LOW);
+}
+void pulseRight(int p2){
+	ioport_set_pin_level(RIGHT,HIGH);
+	delayMicroseconds(p2);
+	ioport_set_pin_level(RIGHT,LOW);
+}
+/*
 void turn(int a){
 		
 		if(a>250){						//Turning left
@@ -130,10 +161,9 @@ void turn(int a){
 		pulseOut(1550);
 		delayMicroseconds(5250);
 }
-
-void moveForward(){
-	pulseOut(1600);
-	delayMicroseconds(1100);
-	pulseOut(1400);
+*/
+void moveForward(int l,int r){
+	pulseLeft(l);
+	pulseRight(r);
 	delayMicroseconds(5250);
 }

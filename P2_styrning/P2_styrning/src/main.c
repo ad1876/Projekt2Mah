@@ -16,7 +16,8 @@
 
 //#define LED PIO_PB27_IDX
 
-#define FORWARD PIO_PC4_IDX
+#define LEFT PIO_PC4_IDX
+#define RIGHT PIO_PC5_IDX
 //högra räknare
 #define R0 PIO_PA15_IDX
 #define R1 PIO_PD1_IDX
@@ -66,11 +67,11 @@ int main (void)
 	delayInit();
 	configure_console();
 	initMotor();
-	pulseOut(1850);
-	delayMicroseconds(1100);
-	pulseOut(1850);
-	delayMicroseconds(5250);
-	delayMicroseconds(1000);
+	//pulseOut(1850);
+	//delayMicroseconds(1100);
+	//pulseOut(1850);
+	//delayMicroseconds(5250);
+//	delayMicroseconds(1000);
 	ioport_set_pin_dir(TESTPINOUT11,IOPORT_DIR_OUTPUT);
 	printf("HEJ");
 		/*ioport_set_pin_level(R_RESET,HIGH);
@@ -84,7 +85,7 @@ int main (void)
 		P_regulator(0);
 		delayMicroseconds(1000);
 		ioport_set_pin_level(TESTPINOUT11,LOW);
-		delayMicroseconds(1000000);
+		delayMicroseconds(500000);
 		/*ioport_set_pin_level(TESTPINOUT11,HIGH);
 		delayMicroseconds(100);
 		ioport_set_pin_level(TESTPINOUT11,LOW);
