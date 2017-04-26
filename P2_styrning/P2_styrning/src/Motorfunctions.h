@@ -12,5 +12,7 @@
 
 
 void initMotor();
+void P_regulator(int b);
+void pulseOut(int p);
 
 #endif /* MOTORFUNCTIONS_H_ */

@@ -43,9 +43,7 @@
 void pulseOut(int p);
 void P_regulator(int b);
 void turn(int a);
-int r_count=0;
-int l_count=0;
-int Kp = 5;
+
 //int i=0;
 //int speed=1500;
 int angle=250;
@@ -80,31 +78,37 @@ int main (void)
 		ioport_set_pin_level(L_RESET,HIGH);
 		ioport_set_pin_dir(TESTPINOUT11,IOPORT_DIR_OUTPUT);
 		ioport_set_pin_dir(TESPININ12,IOPORT_DIR_INPUT);
-		
-		
 		ioport_set_pin_level(TESTPINOUT11,HIGH);
+		int counter =0;
 	while(1){		
 		//P_regulator(0);
-		
-		char str1[15];
-		int test = ioport_get_pin_level(TESPININ12);
-		sprintf(str1,"TESTPINOUT %d",test);
-		printf(str1);
-		delayMicroseconds(3000);	
+		ioport_set_pin_level(TESTPINOUT11,HIGH);
+		delayMicroseconds(100);
+		ioport_set_pin_level(TESTPINOUT11,LOW);
+		delayMicroseconds(100);
+		r_count = ioport_get_pin_level(R0)+(ioport_get_pin_level(R1)*2)+(ioport_get_pin_level(R2)*4)+(ioport_get_pin_level(R3)*8);
+		char str[20];
+		sprintf(str,"räknaren: %d\n",r_count);
+		printf (str);
+		if(counter == 6´4){
+			ioport_set_pin_level(R_RESET,HIGH);
+			delayMicroseconds(100);
+			counter = 0;
+			ioport_set_pin_level(R_RESET,LOW);
+		}
+		counter++;
+		delayMicroseconds(1000);
 	}
 	/*pulseOut(1500);
 	delayMicroseconds(1100);
 	pulseOut(1500);*/
 }
 
-void pulseOut(int p){					//Gives signal out for "p" microseconds   
-	ioport_set_pin_level(FORWARD,HIGH);
-	delayMicroseconds(p);
-	ioport_set_pin_level(FORWARD,LOW);
-}
+
 
 
 void turn(int a){
+		/*
 		if(a>250){						//Turning left
 			for(int i=0;i<a-250;i++){		
 				pulseOut(1850-i);
@@ -133,27 +137,12 @@ void turn(int a){
 				delayMicroseconds(5250);			
 		}
 		angle=250;
-		
+		*/
+		pulseOut(1550);
+		delayMicroseconds(1100);
+		pulseOut(1550);
+		delayMicroseconds(5250);
 }
 
-void P_regulator(int b)
-{	
-	r_count = ioport_get_pin_level(R0)+(ioport_get_pin_level(R1)*2)+(ioport_get_pin_level(R2)*4)+(ioport_get_pin_level(R3)*8);
-	ioport_set_pin_level(R_RESET,LOW);
-	//+ioport_get_pin_level(R4)*16+ioport_get_pin_level(R5)*32;                                                             //hämta input värde frå pinnarna
-	l_count = ioport_get_pin_level(L0)+ioport_get_pin_level(L1)*2+ioport_get_pin_level(L2)*4+ioport_get_pin_level(L3)*8;
-	ioport_set_pin_level(L_RESET,LOW);
-	//+ioport_get_pin_level(L4)*16+ioport_get_pin_level(L5)*32;
-	char str[20];
-	sprintf(str,"räknaren: %d\n",r_count);
-	printf (str);
-	
-	int e = b-(r_count - l_count); //räkna felvärde
-	angle = (Kp*e)+250; //adderar medelvärde för att köra fram, funktionen för p-regulator
-	printf (" Felvarde:%d\n",e);
-	turn(angle); // anropar turn med den nya vinkeln 
-	ioport_set_pin_level(R_RESET,HIGH);
-	ioport_set_pin_level(L_RESET,HIGH);
-	delayMicroseconds(100);
-}
+
 

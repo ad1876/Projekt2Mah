@@ -27,6 +27,10 @@
 #define L5 PIO_PC3_IDX
 #define L_RESET PIO_PA14_IDX
 
+int r_count=0;
+int l_count=0;
+int Kp = 5;
+
 void initMotor(){
 		ioport_set_pin_dir(FORWARD,IOPORT_DIR_OUTPUT);
 		ioport_set_pin_dir(R_RESET,IOPORT_DIR_OUTPUT);
@@ -43,3 +47,30 @@ void initMotor(){
 }
 
 
+void P_regulator(int b)
+{
+	//r_count = ioport_get_pin_level(R0)+(ioport_get_pin_level(R1)*2)+(ioport_get_pin_level(R2)*4)+(ioport_get_pin_level(R3)*8);
+	r_count = ioport_get_pin_level(R0);
+	ioport_set_pin_level(R_RESET,LOW);
+	//+ioport_get_pin_level(R4)*16+ioport_get_pin_level(R5)*32;                                                             //hämta input värde frå pinnarna
+	l_count = ioport_get_pin_level(L0)+ioport_get_pin_level(L1)*2+ioport_get_pin_level(L2)*4+ioport_get_pin_level(L3)*8;
+	ioport_set_pin_level(L_RESET,LOW);
+	//+ioport_get_pin_level(L4)*16+ioport_get_pin_level(L5)*32;
+	char str[20];
+	sprintf(str,"räknaren: %d\n",r_count);
+	printf (str);
+	
+	int e = b-(r_count - l_count); //räkna felvärde
+	angle = (Kp*e)+250; //adderar medelvärde för att köra fram, funktionen för p-regulator
+	//printf (" Felvarde:%d\n",e);
+	turn(angle); // anropar turn med den nya vinkeln
+	ioport_set_pin_level(R_RESET,HIGH);
+	ioport_set_pin_level(L_RESET,HIGH);
+	//delayMicroseconds(10000);
+}
+
+void pulseOut(int p){					//Gives signal out for "p" microseconds
+	ioport_set_pin_level(FORWARD,HIGH);
+	delayMicroseconds(p);
+	ioport_set_pin_level(FORWARD,LOW);
+}
