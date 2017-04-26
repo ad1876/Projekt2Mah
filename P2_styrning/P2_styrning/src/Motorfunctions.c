@@ -7,6 +7,7 @@
 
 #include <asf.h>
 #include <ioport.h>
+#include <inttypes.h>
 
 #define FORWARD PIO_PC4_IDX
 //högra räknare
@@ -40,3 +41,5 @@ void initMotor(){
 		ioport_set_pin_dir(L3,IOPORT_DIR_INPUT);
 		//ioport_set_pin_dir(TESTPIN,IOPORT_DIR_OUTPUT);
 }
+
+
