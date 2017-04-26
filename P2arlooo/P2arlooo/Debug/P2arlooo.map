@@ -13,7 +13,7 @@ c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1443/arm-gnu-too
 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1443/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
                               c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1443/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o (memset)
 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1443/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-puts.o)
-                              src/Tasks/task_KNAPP.o (puts)
+                              src/Tasks/task_knapp.o (puts)
 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1443/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-setbuf.o)
                               src/main.o (setbuf)
 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1443/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-setvbuf.o)
@@ -290,280 +290,565 @@ Discarded input sections
                 0x00000000        0x4 src/Delays/delay.o
  .bss.cpu_irq_prev_interrupt_state
                 0x00000000        0x1 src/Delays/delay.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .group         0x00000000        0x8 src/Tasks/task_KNAPP.o
- .text          0x00000000        0x0 src/Tasks/task_KNAPP.o
- .data          0x00000000        0x0 src/Tasks/task_KNAPP.o
- .bss           0x00000000        0x0 src/Tasks/task_KNAPP.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Interrupts/Interrupt_Handler.o
+ .text          0x00000000        0x0 src/Interrupts/Interrupt_Handler.o
+ .data          0x00000000        0x0 src/Interrupts/Interrupt_Handler.o
+ .bss           0x00000000        0x0 src/Interrupts/Interrupt_Handler.o
  .bss.cpu_irq_critical_section_counter
-                0x00000000        0x4 src/Tasks/task_KNAPP.o
+                0x00000000        0x4 src/Interrupts/Interrupt_Handler.o
  .bss.cpu_irq_prev_interrupt_state
-                0x00000000        0x1 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x87a src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x166 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x644 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x76 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x16 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x6e4 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x16 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x44 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x209 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x20 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x3a src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x2d src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0xbb1 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0xab6 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x569 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x2b5 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x31a src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x74f src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x82 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x57b src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x1c src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x6b7 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x52d src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0xbe src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000     0x2342 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x85d src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0xdc9 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x7c src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x263 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x58 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x9a7 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x248 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x4df src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x6b3 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x59f src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x46 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x34d src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x28c src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000     0x14d7 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x7ba src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x76 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x82 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x76 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x4c src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x105 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x105 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x105 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x88 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x88 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x3b4 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0xb8 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0xb8 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0xb8 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0xb8 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x2b8 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x125 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x225 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x225 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x2e src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0xac src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x14d src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x7c src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x205 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x64 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0xa6 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x7c src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x16 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x22 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x22 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x115 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x115 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x115 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x115 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x1c src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x2e src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x22 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x1c src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x58 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x10 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x273 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0xd43 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x131 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x58 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x35 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0xa3 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x16 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x35 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x10 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x52 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x16 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x43 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x180 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x10 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x22 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0xbd src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x16 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x16c src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x22 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x16 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x16 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x29 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x6e src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x45 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x3ca src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x46 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x100 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x99 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x12 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x1f src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x1e7 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x10 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x16 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x5e src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x43 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x96 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x77 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x5d src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x5b src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x94 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x40 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x2a3 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000      0x790 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x34 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x5e src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x64 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x5f src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x90 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x6a src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x34 src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x1c src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x2e src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x1c src/Tasks/task_KNAPP.o
- .debug_macro   0x00000000       0x10 src/Tasks/task_KNAPP.o
+                0x00000000        0x1 src/Interrupts/Interrupt_Handler.o
+ .debug_info    0x00000000      0xa38 src/Interrupts/Interrupt_Handler.o
+ .debug_abbrev  0x00000000      0x182 src/Interrupts/Interrupt_Handler.o
+ .debug_aranges
+                0x00000000       0x18 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x6c6 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x87a src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x166 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x644 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x76 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x16 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x6e4 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x16 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x44 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x209 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x20 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x3a src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x2d src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0xbb1 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0xab6 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x569 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x2b5 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x31a src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x74f src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x82 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x57b src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x1c src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x6b7 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x52d src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0xbe src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000     0x2342 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x85d src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0xdc9 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x7c src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x263 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x58 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x9a7 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x248 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x4df src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x6b3 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x59f src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x46 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x34d src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x28c src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000     0x14d7 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x7ba src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x76 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x82 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x76 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x4c src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x105 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x105 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x105 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x88 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x88 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x3b4 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0xb8 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0xb8 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0xb8 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0xb8 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x2b8 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x125 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x225 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x225 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x2e src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0xac src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x14d src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x7c src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x205 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x64 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0xa6 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x7c src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x16 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x22 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x22 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x115 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x115 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x115 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x115 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x1c src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x2e src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x22 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x1c src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x58 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x10 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x273 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0xd43 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x131 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x58 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x35 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0xa3 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x16 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x35 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x10 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x52 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x16 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x43 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x180 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x10 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x22 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0xbd src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x16 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x16c src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x22 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x16 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x16 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x29 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x6e src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x45 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x3ca src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x46 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x100 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x99 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x12 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x1f src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x1e7 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x10 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x16 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x5e src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x43 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x96 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x77 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x5d src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x5b src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x94 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x40 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x2a3 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000      0x790 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x34 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x5e src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x64 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x5f src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x90 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x6a src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x34 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x1c src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x2e src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x1c src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x10 src/Interrupts/Interrupt_Handler.o
+ .debug_macro   0x00000000       0x16 src/Interrupts/Interrupt_Handler.o
+ .debug_line    0x00000000      0xfd3 src/Interrupts/Interrupt_Handler.o
+ .debug_str     0x00000000    0x62972 src/Interrupts/Interrupt_Handler.o
+ .comment       0x00000000       0x5c src/Interrupts/Interrupt_Handler.o
+ .ARM.attributes
+                0x00000000       0x33 src/Interrupts/Interrupt_Handler.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .group         0x00000000        0x8 src/Tasks/task_knapp.o
+ .text          0x00000000        0x0 src/Tasks/task_knapp.o
+ .data          0x00000000        0x0 src/Tasks/task_knapp.o
+ .bss           0x00000000        0x0 src/Tasks/task_knapp.o
+ .bss.cpu_irq_critical_section_counter
+                0x00000000        0x4 src/Tasks/task_knapp.o
+ .bss.cpu_irq_prev_interrupt_state
+                0x00000000        0x1 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x87a src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x166 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x644 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x76 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x16 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x6e4 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x16 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x44 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x209 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x20 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x3a src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x2d src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0xbb1 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0xab6 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x569 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x2b5 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x31a src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x74f src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x82 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x57b src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x1c src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x6b7 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x52d src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0xbe src/Tasks/task_knapp.o
+ .debug_macro   0x00000000     0x2342 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x85d src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0xdc9 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x7c src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x263 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x58 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x9a7 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x248 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x4df src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x6b3 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x59f src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x46 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x34d src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x28c src/Tasks/task_knapp.o
+ .debug_macro   0x00000000     0x14d7 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x7ba src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x76 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x82 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x76 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x4c src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x105 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x105 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x105 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x88 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x88 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x3b4 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0xb8 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0xb8 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0xb8 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0xb8 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x2b8 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x125 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x225 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x225 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x2e src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0xac src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x14d src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x7c src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x205 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x64 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0xa6 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x7c src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x16 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x22 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x22 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x115 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x115 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x115 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x115 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x1c src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x2e src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x22 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x1c src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x58 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x10 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x273 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0xd43 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x131 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x58 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x35 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0xa3 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x16 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x35 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x10 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x52 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x16 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x43 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x180 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x10 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x22 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0xbd src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x16 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x16c src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x22 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x16 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x16 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x29 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x6e src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x45 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x3ca src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x46 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x100 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x99 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x12 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x1f src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x1e7 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x10 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x16 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x5e src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x43 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x96 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x77 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x5d src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x5b src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x94 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x40 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x2a3 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000      0x790 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x34 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x5e src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x64 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x5f src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x90 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x6a src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x34 src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x1c src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x2e src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x1c src/Tasks/task_knapp.o
+ .debug_macro   0x00000000       0x10 src/Tasks/task_knapp.o
  .group         0x00000000        0x8 src/Tasks/task_BLINKA.o
  .group         0x00000000        0x8 src/Tasks/task_BLINKA.o
  .group         0x00000000        0x8 src/Tasks/task_BLINKA.o
@@ -6863,6 +7148,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x58 src/main.o
  .debug_macro   0x00000000       0x16 src/main.o
  .debug_macro   0x00000000       0x16 src/main.o
+ .debug_macro   0x00000000       0x16 src/main.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1443/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-exit.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1443/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-exit.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1443/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-exit.o)
@@ -7252,7 +7538,8 @@ LOAD c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1443/arm-gn
 LOAD c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1443/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m/crtbegin.o
 LOAD c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1443/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
 LOAD src/Delays/delay.o
-LOAD src/Tasks/task_KNAPP.o
+LOAD src/Interrupts/Interrupt_Handler.o
+LOAD src/Tasks/task_knapp.o
 LOAD src/Tasks/task_BLINKA.o
 LOAD src/Tasks/task_LED.o
 LOAD src/Tasks/task_VinkelGivare.o
@@ -7311,337 +7598,337 @@ LOAD c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1443/arm-gn
                 0x00080184       0x3c src/Delays/delay.o
                 0x00080184                delayMicroseconds
  .text.task_KNAPP
-                0x000801c0       0xb0 src/Tasks/task_KNAPP.o
+                0x000801c0       0xb0 src/Tasks/task_knapp.o
                 0x000801c0                task_KNAPP
  .text.task_BLINKA
-                0x00080270       0x60 src/Tasks/task_BLINKA.o
+                0x00080270       0x64 src/Tasks/task_BLINKA.o
                 0x00080270                task_BLINKA
  .text.task_LED
-                0x000802d0       0xa8 src/Tasks/task_LED.o
-                0x000802d0                task_LED
+                0x000802d4       0xa8 src/Tasks/task_LED.o
+                0x000802d4                task_LED
  .text.task_VinkelGivare
-                0x00080378       0x24 src/Tasks/task_VinkelGivare.o
-                0x00080378                task_VinkelGivare
+                0x0008037c       0x24 src/Tasks/task_VinkelGivare.o
+                0x0008037c                task_VinkelGivare
  .text.sysclk_init
-                0x0008039c       0x64 src/ASF/common/services/clock/sam3x/sysclk.o
-                0x0008039c                sysclk_init
- .text._read    0x00080400       0x40 src/ASF/common/utils/stdio/read.o
-                0x00080400                _read
- .text._write   0x00080440       0x54 src/ASF/common/utils/stdio/write.o
-                0x00080440                _write
+                0x000803a0       0x64 src/ASF/common/services/clock/sam3x/sysclk.o
+                0x000803a0                sysclk_init
+ .text._read    0x00080404       0x40 src/ASF/common/utils/stdio/read.o
+                0x00080404                _read
+ .text._write   0x00080444       0x54 src/ASF/common/utils/stdio/write.o
+                0x00080444                _write
  .text.board_init
-                0x00080494       0x70 src/ASF/sam/boards/arduino_due_x/init.o
-                0x00080494                board_init
+                0x00080498       0x70 src/ASF/sam/boards/arduino_due_x/init.o
+                0x00080498                board_init
  .text.pio_set_peripheral
-                0x00080504       0x40 src/ASF/sam/drivers/pio/pio.o
-                0x00080504                pio_set_peripheral
+                0x00080508       0x40 src/ASF/sam/drivers/pio/pio.o
+                0x00080508                pio_set_peripheral
  .text.pio_set_input
-                0x00080544       0x34 src/ASF/sam/drivers/pio/pio.o
-                0x00080544                pio_set_input
+                0x00080548       0x34 src/ASF/sam/drivers/pio/pio.o
+                0x00080548                pio_set_input
  .text.pio_set_output
-                0x00080578       0x28 src/ASF/sam/drivers/pio/pio.o
-                0x00080578                pio_set_output
+                0x0008057c       0x28 src/ASF/sam/drivers/pio/pio.o
+                0x0008057c                pio_set_output
  .text.pio_get_interrupt_status
-                0x000805a0        0x4 src/ASF/sam/drivers/pio/pio.o
-                0x000805a0                pio_get_interrupt_status
- .text.pio_get_interrupt_mask
                 0x000805a4        0x4 src/ASF/sam/drivers/pio/pio.o
-                0x000805a4                pio_get_interrupt_mask
+                0x000805a4                pio_get_interrupt_status
+ .text.pio_get_interrupt_mask
+                0x000805a8        0x4 src/ASF/sam/drivers/pio/pio.o
+                0x000805a8                pio_get_interrupt_mask
  .text.pio_configure_pin
-                0x000805a8       0xd4 src/ASF/sam/drivers/pio/pio.o
-                0x000805a8                pio_configure_pin
+                0x000805ac       0xd4 src/ASF/sam/drivers/pio/pio.o
+                0x000805ac                pio_configure_pin
  .text.pio_configure_pin_group
-                0x0008067c       0xa0 src/ASF/sam/drivers/pio/pio.o
-                0x0008067c                pio_configure_pin_group
+                0x00080680       0xa0 src/ASF/sam/drivers/pio/pio.o
+                0x00080680                pio_configure_pin_group
  .text.pio_handler_process
-                0x0008071c       0x58 src/ASF/sam/drivers/pio/pio_handler.o
-                0x0008071c                pio_handler_process
+                0x00080720       0x58 src/ASF/sam/drivers/pio/pio_handler.o
+                0x00080720                pio_handler_process
  .text.PIOA_Handler
-                0x00080774       0x14 src/ASF/sam/drivers/pio/pio_handler.o
-                0x00080774                PIOA_Handler
+                0x00080778       0x14 src/ASF/sam/drivers/pio/pio_handler.o
+                0x00080778                PIOA_Handler
  .text.PIOB_Handler
-                0x00080788       0x14 src/ASF/sam/drivers/pio/pio_handler.o
-                0x00080788                PIOB_Handler
+                0x0008078c       0x14 src/ASF/sam/drivers/pio/pio_handler.o
+                0x0008078c                PIOB_Handler
  .text.PIOC_Handler
-                0x0008079c       0x14 src/ASF/sam/drivers/pio/pio_handler.o
-                0x0008079c                PIOC_Handler
+                0x000807a0       0x14 src/ASF/sam/drivers/pio/pio_handler.o
+                0x000807a0                PIOC_Handler
  .text.PIOD_Handler
-                0x000807b0       0x14 src/ASF/sam/drivers/pio/pio_handler.o
-                0x000807b0                PIOD_Handler
+                0x000807b4       0x14 src/ASF/sam/drivers/pio/pio_handler.o
+                0x000807b4                PIOD_Handler
  .text.pmc_switch_mck_to_pllack
-                0x000807c4       0x64 src/ASF/sam/drivers/pmc/pmc.o
-                0x000807c4                pmc_switch_mck_to_pllack
+                0x000807c8       0x64 src/ASF/sam/drivers/pmc/pmc.o
+                0x000807c8                pmc_switch_mck_to_pllack
  .text.pmc_switch_mainck_to_xtal
-                0x00080828       0x54 src/ASF/sam/drivers/pmc/pmc.o
-                0x00080828                pmc_switch_mainck_to_xtal
+                0x0008082c       0x54 src/ASF/sam/drivers/pmc/pmc.o
+                0x0008082c                pmc_switch_mainck_to_xtal
  .text.pmc_osc_is_ready_mainck
-                0x0008087c       0x10 src/ASF/sam/drivers/pmc/pmc.o
-                0x0008087c                pmc_osc_is_ready_mainck
+                0x00080880       0x10 src/ASF/sam/drivers/pmc/pmc.o
+                0x00080880                pmc_osc_is_ready_mainck
  .text.pmc_disable_pllack
-                0x0008088c       0x10 src/ASF/sam/drivers/pmc/pmc.o
-                0x0008088c                pmc_disable_pllack
+                0x00080890       0x10 src/ASF/sam/drivers/pmc/pmc.o
+                0x00080890                pmc_disable_pllack
  .text.pmc_is_locked_pllack
-                0x0008089c       0x10 src/ASF/sam/drivers/pmc/pmc.o
-                0x0008089c                pmc_is_locked_pllack
+                0x000808a0       0x10 src/ASF/sam/drivers/pmc/pmc.o
+                0x000808a0                pmc_is_locked_pllack
  .text.pmc_enable_periph_clk
-                0x000808ac       0x58 src/ASF/sam/drivers/pmc/pmc.o
-                0x000808ac                pmc_enable_periph_clk
- .text.tc_init  0x00080904       0x1c src/ASF/sam/drivers/tc/tc.o
-                0x00080904                tc_init
+                0x000808b0       0x58 src/ASF/sam/drivers/pmc/pmc.o
+                0x000808b0                pmc_enable_periph_clk
+ .text.tc_init  0x00080908       0x1c src/ASF/sam/drivers/tc/tc.o
+                0x00080908                tc_init
  .text.tc_set_block_mode
-                0x00080920        0x8 src/ASF/sam/drivers/tc/tc.o
-                0x00080920                tc_set_block_mode
+                0x00080924        0x8 src/ASF/sam/drivers/tc/tc.o
+                0x00080924                tc_set_block_mode
  .text.tc_start
-                0x00080928        0x8 src/ASF/sam/drivers/tc/tc.o
-                0x00080928                tc_start
- .text.tc_stop  0x00080930        0x8 src/ASF/sam/drivers/tc/tc.o
-                0x00080930                tc_stop
+                0x0008092c        0x8 src/ASF/sam/drivers/tc/tc.o
+                0x0008092c                tc_start
+ .text.tc_stop  0x00080934        0x8 src/ASF/sam/drivers/tc/tc.o
+                0x00080934                tc_stop
  .text.tc_read_cv
-                0x00080938        0x8 src/ASF/sam/drivers/tc/tc.o
-                0x00080938                tc_read_cv
+                0x0008093c        0x8 src/ASF/sam/drivers/tc/tc.o
+                0x0008093c                tc_read_cv
  .text.uart_init
-                0x00080940       0x38 src/ASF/sam/drivers/uart/uart.o
-                0x00080940                uart_init
+                0x00080944       0x38 src/ASF/sam/drivers/uart/uart.o
+                0x00080944                uart_init
  .text.uart_write
-                0x00080978       0x10 src/ASF/sam/drivers/uart/uart.o
-                0x00080978                uart_write
+                0x0008097c       0x10 src/ASF/sam/drivers/uart/uart.o
+                0x0008097c                uart_write
  .text.uart_read
-                0x00080988       0x14 src/ASF/sam/drivers/uart/uart.o
-                0x00080988                uart_read
+                0x0008098c       0x14 src/ASF/sam/drivers/uart/uart.o
+                0x0008098c                uart_read
  .text.usart_write
-                0x0008099c       0x14 src/ASF/sam/drivers/usart/usart.o
-                0x0008099c                usart_write
+                0x000809a0       0x14 src/ASF/sam/drivers/usart/usart.o
+                0x000809a0                usart_write
  .text.usart_read
-                0x000809b0       0x18 src/ASF/sam/drivers/usart/usart.o
-                0x000809b0                usart_read
+                0x000809b4       0x18 src/ASF/sam/drivers/usart/usart.o
+                0x000809b4                usart_read
  .text.Dummy_Handler
-                0x000809c8        0x4 src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
-                0x000809c8                DACC_Handler
-                0x000809c8                DebugMon_Handler
-                0x000809c8                DMAC_Handler
-                0x000809c8                TRNG_Handler
-                0x000809c8                HardFault_Handler
-                0x000809c8                TC2_Handler
-                0x000809c8                USART3_Handler
-                0x000809c8                TWI1_Handler
-                0x000809c8                NMI_Handler
-                0x000809c8                TC7_Handler
-                0x000809c8                ADC_Handler
-                0x000809c8                SMC_Handler
-                0x000809c8                USART0_Handler
-                0x000809c8                RTT_Handler
-                0x000809c8                EFC1_Handler
-                0x000809c8                RTC_Handler
-                0x000809c8                UsageFault_Handler
-                0x000809c8                TC6_Handler
-                0x000809c8                WDT_Handler
-                0x000809c8                CAN0_Handler
-                0x000809c8                TC4_Handler
-                0x000809c8                TC1_Handler
-                0x000809c8                HSMCI_Handler
-                0x000809c8                TC3_Handler
-                0x000809c8                Dummy_Handler
-                0x000809c8                TWI0_Handler
-                0x000809c8                USART1_Handler
-                0x000809c8                SSC_Handler
-                0x000809c8                EFC0_Handler
-                0x000809c8                PMC_Handler
-                0x000809c8                PWM_Handler
-                0x000809c8                CAN1_Handler
-                0x000809c8                MemManage_Handler
-                0x000809c8                SUPC_Handler
-                0x000809c8                TC8_Handler
-                0x000809c8                USART2_Handler
-                0x000809c8                EMAC_Handler
-                0x000809c8                UART_Handler
-                0x000809c8                BusFault_Handler
-                0x000809c8                RSTC_Handler
-                0x000809c8                TC0_Handler
-                0x000809c8                TC5_Handler
-                0x000809c8                UOTGHS_Handler
-                0x000809c8                SPI0_Handler
+                0x000809cc        0x4 src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
+                0x000809cc                DACC_Handler
+                0x000809cc                DebugMon_Handler
+                0x000809cc                DMAC_Handler
+                0x000809cc                TRNG_Handler
+                0x000809cc                HardFault_Handler
+                0x000809cc                TC2_Handler
+                0x000809cc                USART3_Handler
+                0x000809cc                TWI1_Handler
+                0x000809cc                NMI_Handler
+                0x000809cc                TC7_Handler
+                0x000809cc                ADC_Handler
+                0x000809cc                SMC_Handler
+                0x000809cc                USART0_Handler
+                0x000809cc                RTT_Handler
+                0x000809cc                EFC1_Handler
+                0x000809cc                RTC_Handler
+                0x000809cc                UsageFault_Handler
+                0x000809cc                TC6_Handler
+                0x000809cc                WDT_Handler
+                0x000809cc                CAN0_Handler
+                0x000809cc                TC4_Handler
+                0x000809cc                TC1_Handler
+                0x000809cc                HSMCI_Handler
+                0x000809cc                TC3_Handler
+                0x000809cc                Dummy_Handler
+                0x000809cc                TWI0_Handler
+                0x000809cc                USART1_Handler
+                0x000809cc                SSC_Handler
+                0x000809cc                EFC0_Handler
+                0x000809cc                PMC_Handler
+                0x000809cc                PWM_Handler
+                0x000809cc                CAN1_Handler
+                0x000809cc                MemManage_Handler
+                0x000809cc                SUPC_Handler
+                0x000809cc                TC8_Handler
+                0x000809cc                USART2_Handler
+                0x000809cc                EMAC_Handler
+                0x000809cc                UART_Handler
+                0x000809cc                BusFault_Handler
+                0x000809cc                RSTC_Handler
+                0x000809cc                TC0_Handler
+                0x000809cc                TC5_Handler
+                0x000809cc                UOTGHS_Handler
+                0x000809cc                SPI0_Handler
  .text.Reset_Handler
-                0x000809cc       0xb0 src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
-                0x000809cc                Reset_Handler
+                0x000809d0       0xb0 src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
+                0x000809d0                Reset_Handler
  .text.SystemCoreClockUpdate
-                0x00080a7c      0x11c src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
-                0x00080a7c                SystemCoreClockUpdate
- .text._sbrk    0x00080b98       0x34 src/ASF/sam/utils/syscalls/gcc/syscalls.o
-                0x00080b98                _sbrk
- .text._close   0x00080bcc        0x8 src/ASF/sam/utils/syscalls/gcc/syscalls.o
-                0x00080bcc                _close
- .text._fstat   0x00080bd4        0xc src/ASF/sam/utils/syscalls/gcc/syscalls.o
-                0x00080bd4                _fstat
- .text._isatty  0x00080be0        0x4 src/ASF/sam/utils/syscalls/gcc/syscalls.o
-                0x00080be0                _isatty
- .text._lseek   0x00080be4        0x4 src/ASF/sam/utils/syscalls/gcc/syscalls.o
-                0x00080be4                _lseek
+                0x00080a80      0x11c src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
+                0x00080a80                SystemCoreClockUpdate
+ .text._sbrk    0x00080b9c       0x34 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+                0x00080b9c                _sbrk
+ .text._close   0x00080bd0        0x8 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+                0x00080bd0                _close
+ .text._fstat   0x00080bd8        0xc src/ASF/sam/utils/syscalls/gcc/syscalls.o
+                0x00080bd8                _fstat
+ .text._isatty  0x00080be4        0x4 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+                0x00080be4                _isatty
+ .text._lseek   0x00080be8        0x4 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+                0x00080be8                _lseek
  .text.vListInitialise
-                0x00080be8       0x18 src/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o
-                0x00080be8                vListInitialise
+                0x00080bec       0x18 src/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o
+                0x00080bec                vListInitialise
  .text.vListInitialiseItem
-                0x00080c00        0x8 src/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o
-                0x00080c00                vListInitialiseItem
+                0x00080c04        0x8 src/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o
+                0x00080c04                vListInitialiseItem
  .text.vListInsertEnd
-                0x00080c08       0x1c src/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o
-                0x00080c08                vListInsertEnd
+                0x00080c0c       0x1c src/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o
+                0x00080c0c                vListInsertEnd
  .text.vListInsert
-                0x00080c24       0x44 src/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o
-                0x00080c24                vListInsert
+                0x00080c28       0x44 src/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o
+                0x00080c28                vListInsert
  .text.uxListRemove
-                0x00080c68       0x28 src/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o
-                0x00080c68                uxListRemove
+                0x00080c6c       0x28 src/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o
+                0x00080c6c                uxListRemove
  .text.prvPortStartFirstTask
-                0x00080c90       0x14 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
+                0x00080c94       0x14 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
  .text.pxPortInitialiseStack
-                0x00080ca4       0x1c src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
-                0x00080ca4                pxPortInitialiseStack
+                0x00080ca8       0x1c src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
+                0x00080ca8                pxPortInitialiseStack
  .text.SVC_Handler
-                0x00080cc0       0x20 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
-                0x00080cc0                SVC_Handler
+                0x00080cc4       0x20 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
+                0x00080cc4                SVC_Handler
  .text.vPortYieldFromISR
-                0x00080ce0       0x10 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
-                0x00080ce0                vPortYieldFromISR
+                0x00080ce4       0x10 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
+                0x00080ce4                vPortYieldFromISR
  .text.ulPortSetInterruptMask
-                0x00080cf0       0x10 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
-                0x00080cf0                ulPortSetInterruptMask
+                0x00080cf4       0x10 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
+                0x00080cf4                ulPortSetInterruptMask
  .text.vPortEnterCritical
-                0x00080d00       0x18 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
-                0x00080d00                vPortEnterCritical
+                0x00080d04       0x18 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
+                0x00080d04                vPortEnterCritical
  .text.vPortClearInterruptMask
-                0x00080d18        0x8 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
-                0x00080d18                vPortClearInterruptMask
+                0x00080d1c        0x8 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
+                0x00080d1c                vPortClearInterruptMask
  .text.vPortExitCritical
-                0x00080d20       0x1c src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
-                0x00080d20                vPortExitCritical
+                0x00080d24       0x1c src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
+                0x00080d24                vPortExitCritical
  .text.PendSV_Handler
-                0x00080d3c       0x3c src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
-                0x00080d3c                PendSV_Handler
+                0x00080d40       0x3c src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
+                0x00080d40                PendSV_Handler
  .text.SysTick_Handler
-                0x00080d78       0x2c src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
-                0x00080d78                SysTick_Handler
+                0x00080d7c       0x2c src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
+                0x00080d7c                SysTick_Handler
  .text.vPortSetupTimerInterrupt
-                0x00080da4       0x18 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
-                0x00080da4                vPortSetupTimerInterrupt
+                0x00080da8       0x18 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
+                0x00080da8                vPortSetupTimerInterrupt
  .text.xPortStartScheduler
-                0x00080dbc       0x38 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
-                0x00080dbc                xPortStartScheduler
+                0x00080dc0       0x38 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
+                0x00080dc0                xPortStartScheduler
  .text.prvInsertBlockIntoFreeList
-                0x00080df4       0x58 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o
+                0x00080df8       0x58 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o
  .text.pvPortMalloc
-                0x00080e4c       0xc4 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o
-                0x00080e4c                pvPortMalloc
+                0x00080e50       0xc4 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o
+                0x00080e50                pvPortMalloc
  .text.vPortFree
-                0x00080f10       0x34 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o
-                0x00080f10                vPortFree
+                0x00080f14       0x34 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o
+                0x00080f14                vPortFree
  .text.prvCopyDataToQueue
-                0x00080f44       0x64 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
+                0x00080f48       0x64 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
  .text.prvCopyDataFromQueue
-                0x00080fa8       0x28 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
+                0x00080fac       0x28 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
  .text.prvUnlockQueue
-                0x00080fd0       0x8c src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
+                0x00080fd4       0x8c src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
  .text.xQueueGenericReset
-                0x0008105c       0x7c src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
-                0x0008105c                xQueueGenericReset
+                0x00081060       0x7c src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
+                0x00081060                xQueueGenericReset
  .text.xQueueGenericCreate
-                0x000810d8       0x58 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
-                0x000810d8                xQueueGenericCreate
+                0x000810dc       0x58 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
+                0x000810dc                xQueueGenericCreate
  .text.xQueueGenericSend
-                0x00081130      0x124 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
-                0x00081130                xQueueGenericSend
+                0x00081134      0x124 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
+                0x00081134                xQueueGenericSend
  .text.xQueueCreateMutex
-                0x00081254       0x64 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
-                0x00081254                xQueueCreateMutex
+                0x00081258       0x64 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
+                0x00081258                xQueueCreateMutex
  .text.xQueueGenericSendFromISR
-                0x000812b8       0x90 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
-                0x000812b8                xQueueGenericSendFromISR
+                0x000812bc       0x90 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
+                0x000812bc                xQueueGenericSendFromISR
  .text.xQueueGenericReceive
-                0x00081348      0x164 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
-                0x00081348                xQueueGenericReceive
+                0x0008134c      0x164 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
+                0x0008134c                xQueueGenericReceive
  .text.vQueueWaitForMessageRestricted
-                0x000814ac       0x4c src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
-                0x000814ac                vQueueWaitForMessageRestricted
+                0x000814b0       0x4c src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
+                0x000814b0                vQueueWaitForMessageRestricted
  .text.prvAddCurrentTaskToDelayedList
-                0x000814f8       0x5c src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x000814fc       0x5c src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
  .text.xTaskGenericCreate
-                0x00081554      0x208 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
-                0x00081554                xTaskGenericCreate
+                0x00081558      0x208 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x00081558                xTaskGenericCreate
  .text.vTaskStartScheduler
-                0x0008175c       0x6c src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
-                0x0008175c                vTaskStartScheduler
+                0x00081760       0x6c src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x00081760                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x000817c8       0x10 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
-                0x000817c8                vTaskSuspendAll
+                0x000817cc       0x10 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x000817cc                vTaskSuspendAll
  .text.xTaskGetTickCount
-                0x000817d8       0x20 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
-                0x000817d8                xTaskGetTickCount
+                0x000817dc       0x20 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x000817dc                xTaskGetTickCount
  .text.vTaskIncrementTick
-                0x000817f8      0x12c src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
-                0x000817f8                vTaskIncrementTick
+                0x000817fc      0x12c src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x000817fc                vTaskIncrementTick
  .text.xTaskResumeAll
-                0x00081924      0x108 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
-                0x00081924                xTaskResumeAll
+                0x00081928      0x108 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x00081928                xTaskResumeAll
  .text.vTaskDelayUntil
-                0x00081a2c       0x98 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
-                0x00081a2c                vTaskDelayUntil
+                0x00081a30       0x98 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x00081a30                vTaskDelayUntil
  .text.vTaskDelay
-                0x00081ac4       0x4c src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
-                0x00081ac4                vTaskDelay
+                0x00081ac8       0x4c src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x00081ac8                vTaskDelay
  .text.prvIdleTask
-                0x00081b10       0x84 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x00081b14       0x84 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
  .text.vTaskSwitchContext
-                0x00081b94       0x90 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
-                0x00081b94                vTaskSwitchContext
+                0x00081b98       0x90 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x00081b98                vTaskSwitchContext
  .text.vTaskPlaceOnEventList
-                0x00081c24       0x64 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
-                0x00081c24                vTaskPlaceOnEventList
+                0x00081c28       0x64 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x00081c28                vTaskPlaceOnEventList
  .text.vTaskPlaceOnEventListRestricted
-                0x00081c88       0x48 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
-                0x00081c88                vTaskPlaceOnEventListRestricted
+                0x00081c8c       0x48 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x00081c8c                vTaskPlaceOnEventListRestricted
  .text.xTaskRemoveFromEventList
-                0x00081cd0       0x84 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
-                0x00081cd0                xTaskRemoveFromEventList
+                0x00081cd4       0x84 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x00081cd4                xTaskRemoveFromEventList
  .text.vTaskSetTimeOutState
-                0x00081d54       0x28 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
-                0x00081d54                vTaskSetTimeOutState
+                0x00081d58       0x28 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x00081d58                vTaskSetTimeOutState
  .text.xTaskCheckForTimeOut
-                0x00081d7c       0x8c src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
-                0x00081d7c                xTaskCheckForTimeOut
+                0x00081d80       0x8c src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x00081d80                xTaskCheckForTimeOut
  .text.vTaskMissedYield
-                0x00081e08        0xc src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
-                0x00081e08                vTaskMissedYield
+                0x00081e0c        0xc src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x00081e0c                vTaskMissedYield
  .text.xTaskGetCurrentTaskHandle
-                0x00081e14        0xc src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
-                0x00081e14                xTaskGetCurrentTaskHandle
+                0x00081e18        0xc src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x00081e18                xTaskGetCurrentTaskHandle
  .text.xTaskGetSchedulerState
-                0x00081e20       0x20 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
-                0x00081e20                xTaskGetSchedulerState
+                0x00081e24       0x20 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x00081e24                xTaskGetSchedulerState
  .text.vTaskPriorityInherit
-                0x00081e40       0x7c src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
-                0x00081e40                vTaskPriorityInherit
+                0x00081e44       0x7c src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x00081e44                vTaskPriorityInherit
  .text.vTaskPriorityDisinherit
-                0x00081ebc       0x50 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
-                0x00081ebc                vTaskPriorityDisinherit
+                0x00081ec0       0x50 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+                0x00081ec0                vTaskPriorityDisinherit
  .text.prvInsertTimerInActiveList
-                0x00081f0c       0x50 src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
+                0x00081f10       0x50 src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
  .text.prvCheckForValidListAndQueue
-                0x00081f5c       0x5c src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
+                0x00081f60       0x5c src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
  .text.xTimerCreateTimerTask
-                0x00081fb8       0x4c src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
-                0x00081fb8                xTimerCreateTimerTask
+                0x00081fbc       0x4c src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
+                0x00081fbc                xTimerCreateTimerTask
  .text.xTimerGenericCommand
-                0x00082004       0x58 src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
-                0x00082004                xTimerGenericCommand
+                0x00082008       0x58 src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
+                0x00082008                xTimerGenericCommand
  .text.prvSampleTimeNow
-                0x0008205c       0xbc src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
+                0x00082060       0xbc src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
  .text.prvTimerTask
-                0x00082118      0x180 src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
+                0x0008211c      0x180 src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
  .text.usart_serial_getchar
-                0x00082298       0xa8 src/main.o
+                0x0008229c       0xa8 src/main.o
  .text.usart_serial_putchar
-                0x00082340       0xa8 src/main.o
- .text.main     0x000823e8      0x1d0 src/main.o
-                0x000823e8                main
+                0x00082344       0xa8 src/main.o
+ .text.main     0x000823ec      0x1cc src/main.o
+                0x000823ec                main
  .text.__libc_init_array
                 0x000825b8       0x50 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1443/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-init.o)
                 0x000825b8                __libc_init_array
@@ -7801,7 +8088,7 @@ LOAD c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1443/arm-gn
  .glue_7        0x00000000        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
  .rodata.str1.4
-                0x00085620       0x42 src/Tasks/task_KNAPP.o
+                0x00085620       0x42 src/Tasks/task_knapp.o
                                  0x44 (size before relaxing)
  *fill*         0x00085662        0x2 
  .rodata.str1.4
@@ -8066,7 +8353,7 @@ OUTPUT(P2arlooo.elf elf32-littlearm)
  .ARM.attributes
                 0x0000004a       0x33 src/Delays/delay.o
  .ARM.attributes
-                0x0000007d       0x33 src/Tasks/task_KNAPP.o
+                0x0000007d       0x33 src/Tasks/task_knapp.o
  .ARM.attributes
                 0x000000b0       0x33 src/Tasks/task_BLINKA.o
  .ARM.attributes
@@ -8217,7 +8504,7 @@ OUTPUT(P2arlooo.elf elf32-littlearm)
 .comment        0x00000000       0x5b
  .comment       0x00000000       0x5b src/Delays/delay.o
                                  0x5c (size before relaxing)
- .comment       0x00000000       0x5c src/Tasks/task_KNAPP.o
+ .comment       0x00000000       0x5c src/Tasks/task_knapp.o
  .comment       0x00000000       0x5c src/Tasks/task_BLINKA.o
  .comment       0x00000000       0x5c src/Tasks/task_LED.o
  .comment       0x00000000       0x5c src/Tasks/task_VinkelGivare.o
@@ -8243,93 +8530,93 @@ OUTPUT(P2arlooo.elf elf32-littlearm)
  .comment       0x00000000       0x5c src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
  .comment       0x00000000       0x5c src/main.o
 
-.debug_info     0x00000000    0x1229c
+.debug_info     0x00000000    0x122ec
  .debug_info    0x00000000      0xd12 src/Delays/delay.o
- .debug_info    0x00000d12     0x1242 src/Tasks/task_KNAPP.o
- .debug_info    0x00001f54     0x1032 src/Tasks/task_BLINKA.o
- .debug_info    0x00002f86     0x1123 src/Tasks/task_LED.o
- .debug_info    0x000040a9      0xaaf src/Tasks/task_VinkelGivare.o
- .debug_info    0x00004b58      0x796 src/ASF/common/services/clock/sam3x/sysclk.o
- .debug_info    0x000052ee      0x1bb src/ASF/common/utils/stdio/read.o
- .debug_info    0x000054a9      0x1c0 src/ASF/common/utils/stdio/write.o
- .debug_info    0x00005669      0x728 src/ASF/sam/boards/arduino_due_x/init.o
- .debug_info    0x00005d91     0x1385 src/ASF/sam/drivers/pio/pio.o
- .debug_info    0x00007116      0xe52 src/ASF/sam/drivers/pio/pio_handler.o
- .debug_info    0x00007f68     0x1080 src/ASF/sam/drivers/pmc/pmc.o
- .debug_info    0x00008fe8      0x94f src/ASF/sam/drivers/tc/tc.o
- .debug_info    0x00009937      0x889 src/ASF/sam/drivers/uart/uart.o
- .debug_info    0x0000a1c0     0x1bfa src/ASF/sam/drivers/usart/usart.o
- .debug_info    0x0000bdba      0x124 src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
- .debug_info    0x0000bede      0x3bd src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
- .debug_info    0x0000c29b      0x4c6 src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
- .debug_info    0x0000c761      0x43f src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_info    0x0000cba0      0x2b7 src/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o
- .debug_info    0x0000ce57      0x3a0 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
- .debug_info    0x0000d1f7      0x38d src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o
- .debug_info    0x0000d584      0xea7 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
- .debug_info    0x0000e42b     0x178e src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
- .debug_info    0x0000fbb9      0xb44 src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
- .debug_info    0x000106fd     0x1b9f src/main.o
+ .debug_info    0x00000d12     0x1246 src/Tasks/task_knapp.o
+ .debug_info    0x00001f58     0x107e src/Tasks/task_BLINKA.o
+ .debug_info    0x00002fd6     0x1123 src/Tasks/task_LED.o
+ .debug_info    0x000040f9      0xaaf src/Tasks/task_VinkelGivare.o
+ .debug_info    0x00004ba8      0x796 src/ASF/common/services/clock/sam3x/sysclk.o
+ .debug_info    0x0000533e      0x1bb src/ASF/common/utils/stdio/read.o
+ .debug_info    0x000054f9      0x1c0 src/ASF/common/utils/stdio/write.o
+ .debug_info    0x000056b9      0x728 src/ASF/sam/boards/arduino_due_x/init.o
+ .debug_info    0x00005de1     0x1385 src/ASF/sam/drivers/pio/pio.o
+ .debug_info    0x00007166      0xe52 src/ASF/sam/drivers/pio/pio_handler.o
+ .debug_info    0x00007fb8     0x1080 src/ASF/sam/drivers/pmc/pmc.o
+ .debug_info    0x00009038      0x94f src/ASF/sam/drivers/tc/tc.o
+ .debug_info    0x00009987      0x889 src/ASF/sam/drivers/uart/uart.o
+ .debug_info    0x0000a210     0x1bfa src/ASF/sam/drivers/usart/usart.o
+ .debug_info    0x0000be0a      0x124 src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
+ .debug_info    0x0000bf2e      0x3bd src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
+ .debug_info    0x0000c2eb      0x4c6 src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
+ .debug_info    0x0000c7b1      0x43f src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_info    0x0000cbf0      0x2b7 src/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o
+ .debug_info    0x0000cea7      0x3a0 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
+ .debug_info    0x0000d247      0x38d src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o
+ .debug_info    0x0000d5d4      0xea7 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
+ .debug_info    0x0000e47b     0x178e src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+ .debug_info    0x0000fc09      0xb44 src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
+ .debug_info    0x0001074d     0x1b9f src/main.o
 
-.debug_abbrev   0x00000000     0x341c
+.debug_abbrev   0x00000000     0x3445
  .debug_abbrev  0x00000000      0x1de src/Delays/delay.o
- .debug_abbrev  0x000001de      0x2eb src/Tasks/task_KNAPP.o
- .debug_abbrev  0x000004c9      0x2a0 src/Tasks/task_BLINKA.o
- .debug_abbrev  0x00000769      0x2b1 src/Tasks/task_LED.o
- .debug_abbrev  0x00000a1a      0x1de src/Tasks/task_VinkelGivare.o
- .debug_abbrev  0x00000bf8      0x227 src/ASF/common/services/clock/sam3x/sysclk.o
- .debug_abbrev  0x00000e1f      0x101 src/ASF/common/utils/stdio/read.o
- .debug_abbrev  0x00000f20       0xf5 src/ASF/common/utils/stdio/write.o
- .debug_abbrev  0x00001015      0x16d src/ASF/sam/boards/arduino_due_x/init.o
- .debug_abbrev  0x00001182      0x2d5 src/ASF/sam/drivers/pio/pio.o
- .debug_abbrev  0x00001457      0x257 src/ASF/sam/drivers/pio/pio_handler.o
- .debug_abbrev  0x000016ae      0x268 src/ASF/sam/drivers/pmc/pmc.o
- .debug_abbrev  0x00001916      0x1bb src/ASF/sam/drivers/tc/tc.o
- .debug_abbrev  0x00001ad1      0x1bd src/ASF/sam/drivers/uart/uart.o
- .debug_abbrev  0x00001c8e      0x325 src/ASF/sam/drivers/usart/usart.o
- .debug_abbrev  0x00001fb3       0x8c src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
- .debug_abbrev  0x0000203f      0x118 src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
- .debug_abbrev  0x00002157      0x115 src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
- .debug_abbrev  0x0000226c      0x14e src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_abbrev  0x000023ba       0xfb src/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o
- .debug_abbrev  0x000024b5      0x246 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
- .debug_abbrev  0x000026fb      0x220 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o
- .debug_abbrev  0x0000291b      0x231 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
- .debug_abbrev  0x00002b4c      0x2e0 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
- .debug_abbrev  0x00002e2c      0x261 src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
- .debug_abbrev  0x0000308d      0x38f src/main.o
+ .debug_abbrev  0x000001de      0x2eb src/Tasks/task_knapp.o
+ .debug_abbrev  0x000004c9      0x2c9 src/Tasks/task_BLINKA.o
+ .debug_abbrev  0x00000792      0x2b1 src/Tasks/task_LED.o
+ .debug_abbrev  0x00000a43      0x1de src/Tasks/task_VinkelGivare.o
+ .debug_abbrev  0x00000c21      0x227 src/ASF/common/services/clock/sam3x/sysclk.o
+ .debug_abbrev  0x00000e48      0x101 src/ASF/common/utils/stdio/read.o
+ .debug_abbrev  0x00000f49       0xf5 src/ASF/common/utils/stdio/write.o
+ .debug_abbrev  0x0000103e      0x16d src/ASF/sam/boards/arduino_due_x/init.o
+ .debug_abbrev  0x000011ab      0x2d5 src/ASF/sam/drivers/pio/pio.o
+ .debug_abbrev  0x00001480      0x257 src/ASF/sam/drivers/pio/pio_handler.o
+ .debug_abbrev  0x000016d7      0x268 src/ASF/sam/drivers/pmc/pmc.o
+ .debug_abbrev  0x0000193f      0x1bb src/ASF/sam/drivers/tc/tc.o
+ .debug_abbrev  0x00001afa      0x1bd src/ASF/sam/drivers/uart/uart.o
+ .debug_abbrev  0x00001cb7      0x325 src/ASF/sam/drivers/usart/usart.o
+ .debug_abbrev  0x00001fdc       0x8c src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
+ .debug_abbrev  0x00002068      0x118 src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
+ .debug_abbrev  0x00002180      0x115 src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
+ .debug_abbrev  0x00002295      0x14e src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_abbrev  0x000023e3       0xfb src/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o
+ .debug_abbrev  0x000024de      0x246 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
+ .debug_abbrev  0x00002724      0x220 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o
+ .debug_abbrev  0x00002944      0x231 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
+ .debug_abbrev  0x00002b75      0x2e0 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+ .debug_abbrev  0x00002e55      0x261 src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
+ .debug_abbrev  0x000030b6      0x38f src/main.o
 
-.debug_loc      0x00000000     0x75fb
+.debug_loc      0x00000000     0x75fc
  .debug_loc     0x00000000       0x6c src/Delays/delay.o
- .debug_loc     0x0000006c      0x12e src/Tasks/task_KNAPP.o
- .debug_loc     0x0000019a       0x4d src/Tasks/task_BLINKA.o
- .debug_loc     0x000001e7       0xc9 src/Tasks/task_LED.o
- .debug_loc     0x000002b0       0x4d src/Tasks/task_VinkelGivare.o
- .debug_loc     0x000002fd      0x12d src/ASF/common/services/clock/sam3x/sysclk.o
- .debug_loc     0x0000042a       0xc5 src/ASF/common/utils/stdio/read.o
- .debug_loc     0x000004ef      0x161 src/ASF/common/utils/stdio/write.o
- .debug_loc     0x00000650       0x20 src/ASF/sam/boards/arduino_due_x/init.o
- .debug_loc     0x00000670      0xa83 src/ASF/sam/drivers/pio/pio.o
- .debug_loc     0x000010f3      0x53d src/ASF/sam/drivers/pio/pio_handler.o
- .debug_loc     0x00001630      0xc95 src/ASF/sam/drivers/pmc/pmc.o
- .debug_loc     0x000022c5      0x57a src/ASF/sam/drivers/tc/tc.o
- .debug_loc     0x0000283f      0x236 src/ASF/sam/drivers/uart/uart.o
- .debug_loc     0x00002a75     0x128d src/ASF/sam/drivers/usart/usart.o
- .debug_loc     0x00003d02       0x7e src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
- .debug_loc     0x00003d80      0x12b src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_loc     0x00003eab       0x91 src/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o
- .debug_loc     0x00003f3c      0x100 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
- .debug_loc     0x0000403c      0x371 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o
- .debug_loc     0x000043ad     0x10da src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
- .debug_loc     0x00005487     0x1545 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
- .debug_loc     0x000069cc      0x9a4 src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
- .debug_loc     0x00007370      0x28b src/main.o
+ .debug_loc     0x0000006c      0x12f src/Tasks/task_knapp.o
+ .debug_loc     0x0000019b       0x4d src/Tasks/task_BLINKA.o
+ .debug_loc     0x000001e8       0xc9 src/Tasks/task_LED.o
+ .debug_loc     0x000002b1       0x4d src/Tasks/task_VinkelGivare.o
+ .debug_loc     0x000002fe      0x12d src/ASF/common/services/clock/sam3x/sysclk.o
+ .debug_loc     0x0000042b       0xc5 src/ASF/common/utils/stdio/read.o
+ .debug_loc     0x000004f0      0x161 src/ASF/common/utils/stdio/write.o
+ .debug_loc     0x00000651       0x20 src/ASF/sam/boards/arduino_due_x/init.o
+ .debug_loc     0x00000671      0xa83 src/ASF/sam/drivers/pio/pio.o
+ .debug_loc     0x000010f4      0x53d src/ASF/sam/drivers/pio/pio_handler.o
+ .debug_loc     0x00001631      0xc95 src/ASF/sam/drivers/pmc/pmc.o
+ .debug_loc     0x000022c6      0x57a src/ASF/sam/drivers/tc/tc.o
+ .debug_loc     0x00002840      0x236 src/ASF/sam/drivers/uart/uart.o
+ .debug_loc     0x00002a76     0x128d src/ASF/sam/drivers/usart/usart.o
+ .debug_loc     0x00003d03       0x7e src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
+ .debug_loc     0x00003d81      0x12b src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_loc     0x00003eac       0x91 src/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o
+ .debug_loc     0x00003f3d      0x100 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
+ .debug_loc     0x0000403d      0x371 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o
+ .debug_loc     0x000043ae     0x10da src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
+ .debug_loc     0x00005488     0x1545 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+ .debug_loc     0x000069cd      0x9a4 src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
+ .debug_loc     0x00007371      0x28b src/main.o
 
 .debug_aranges  0x00000000      0xda0
  .debug_aranges
                 0x00000000       0x28 src/Delays/delay.o
  .debug_aranges
-                0x00000028       0x20 src/Tasks/task_KNAPP.o
+                0x00000028       0x20 src/Tasks/task_knapp.o
  .debug_aranges
                 0x00000048       0x20 src/Tasks/task_BLINKA.o
  .debug_aranges
@@ -8381,7 +8668,7 @@ OUTPUT(P2arlooo.elf elf32-littlearm)
 
 .debug_ranges   0x00000000      0xce8
  .debug_ranges  0x00000000       0x18 src/Delays/delay.o
- .debug_ranges  0x00000018       0x40 src/Tasks/task_KNAPP.o
+ .debug_ranges  0x00000018       0x40 src/Tasks/task_knapp.o
  .debug_ranges  0x00000058       0x28 src/Tasks/task_BLINKA.o
  .debug_ranges  0x00000080       0x10 src/Tasks/task_LED.o
  .debug_ranges  0x00000090       0x10 src/Tasks/task_VinkelGivare.o
@@ -8407,7 +8694,7 @@ OUTPUT(P2arlooo.elf elf32-littlearm)
  .debug_ranges  0x00000c20       0xa8 src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
  .debug_ranges  0x00000cc8       0x20 src/main.o
 
-.debug_macro    0x00000000    0x1a55f
+.debug_macro    0x00000000    0x1a549
  .debug_macro   0x00000000      0x6b6 src/Delays/delay.o
  .debug_macro   0x000006b6      0x87a src/Delays/delay.o
  .debug_macro   0x00000f30      0x166 src/Delays/delay.o
@@ -8542,8 +8829,8 @@ OUTPUT(P2arlooo.elf elf32-littlearm)
  .debug_macro   0x000129d7       0x2e src/Delays/delay.o
  .debug_macro   0x00012a05       0x1c src/Delays/delay.o
  .debug_macro   0x00012a21       0x10 src/Delays/delay.o
- .debug_macro   0x00012a31      0x6d3 src/Tasks/task_KNAPP.o
- .debug_macro   0x00013104       0x16 src/Tasks/task_KNAPP.o
+ .debug_macro   0x00012a31      0x6d3 src/Tasks/task_knapp.o
+ .debug_macro   0x00013104       0x16 src/Tasks/task_knapp.o
  .debug_macro   0x0001311a      0x6cd src/Tasks/task_BLINKA.o
  .debug_macro   0x000137e7       0x16 src/Tasks/task_BLINKA.o
  .debug_macro   0x000137fd      0x6c1 src/Tasks/task_LED.o
@@ -8592,43 +8879,42 @@ OUTPUT(P2arlooo.elf elf32-littlearm)
  .debug_macro   0x00019d45       0xe1 src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
  .debug_macro   0x00019e26      0x707 src/main.o
  .debug_macro   0x0001a52d       0x1c src/main.o
- .debug_macro   0x0001a549       0x16 src/main.o
 
-.debug_line     0x00000000    0x13651
+.debug_line     0x00000000    0x13662
  .debug_line    0x00000000      0xfd3 src/Delays/delay.o
- .debug_line    0x00000fd3      0xffa src/Tasks/task_KNAPP.o
- .debug_line    0x00001fcd      0xff7 src/Tasks/task_BLINKA.o
- .debug_line    0x00002fc4      0xfe3 src/Tasks/task_LED.o
- .debug_line    0x00003fa7      0xfd5 src/Tasks/task_VinkelGivare.o
- .debug_line    0x00004f7c      0xc48 src/ASF/common/services/clock/sam3x/sysclk.o
- .debug_line    0x00005bc4      0xad9 src/ASF/common/utils/stdio/read.o
- .debug_line    0x0000669d      0xacf src/ASF/common/utils/stdio/write.o
- .debug_line    0x0000716c      0xcda src/ASF/sam/boards/arduino_due_x/init.o
- .debug_line    0x00007e46      0xe42 src/ASF/sam/drivers/pio/pio.o
- .debug_line    0x00008c88      0xb8d src/ASF/sam/drivers/pio/pio_handler.o
- .debug_line    0x00009815     0x1047 src/ASF/sam/drivers/pmc/pmc.o
- .debug_line    0x0000a85c      0xc7a src/ASF/sam/drivers/tc/tc.o
- .debug_line    0x0000b4d6      0xc8f src/ASF/sam/drivers/uart/uart.o
- .debug_line    0x0000c165     0x11a9 src/ASF/sam/drivers/usart/usart.o
- .debug_line    0x0000d30e      0xab5 src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
- .debug_line    0x0000ddc3      0xb05 src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
- .debug_line    0x0000e8c8      0xb22 src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
- .debug_line    0x0000f3ea      0x39b src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_line    0x0000f785      0x467 src/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o
- .debug_line    0x0000fbec      0xdcd src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
- .debug_line    0x000109b9      0x4c2 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o
- .debug_line    0x00010e7b      0x7de src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
- .debug_line    0x00011659      0xa28 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
- .debug_line    0x00012081      0x4ee src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
- .debug_line    0x0001256f     0x10e2 src/main.o
+ .debug_line    0x00000fd3      0xffc src/Tasks/task_knapp.o
+ .debug_line    0x00001fcf     0x1006 src/Tasks/task_BLINKA.o
+ .debug_line    0x00002fd5      0xfe3 src/Tasks/task_LED.o
+ .debug_line    0x00003fb8      0xfd5 src/Tasks/task_VinkelGivare.o
+ .debug_line    0x00004f8d      0xc48 src/ASF/common/services/clock/sam3x/sysclk.o
+ .debug_line    0x00005bd5      0xad9 src/ASF/common/utils/stdio/read.o
+ .debug_line    0x000066ae      0xacf src/ASF/common/utils/stdio/write.o
+ .debug_line    0x0000717d      0xcda src/ASF/sam/boards/arduino_due_x/init.o
+ .debug_line    0x00007e57      0xe42 src/ASF/sam/drivers/pio/pio.o
+ .debug_line    0x00008c99      0xb8d src/ASF/sam/drivers/pio/pio_handler.o
+ .debug_line    0x00009826     0x1047 src/ASF/sam/drivers/pmc/pmc.o
+ .debug_line    0x0000a86d      0xc7a src/ASF/sam/drivers/tc/tc.o
+ .debug_line    0x0000b4e7      0xc8f src/ASF/sam/drivers/uart/uart.o
+ .debug_line    0x0000c176     0x11a9 src/ASF/sam/drivers/usart/usart.o
+ .debug_line    0x0000d31f      0xab5 src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
+ .debug_line    0x0000ddd4      0xb05 src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
+ .debug_line    0x0000e8d9      0xb22 src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
+ .debug_line    0x0000f3fb      0x39b src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_line    0x0000f796      0x467 src/ASF/thirdparty/freertos/freertos-7.3.0/source/list.o
+ .debug_line    0x0000fbfd      0xdcd src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o
+ .debug_line    0x000109ca      0x4c2 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o
+ .debug_line    0x00010e8c      0x7de src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
+ .debug_line    0x0001166a      0xa28 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
+ .debug_line    0x00012092      0x4ee src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
+ .debug_line    0x00012580     0x10e2 src/main.o
 
 .debug_str      0x00000000    0x68df3
  .debug_str     0x00000000    0x62641 src/Delays/delay.o
                               0x629c8 (size before relaxing)
- .debug_str     0x00062641      0x3fe src/Tasks/task_KNAPP.o
+ .debug_str     0x00062641      0x3fe src/Tasks/task_knapp.o
                               0x62d38 (size before relaxing)
  .debug_str     0x00062a3f       0x8b src/Tasks/task_BLINKA.o
-                              0x62ccf (size before relaxing)
+                              0x62cce (size before relaxing)
  .debug_str     0x00062aca       0x8d src/Tasks/task_LED.o
                               0x62cb6 (size before relaxing)
  .debug_str     0x00062b57       0xa9 src/Tasks/task_VinkelGivare.o
@@ -8678,7 +8964,7 @@ OUTPUT(P2arlooo.elf elf32-littlearm)
 
 .debug_frame    0x00000000     0x290c
  .debug_frame   0x00000000       0x48 src/Delays/delay.o
- .debug_frame   0x00000048       0x34 src/Tasks/task_KNAPP.o
+ .debug_frame   0x00000048       0x34 src/Tasks/task_knapp.o
  .debug_frame   0x0000007c       0x34 src/Tasks/task_BLINKA.o
  .debug_frame   0x000000b0       0x38 src/Tasks/task_LED.o
  .debug_frame   0x000000e8       0x30 src/Tasks/task_VinkelGivare.o
@@ -9406,7 +9692,7 @@ ptr_put                                           src/main.o
 puts                                              c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1443/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-puts.o)
                                                   src/Tasks/task_LED.o
                                                   src/Tasks/task_BLINKA.o
-                                                  src/Tasks/task_KNAPP.o
+                                                  src/Tasks/task_knapp.o
 pvPortMalloc                                      src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o
                                                   src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
                                                   src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
@@ -9456,7 +9742,7 @@ system_init_flash                                 src/ASF/sam/utils/cmsis/sam3x/
                                                   src/ASF/common/services/clock/sam3x/sysclk.o
 task_BLINKA                                       src/Tasks/task_BLINKA.o
                                                   src/main.o
-task_KNAPP                                        src/Tasks/task_KNAPP.o
+task_KNAPP                                        src/Tasks/task_knapp.o
                                                   src/main.o
 task_LED                                          src/Tasks/task_LED.o
                                                   src/main.o
@@ -9669,12 +9955,12 @@ vQueueWaitForMessageRestricted                    src/ASF/thirdparty/freertos/fr
 vTaskDelay                                        src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
                                                   src/Tasks/task_LED.o
                                                   src/Tasks/task_BLINKA.o
-                                                  src/Tasks/task_KNAPP.o
+                                                  src/Tasks/task_knapp.o
 vTaskDelayUntil                                   src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
                                                   src/Tasks/task_VinkelGivare.o
                                                   src/Tasks/task_LED.o
                                                   src/Tasks/task_BLINKA.o
-                                                  src/Tasks/task_KNAPP.o
+                                                  src/Tasks/task_knapp.o
 vTaskDelete                                       src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
 vTaskEndScheduler                                 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
 vTaskIncrementTick                                src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
@@ -9718,18 +10004,18 @@ xPortStartScheduler                               src/ASF/thirdparty/freertos/fr
 xQueueCreateCountingSemaphore                     src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
 xQueueCreateMutex                                 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
                                                   src/Tasks/task_LED.o
-                                                  src/Tasks/task_KNAPP.o
+                                                  src/Tasks/task_knapp.o
 xQueueGenericCreate                               src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
                                                   src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
 xQueueGenericReceive                              src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
                                                   src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
                                                   src/Tasks/task_LED.o
-                                                  src/Tasks/task_KNAPP.o
+                                                  src/Tasks/task_knapp.o
 xQueueGenericReset                                src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
 xQueueGenericSend                                 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
                                                   src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
                                                   src/Tasks/task_LED.o
-                                                  src/Tasks/task_KNAPP.o
+                                                  src/Tasks/task_knapp.o
 xQueueGenericSendFromISR                          src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
                                                   src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
 xQueueGiveMutexRecursive                          src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o
@@ -9751,7 +10037,7 @@ xTaskGetTickCount                                 src/ASF/thirdparty/freertos/fr
                                                   src/Tasks/task_VinkelGivare.o
                                                   src/Tasks/task_LED.o
                                                   src/Tasks/task_BLINKA.o
-                                                  src/Tasks/task_KNAPP.o
+                                                  src/Tasks/task_knapp.o
 xTaskGetTickCountFromISR                          src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
 xTaskIsTaskSuspended                              src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o
 xTaskRemoveFromEventList                          src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o

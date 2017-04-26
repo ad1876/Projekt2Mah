@@ -8,7 +8,7 @@
 #include "task_BLINKA.h"
 
 void task_BLINKA(void *pvParameters)
-#define BlinkaGreen PIO_PA15_IDX	//Digital Pinne 24
+#define BlinkaGreen PIO_PD9_IDX		//Digital Pinne 30
 #define BlinkaYellow PIO_PD1_IDX	//Digital Pinne 26
 #define BlinkaRed PIO_PD3_IDX		//Digital Pinne 28
 {

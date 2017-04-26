@@ -474,6 +474,12 @@
     <Compile Include="src\Delays\delay.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\Interrupts\Interrupt_Handler.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Interrupts\Interrupt_Handler.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\Tasks\task_knapp.c">
       <SubType>compile</SubType>
     </Compile>
@@ -1119,6 +1125,7 @@
     <Folder Include="src\ASF\thirdparty\freertos\freertos-7.3.0\source\portable\memmang\" />
     <Folder Include="src\config\" />
     <Folder Include="src\Delays" />
+    <Folder Include="src\Interrupts" />
     <Folder Include="src\Tasks" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />

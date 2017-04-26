@@ -15,16 +15,17 @@
 #include "task_BLINKA.h"
 #include "task_VinkelGivare.h"
 #include "task_KNAPP.h"
+//#include "Interrupt_Handler.h"
 
 //För att hålla reda vad de mappade pinnarna motsvarar i SAM3x pin namn.
 //https://www.arduino.cc/en/Hacking/PinMappingSAM3X
 
 //	Definierar pinnar som jag använder.
 #define LED PIO_PB27_IDX			//Digital Pinne 13 / Amber LED "L"
-#define BlinkaGreen PIO_PA15_IDX	//Digital Pinne 24
+#define BlinkaGreen PIO_PD9_IDX		//Digital Pinne 30
 #define BlinkaYellow PIO_PD1_IDX	//Digital Pinne 26
 #define BlinkaRed PIO_PD3_IDX		//Digital Pinne 28
-#define Knapp PIO_PD9_IDX			//Digital Pinne 30
+#define Knapp PIO_PA15_IDX			//Digital Pinne 24
 
 /*Tillåter feedback till terminafönstret */
 static void configure_console(void)
@@ -58,10 +59,10 @@ int main (void)
 	ioport_set_pin_dir(BlinkaRed,IOPORT_DIR_OUTPUT);	//Utgång
 	ioport_set_pin_dir(LED,IOPORT_DIR_OUTPUT);			//Utgång
 	ioport_set_pin_dir(Knapp,IOPORT_DIR_INPUT);			//Ingång
-	
+
 	//Skapar tasken nedan.
 	//Task med högst prioritet
-	xTaskCreate(task_KNAPP, (const signed char * const) "KNAPP", TASK_KNAPP_STACK_SIZE, NULL, TASK_KNAPP_STACK_PRIORITY, xTaskHandle);
+	xTaskCreate(task_KNAPP, (const signed char * const) "KNAPP", TASK_KNAPP_STACK_SIZE, NULL, TASK_KNAPP_STACK_PRIORITY, NULL);
 	
 	//Task med näst högst prioritet
 	if (xTaskCreate(task_VinkelGivare, (const signed char * const) "VINKELGIVARE", TASK_VINKELGIVARE_STACK_SIZE, NULL, TASK_VINKELGIVARE_STACK_PRIORITY, NULL) != pdPASS) {
@@ -74,7 +75,7 @@ int main (void)
 	//Task med lägst prioritet
 	if (xTaskCreate(task_BLINKA, (const signed char * const) "BLINKA", TASK_BLINKA_STACK_SIZE, NULL, TASK_BLINKA_STACK_PRIORITY, NULL) != pdPASS) {
 		printf("Failed the BLINKA Task\r\n");
-}
+	}
 	//Ser till att köra tasken.
 	vTaskStartScheduler();
 }
