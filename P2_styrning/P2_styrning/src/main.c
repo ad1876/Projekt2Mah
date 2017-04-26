@@ -40,13 +40,11 @@
 #define TESTPINOUT11 PIO_PD7_IDX
 #define TESPININ12 PIO_PD8_IDX
 
-void pulseOut(int p);
-void P_regulator(int b);
-void turn(int a);
+
 
 //int i=0;
 //int speed=1500;
-int angle=250;
+
 //int d=0;			//0=left, 1=right
 static void configure_console(void)
 /* Enables feedback through the USB-cable back to terminal within Atmel Studio */
@@ -68,29 +66,34 @@ int main (void)
 	delayInit();
 	configure_console();
 	initMotor();
-	
-		pulseOut(1850);
-		delayMicroseconds(1100);
-		pulseOut(1850);
-		delayMicroseconds(5250);
-		printf("HEJ");
-		ioport_set_pin_level(R_RESET,HIGH);
+	pulseOut(1850);
+	delayMicroseconds(1100);
+	pulseOut(1850);
+	delayMicroseconds(5250);
+	delayMicroseconds(1000);
+	ioport_set_pin_dir(TESTPINOUT11,IOPORT_DIR_OUTPUT);
+	printf("HEJ");
+		/*ioport_set_pin_level(R_RESET,HIGH);
 		ioport_set_pin_level(L_RESET,HIGH);
-		ioport_set_pin_dir(TESTPINOUT11,IOPORT_DIR_OUTPUT);
+	
 		ioport_set_pin_dir(TESPININ12,IOPORT_DIR_INPUT);
 		ioport_set_pin_level(TESTPINOUT11,HIGH);
-		int counter =0;
-	while(1){		
-		//P_regulator(0);
+	//	int counter =0;*/
+	while(1){	
 		ioport_set_pin_level(TESTPINOUT11,HIGH);
+		P_regulator(0);
+		delayMicroseconds(1000);
+		ioport_set_pin_level(TESTPINOUT11,LOW);
+		delayMicroseconds(1000000);
+		/*ioport_set_pin_level(TESTPINOUT11,HIGH);
 		delayMicroseconds(100);
 		ioport_set_pin_level(TESTPINOUT11,LOW);
-		delayMicroseconds(100);
-		r_count = ioport_get_pin_level(R0)+(ioport_get_pin_level(R1)*2)+(ioport_get_pin_level(R2)*4)+(ioport_get_pin_level(R3)*8);
-		char str[20];
-		sprintf(str,"räknaren: %d\n",r_count);
-		printf (str);
-		if(counter == 6´4){
+		delayMicroseconds(100);*/
+		//r_count = ioport_get_pin_level(R0)+(ioport_get_pin_level(R1)*2)+(ioport_get_pin_level(R2)*4)+(ioport_get_pin_level(R3)*8);
+		//char str[20];
+		//sprintf(str,"räknaren: %d\n",r_count);
+	//	printf (str);
+	/*	if(counter == 64){
 			ioport_set_pin_level(R_RESET,HIGH);
 			delayMicroseconds(100);
 			counter = 0;
@@ -98,51 +101,16 @@ int main (void)
 		}
 		counter++;
 		delayMicroseconds(1000);
-	}
+	}*/
 	/*pulseOut(1500);
 	delayMicroseconds(1100);
 	pulseOut(1500);*/
+
+	}
+
 }
 
 
-
-
-void turn(int a){
-		/*
-		if(a>250){						//Turning left
-			for(int i=0;i<a-250;i++){		
-				pulseOut(1850-i);
-				delayMicroseconds(1100);
-				pulseOut(1850+i);
-				delayMicroseconds(5250);
-					
-			}
-			
-		}
-		else if(a<250){					//Turning right
-			for(int i=0;i<a;i++){
-				
-				pulseOut(1850+i);
-				delayMicroseconds(1100);
-				pulseOut(1850-i);
-				delayMicroseconds(5250);
-				
-			}
-			
-		}
-		else{								//Forward
-				pulseOut(1850);
-				delayMicroseconds(1100);
-				pulseOut(1850);
-				delayMicroseconds(5250);			
-		}
-		angle=250;
-		*/
-		pulseOut(1550);
-		delayMicroseconds(1100);
-		pulseOut(1550);
-		delayMicroseconds(5250);
-}
 
 
 
