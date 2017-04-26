@@ -12,6 +12,7 @@
 #include <ioport.h>
 #include "DelayFunctions.h"
 #include "conf_board.h"
+#include "Motorfunctions.h"
 
 //#define LED PIO_PB27_IDX
 
@@ -35,6 +36,8 @@
 //definition för omvandling från bool till int
 #define TRUE 1 
 #define FALSE 0
+
+#define TESTPIN PIO_PD7_IDX
 
 void pulseOut(int p);
 void P_regulator(int b);
@@ -65,16 +68,21 @@ int main (void)
 	ioport_init();
 	delayInit();
 	configure_console();
-	ioport_set_pin_dir(FORWARD,IOPORT_DIR_OUTPUT);
-	
+	initMotor();
 	
 		pulseOut(1850);
 		delayMicroseconds(1100);
 		pulseOut(1850);
 		delayMicroseconds(5250);
 		printf("HEJ");
+		ioport_set_pin_level(R_RESET,LOW);
+		ioport_set_pin_level(L_RESET,LOW);
+		
+		char str1[15];
+		int test = ioport_get_pin_level(R_RESET);
+		sprintf(str1,"TESTPINOUT %d",test);
+		printf(str1);
 	while(1){		
-	
 		P_regulator(0);
 	}
 	/*pulseOut(1500);
@@ -122,15 +130,23 @@ void turn(int a){
 }
 
 void P_regulator(int b)
-{
-	r_count = ioport_get_pin_level(R0)+ioport_get_pin_level(R1)*2+ioport_get_pin_level(R2)*4+ioport_get_pin_level(R3)*8
-	+ioport_get_pin_level(R4)*16+ioport_get_pin_level(R5)*32;                                                             //hämta input värde frå pinnarna
-	l_count = ioport_get_pin_level(L0)+ioport_get_pin_level(L1)*2+ioport_get_pin_level(L2)*4+ioport_get_pin_level(L3)*8
-	+ioport_get_pin_level(L4)*16+ioport_get_pin_level(L5)*32;
-	printf ("räknaren:%d\n",r_count);
+{	
+	r_count = ioport_get_pin_level(R0)+(ioport_get_pin_level(R1)*2)+(ioport_get_pin_level(R2)*4)+(ioport_get_pin_level(R3)*8);
+	ioport_set_pin_level(R_RESET,HIGH);
+	//+ioport_get_pin_level(R4)*16+ioport_get_pin_level(R5)*32;                                                             //hämta input värde frå pinnarna
+	l_count = ioport_get_pin_level(L0)+ioport_get_pin_level(L1)*2+ioport_get_pin_level(L2)*4+ioport_get_pin_level(L3)*8;
+	ioport_set_pin_level(L_RESET,HIGH);
+	//+ioport_get_pin_level(L4)*16+ioport_get_pin_level(L5)*32;
+	char str[20];
+	sprintf(str,"räknaren: %d\n",r_count);
+	printf (str);
 	
 	int e = b-(r_count - l_count); //räkna felvärde
 	angle = (Kp*e)+250; //adderar medelvärde för att köra fram, funktionen för p-regulator
 	printf (" Felvarde:%d\n",e);
-	turn(angle); // anropar turn med den nya vinkeln 
+	//turn(angle); // anropar turn med den nya vinkeln 
+	ioport_set_pin_level(R_RESET,LOW);
+	ioport_set_pin_level(L_RESET,LOW);
+	delayMicroseconds(1000);
 }
+
