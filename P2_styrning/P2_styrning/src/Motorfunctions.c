@@ -32,12 +32,12 @@
 int r_count=0;
 int counter = 0;
 int l_count=0;
-int Kp = 5;
+int Kp = 4;
 int angle=0;
 int speed=1650;
 int r_speed=0;
 int l_speed=0;
-void initMotor(){
+void initMotor(void){
 		ioport_set_pin_dir(LEFT,IOPORT_DIR_OUTPUT);
 		ioport_set_pin_dir(RIGHT,IOPORT_DIR_OUTPUT);
 		ioport_set_pin_dir(R_RESET,IOPORT_DIR_OUTPUT);
@@ -54,30 +54,19 @@ void initMotor(){
 		ioport_set_pin_dir(L3,IOPORT_DIR_INPUT);
 		ioport_set_pin_dir(L4,IOPORT_DIR_INPUT);
 		ioport_set_pin_dir(L5,IOPORT_DIR_INPUT);
-		//ioport_set_pin_dir(TESTPIN,IOPORT_DIR_OUTPUT);
+		
 }
 
 
 void P_regulator(int b)
 {
-	r_count = ioport_get_pin_level(R0)+(ioport_get_pin_level(R1)*2)+(ioport_get_pin_level(R2)*4)+(ioport_get_pin_level(R3)*8);
+	r_count = ioport_get_pin_level(R0)+ioport_get_pin_level(R1)*2+ioport_get_pin_level(R2)*4+ioport_get_pin_level(R3)*8
 	+ioport_get_pin_level(R4)*16+ioport_get_pin_level(R5)*32;   
-	//r_count = ioport_get_pin_level(R0);
 	ioport_set_pin_level(R_RESET,HIGH);	                                                          //hämta input värde frå pinnarna
 	l_count = ioport_get_pin_level(L0)+ioport_get_pin_level(L1)*2+ioport_get_pin_level(L2)*4+ioport_get_pin_level(L3)*8
 	+ioport_get_pin_level(L4)*16+ioport_get_pin_level(L5)*32;
 	ioport_set_pin_level(L_RESET,HIGH);	
-	/*
-	if(counter == 64){
-		ioport_set_pin_level(R_RESET,HIGH);
-		ioport_set_pin_level(L_RESET,HIGH);
-		delayMicroseconds(100);
-		counter = 0;
-		ioport_set_pin_level(R_RESET,LOW);
-		ioport_set_pin_level(L_RESET,LOW);
-	}
-	counter++;
-	*/
+
 	char str[20];
 	sprintf(str,"högerhjul: %d\n",r_count);
 	printf (str);
@@ -86,31 +75,22 @@ void P_regulator(int b)
 	int e = b-(r_count - l_count); //räkna felvärde
 		if(e>0){
 		r_speed=speed-(e*Kp);
-		l_speed=speed+(e*6);
-	//	speed =	speed-(e*Kp);
+		l_speed=speed+(e*Kp);
 	}else if (e<0)
 	{
 		r_speed=speed+(e*Kp);
-		l_speed=speed-(e*6);
-		//moveForward((speed-e*Kp),(speed+e*Kp));
-	//	speed =	speed+(e*Kp);
+		l_speed=speed-(e*Kp);
 	}
 	sprintf(str,"felvärde: %d\n",e);
 	printf (str);
-	//pulseRight(speed);
 	moveForward(l_speed,r_speed);
-	delayMicroseconds(200000);
-	moveForward(speed,speed);
-	//printf (" Felvarde:%d\n",e);
+	delayMicroseconds(500000);
 	sprintf(str,"r-speed: %d\n",r_speed);
 	printf (str);
 		sprintf(str,"l-speed: %d\n",l_speed);
 		printf (str);
-	//moveForward(speed,speed);
-//	turn(angle); // anropar turn med den nya vinkeln
 	ioport_set_pin_level(R_RESET,LOW);
 	ioport_set_pin_level(L_RESET,LOW);
-	//delayMicroseconds(10000);
 }
 
 
@@ -166,4 +146,5 @@ void moveForward(int l,int r){
 	pulseLeft(l);
 	pulseRight(r);
 	delayMicroseconds(5250);
+	//printf (" Felvarde:%d\n",e);
 }

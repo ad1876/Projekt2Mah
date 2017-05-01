@@ -11,11 +11,11 @@
 
 
 
-void initMotor();
+void initMotor(void);
 void P_regulator(int b);
 void pulseLeft(int p1);
 void pulseRight(int p2);
 void turn(int a);
-void moveForward();
+void moveForward(int l,int r);
 
 #endif /* MOTORFUNCTIONS_H_ */
