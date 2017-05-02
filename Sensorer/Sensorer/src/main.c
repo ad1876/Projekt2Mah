@@ -34,8 +34,19 @@
 #include "DelayFunctions.h"
 #include "Sensor/soundSensor.h"
 #include "consoleFunctions.h"
+#include "Sensor/Servo.h"
+#include "Navigation/Navi.h"
 
 #define LED PIO_PB27_IDX
+void testSounSensor(void){
+	int sensorValue = 10;
+	char *str[20];
+	sensorValue = readSensorValue();
+	sprintf(str, "%d",sensorValue);
+	printf(str);
+	printf("TESING\n");
+	delayMicroseconds(1000000);
+}
 int main (void)
 {
 	
@@ -44,21 +55,28 @@ int main (void)
 	ioport_init();
 	delayInit();
 	init_sensor();
-	sensorClck();
 	configureConsole();
+	init_servo();
 	
 	//ioport_set_pin_dir(LED,IOPORT_DIR_OUTPUT);
 			
-	int sensorValue = 10;
-	char *str[20];	
+	calculate_rut();
 		
 	while (1)
 	{
-		//sensorValue = readSensorValue();
+		/*
+		sensorValue = readSensorValue();
 		sprintf(str, "%d",sensorValue);
 		printf(str);
 		printf("TESING\n");
-		delayMicroseconds(1000000);
+		//delayMicroseconds(1000000);
+		*/
+		//center_servo();
+		//delayMicroseconds(200000);
+		//move_servo_left_max();
+		//delayMicroseconds(200000);
+		//move_servo_rigth_max();
+		//delayMicroseconds(200000);	
 	}
 	
 }

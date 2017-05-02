@@ -4,6 +4,8 @@
 
 src\ASF\common\services\delay\sam\cycle_counter.c
 
+src\ASF\common\services\serial\usart_serial.c
+
 src\ASF\common\utils\stdio\read.c
 
 src\ASF\common\utils\stdio\write.c
@@ -12,9 +14,19 @@ src\ASF\common\utils\unit_test\suite.c
 
 src\ASF\sam\drivers\tc\tc.c
 
+src\ASF\sam\drivers\uart\uart.c
+
+src\ASF\sam\drivers\usart\usart.c
+
+src\ASF\thirdparty\wireless\addons\sio2host\uart\sio2host.c
+
+src\ConsoleFunctions.c
+
 src\DelayFunctions.c
 
-src\Sensor\pulsCheck.c
+src\Navigation\Navi.c
+
+src\Sensor\Servo.c
 
 src\Sensor\soundSensor.c
 
