@@ -8,9 +8,6 @@
 #include "task_BLINKA.h"
 
 void task_BLINKA(void *pvParameters)
-#define BlinkaGreen PIO_PD9_IDX		//Digital Pinne 30
-#define BlinkaYellow PIO_PD1_IDX	//Digital Pinne 26
-#define BlinkaRed PIO_PD3_IDX		//Digital Pinne 28
 {
 //	xSemaphoreHandle signal_semafor = 0;
 //	signal_semafor = xSemaphoreCreateMutex();
@@ -31,7 +28,7 @@ void task_BLINKA(void *pvParameters)
 			delayMicroseconds(100000);
 		//	xSemaphoreGive(signal_semafor);
  	//	}
-		vTaskDelay(500);
+		//vTaskDelay(500);
 	}
 	vTaskDelete( NULL );  // För en clean exit av tasken ( Kanske ej behövs)
 }

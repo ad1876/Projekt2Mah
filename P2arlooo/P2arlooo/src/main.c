@@ -15,7 +15,7 @@
 #include "task_BLINKA.h"
 #include "task_VinkelGivare.h"
 #include "task_KNAPP.h"
-//#include "Interrupt_Handler.h"
+/*#include "Interrupt_Handler.h"*/
 
 //För att hålla reda vad de mappade pinnarna motsvarar i SAM3x pin namn.
 //https://www.arduino.cc/en/Hacking/PinMappingSAM3X
@@ -34,10 +34,10 @@ static void configure_console(void)
 		.baudrate = CONF_UART_BAUDRATE,
 		.paritytype = CONF_UART_PARITY
 	};
+	
 	/* Configure console UART. */
 	sysclk_enable_peripheral_clock(CONSOLE_UART_ID);
 	stdio_serial_init(CONF_UART, &uart_serial_options);
-	
 	printf("Konsolen reado\n");
 	printf("===============\n");
 	printf("-- %s\n\r", BOARD_NAME);
@@ -65,17 +65,17 @@ int main (void)
 	xTaskCreate(task_KNAPP, (const signed char * const) "KNAPP", TASK_KNAPP_STACK_SIZE, NULL, TASK_KNAPP_STACK_PRIORITY, NULL);
 	
 	//Task med näst högst prioritet
-	if (xTaskCreate(task_VinkelGivare, (const signed char * const) "VINKELGIVARE", TASK_VINKELGIVARE_STACK_SIZE, NULL, TASK_VINKELGIVARE_STACK_PRIORITY, NULL) != pdPASS) {
-		printf("Failed the VinkelGivare Task\r\n");
-	}
+// 	if (xTaskCreate(task_VinkelGivare, (const signed char * const) "VINKELGIVARE", TASK_VINKELGIVARE_STACK_SIZE, NULL, TASK_VINKELGIVARE_STACK_PRIORITY, NULL) != pdPASS) {
+// 		printf("Failed the VinkelGivare Task\r\n");
+// 	}
 	//Task med näst lägst prioritet
-	if (xTaskCreate(task_LED, (const signed char * const) "LED", TASK_LED_STACK_SIZE, NULL, TASK_LED_STACK_PRIORITY, NULL) != pdPASS) {
-		printf("Failed the LED Task\r\n");
-	}
+// 	if (xTaskCreate(task_LED, (const signed char * const) "LED", TASK_LED_STACK_SIZE, NULL, TASK_LED_STACK_PRIORITY, NULL) != pdPASS) {
+// 		printf("Failed the LED Task\r\n");
+// 	}
 	//Task med lägst prioritet
-	if (xTaskCreate(task_BLINKA, (const signed char * const) "BLINKA", TASK_BLINKA_STACK_SIZE, NULL, TASK_BLINKA_STACK_PRIORITY, NULL) != pdPASS) {
-		printf("Failed the BLINKA Task\r\n");
-	}
+// 	if (xTaskCreate(task_BLINKA, (const signed char * const) "BLINKA", TASK_BLINKA_STACK_SIZE, NULL, TASK_BLINKA_STACK_PRIORITY, NULL) != pdPASS) {
+// 		printf("Failed the BLINKA Task\r\n");
+// 	}
 	//Ser till att köra tasken.
 	vTaskStartScheduler();
 }

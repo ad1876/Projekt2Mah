@@ -11,7 +11,7 @@
 #define TASK_LED_STACK_SIZE     (1024/sizeof(portSTACK_TYPE))
 #define TASK_LED_STACK_PRIORITY    (3)//tskIDLE_PRIORITY
 
-
+#define LED PIO_PB27_IDX
 void task_LED(void *pvParameters);
 
 

@@ -8,7 +8,6 @@
 #include "task_LED.h"
 
 void task_LED(void *pvParameters)
-#define LED PIO_PB27_IDX
 {
 	xSemaphoreHandle signal_semafor=0;
 	signal_semafor = xSemaphoreCreateMutex();

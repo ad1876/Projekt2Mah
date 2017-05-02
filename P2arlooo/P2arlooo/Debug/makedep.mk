@@ -4,9 +4,9 @@
 
 src\Delays\delay.c
 
-src\Interrupts\Interrupt_Handler.c
+src\Interrupt_Handler.c
 
-src\Tasks\task_knapp.c
+src\Tasks\task_KNAPP.c
 
 src\Tasks\task_BLINKA.c
 

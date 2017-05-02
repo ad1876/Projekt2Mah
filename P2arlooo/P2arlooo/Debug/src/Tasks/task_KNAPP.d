@@ -1,4 +1,4 @@
-src/Tasks/task_KNAPP.d src/Tasks/task_KNAPP.o: ../src/Tasks/task_KNAPP.c \
+src/Tasks/task_knapp.d src/Tasks/task_knapp.o: ../src/Tasks/task_knapp.c \
  ../src/asf.h ../src/ASF/sam/utils/compiler.h \
  c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include\stddef.h \
  ../src/ASF/common/utils/parts.h \
