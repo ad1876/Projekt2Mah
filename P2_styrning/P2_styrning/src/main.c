@@ -13,7 +13,7 @@
 #include "DelayFunctions.h"
 #include "conf_board.h"
 #include "Motorfunctions.h"
-
+#include "PID_Controller.h"
 //#define LED PIO_PB27_IDX
 
 #define LEFT PIO_PC4_IDX
@@ -82,7 +82,8 @@ int main (void)
 	//	int counter =0;*/
 	while(1){	
 		ioport_set_pin_level(TESTPINOUT11,HIGH);
-		P_regulator(0);
+	//	P_regulator(0);
+		pidCompute(0);
 		delayMicroseconds(1000);
 		ioport_set_pin_level(TESTPINOUT11,LOW);
 		delayMicroseconds(500000);

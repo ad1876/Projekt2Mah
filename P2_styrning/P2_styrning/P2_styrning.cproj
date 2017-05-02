@@ -499,6 +499,12 @@
     <Compile Include="src\Motorfunctions.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\PID_Controller.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\PID_Controller.h">
+      <SubType>compile</SubType>
+    </Compile>
     <None Include="src\ASF\sam\drivers\tc\tc_capture_waveform_example\tc_capture_waveform_example.h">
       <SubType>compile</SubType>
     </None>
