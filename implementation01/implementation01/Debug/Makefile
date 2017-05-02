@@ -111,6 +111,7 @@ C_SRCS +=  \
 ../src/ASF/sam/drivers/wdt/wdt.c \
 ../src/Configs/DelayFunctions.c \
 ../src/Motor/Motorfunctions.c \
+../src/Motor/PID_Controller.c \
 ../src/Sensor/soundSensor.c \
 ../src/Task/task_blink.c \
 ../src/Task/task_motor.c \
@@ -154,6 +155,7 @@ OBJS +=  \
 src/ASF/sam/drivers/wdt/wdt.o \
 src/Configs/DelayFunctions.o \
 src/Motor/Motorfunctions.o \
+src/Motor/PID_Controller.o \
 src/Sensor/soundSensor.o \
 src/Task/task_blink.o \
 src/Task/task_motor.o \
@@ -190,6 +192,7 @@ OBJS_AS_ARGS +=  \
 src/ASF/sam/drivers/wdt/wdt.o \
 src/Configs/DelayFunctions.o \
 src/Motor/Motorfunctions.o \
+src/Motor/PID_Controller.o \
 src/Sensor/soundSensor.o \
 src/Task/task_blink.o \
 src/Task/task_motor.o \
@@ -226,6 +229,7 @@ C_DEPS +=  \
 src/ASF/sam/drivers/wdt/wdt.d \
 src/Configs/DelayFunctions.d \
 src/Motor/Motorfunctions.d \
+src/Motor/PID_Controller.d \
 src/Sensor/soundSensor.d \
 src/Task/task_blink.d \
 src/Task/task_motor.d \
@@ -262,6 +266,7 @@ C_DEPS_AS_ARGS +=  \
 src/ASF/sam/drivers/wdt/wdt.d \
 src/Configs/DelayFunctions.d \
 src/Motor/Motorfunctions.d \
+src/Motor/PID_Controller.d \
 src/Sensor/soundSensor.d \
 src/Task/task_blink.d \
 src/Task/task_motor.d \
@@ -309,6 +314,8 @@ LINKER_SCRIPT_DEP+=  \
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 
