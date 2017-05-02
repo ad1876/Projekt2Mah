@@ -1,5 +1,6 @@
-src/Task/task_motor.d src/Task/task_motor.o: ../src/Task/task_motor.c \
- ../src/asf.h ../src/ASF/sam/utils/compiler.h \
+src/Motor/PID_Controller.d src/Motor/PID_Controller.o: \
+ ../src/Motor/PID_Controller.c ../src/asf.h \
+ ../src/ASF/sam/utils/compiler.h \
  c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include\stddef.h \
  ../src/ASF/common/utils/parts.h \
  ../src/ASF/sam/utils/preprocessor/preprocessor.h \
@@ -149,8 +150,9 @@ src/Task/task_motor.d src/Task/task_motor.o: ../src/Task/task_motor.c \
  ../src/ASF/sam/drivers/uart/uart.h ../src/ASF/sam/drivers/usart/usart.h \
  ../src/config/conf_uart_serial.h ../src/ASF/sam/drivers/tc/tc.h \
  ../src/ASF/sam/drivers/wdt/wdt.h \
- ../src/ASF/sam/drivers/pio/pio_handler.h ../src/Task/task_motor.h \
- ../src/Motor/PID_Controller.h
+ ../src/ASF/sam/drivers/pio/pio_handler.h \
+ c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\inttypes.h \
+ ../src/Configs/DelayFunctions.h ../src/Motor/PID_Controller.h
 
 ../src/asf.h:
 
@@ -464,6 +466,8 @@ c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu
 
 ../src/ASF/sam/drivers/pio/pio_handler.h:
 
-../src/Task/task_motor.h:
+c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\inttypes.h:
+
+../src/Configs/DelayFunctions.h:
 
 ../src/Motor/PID_Controller.h:

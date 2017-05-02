@@ -34,10 +34,11 @@
 
 #include "Configs/DelayFunctions.h"
 #include "Sensor/soundSensor.h"
-#include "Motor/Motorfunctions.h"
+#include "Motor/PID_Controller.h"
 #include "Task/task_soundsensor.h"
 #include "Task/task_blink.h"
 #include "Task/task_motor.h"
+
 
 int main (void)
 {
@@ -46,7 +47,7 @@ int main (void)
 	sysclk_init();
 	init_sensor();
 	delayInit();
-	initMotor();
+	initMotor2();
 	ioport_init();
 	
 	xTaskCreate(task_motor,(const signed char* const) "Motor",TASK_MOTOR_STACK_SIZE,NULL,TASK_MOTOR_PRIORITY,NULL);

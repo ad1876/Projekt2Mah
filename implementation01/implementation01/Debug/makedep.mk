@@ -8,6 +8,8 @@ src\Configs\DelayFunctions.c
 
 src\Motor\Motorfunctions.c
 
+src\Motor\PID_Controller.c
+
 src\Sensor\soundSensor.c
 
 src\Task\task_blink.c
