@@ -29,12 +29,29 @@
  * Support and FAQ: visit <a href="http://www.atmel.com/design-support/">Atmel Support</a>
  */
 #include <asf.h>
+#include <ioport.h>
+#include <FreeRTOSConfig.h>
+
+#include "Configs/DelayFunctions.h"
+#include "Sensor/soundSensor.h"
+#include "Motor/Motorfunctions.h"
+#include "Task/task_soundsensor.h"
+#include "Task/task_blink.h"
 
 int main (void)
 {
-	// Insert system clock initialization code here (sysclk_init()).
-
+	//alla inits
 	board_init();
-
-	// Insert application code here, after the board has been initialized.
+	sysclk_init();
+	init_sensor();
+	delayInit();
+	initMotor();
+	ioport_init();
+	
+	xTaskCreate(task_soundsensor,(const signed char* const) "Soundsensor",TASK_SOUNDSENSOR_STACK_SIZE,NULL,TASK_SOUNDSENSOR_STACK_PRIORITY,NULL);
+	xTaskCreate(task_blink,(const signed char* const) "BlINK",TASK_BLINK_STACK_SIZE,NULL,TASK_BLINK_PRIORITY,NULL);
+	vTaskStartScheduler();
+	
+	while(1){};
+	
 }

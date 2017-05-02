@@ -58,19 +58,22 @@ int main (void)
 	configureConsole();
 	init_servo();
 	
-	//ioport_set_pin_dir(LED,IOPORT_DIR_OUTPUT);
+	ioport_set_pin_dir(LED,IOPORT_DIR_OUTPUT);
 			
-	calculate_rut();
+	//calculate_rut();
 		
 	while (1)
 	{
-		/*
+		int sensorValue = 10;
+		char *str[20];
+		ioport_set_pin_level(LED,HIGH);
 		sensorValue = readSensorValue();
+		ioport_set_pin_level(LED,LOW);
 		sprintf(str, "%d",sensorValue);
 		printf(str);
 		printf("TESING\n");
 		//delayMicroseconds(1000000);
-		*/
+		
 		//center_servo();
 		//delayMicroseconds(200000);
 		//move_servo_left_max();
