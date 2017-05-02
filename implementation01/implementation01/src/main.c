@@ -37,6 +37,7 @@
 #include "Motor/Motorfunctions.h"
 #include "Task/task_soundsensor.h"
 #include "Task/task_blink.h"
+#include "Task/task_motor.h"
 
 int main (void)
 {
@@ -48,6 +49,7 @@ int main (void)
 	initMotor();
 	ioport_init();
 	
+	xTaskCreate(task_motor,(const signed char* const) "Motor",TASK_MOTOR_STACK_SIZE,NULL,TASK_MOTOR_PRIORITY,NULL);
 	xTaskCreate(task_soundsensor,(const signed char* const) "Soundsensor",TASK_SOUNDSENSOR_STACK_SIZE,NULL,TASK_SOUNDSENSOR_STACK_PRIORITY,NULL);
 	xTaskCreate(task_blink,(const signed char* const) "BlINK",TASK_BLINK_STACK_SIZE,NULL,TASK_BLINK_PRIORITY,NULL);
 	vTaskStartScheduler();

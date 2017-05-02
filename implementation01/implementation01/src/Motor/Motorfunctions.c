@@ -67,9 +67,9 @@ void P_regulator(int b)
 	+ioport_get_pin_level(L4)*16+ioport_get_pin_level(L5)*32;
 	ioport_set_pin_level(L_RESET,HIGH);	
 
-	char str[20];
-	sprintf(str,"högerhjul: %d\n",r_count);
-	printf (str);
+	//char str[20];
+	//sprintf(str,"högerhjul: %d\n",r_count);
+	//printf (str);
 	r_speed=speed;
 	l_speed=speed;
 	int e = b-(r_count - l_count); //räkna felvärde
@@ -81,14 +81,14 @@ void P_regulator(int b)
 		r_speed=speed+(e*Kp);
 		l_speed=speed-(e*Kp);
 	}
-	sprintf(str,"felvärde: %d\n",e);
-	printf (str);
+	//sprintf(str,"felvärde: %d\n",e);
+	//printf (str);
 	moveForward(l_speed,r_speed);
-	delayMicroseconds(500000);
-	sprintf(str,"r-speed: %d\n",r_speed);
-	printf (str);
-		sprintf(str,"l-speed: %d\n",l_speed);
-		printf (str);
+	//delayMicroseconds(500000);
+	//sprintf(str,"r-speed: %d\n",r_speed);
+	//printf (str);
+	//sprintf(str,"l-speed: %d\n",l_speed);
+	//printf (str);
 	ioport_set_pin_level(R_RESET,LOW);
 	ioport_set_pin_level(L_RESET,LOW);
 }

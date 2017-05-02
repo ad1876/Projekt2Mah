@@ -11,9 +11,13 @@
 #include "Configs/DelayFunctions.h"
 
 //DigitalPin 23
-#define EchoPin PIO_PA14_IDX
+//#define EchoPin PIO_PA14_IDX
 //DigitalPin 24
-#define TriggerPin PIO_PA15_IDX
+//#define TriggerPin PIO_PA15_IDX
+//DIGITAL PIN 7
+#define EchoPin PIO_PC23_IDX
+//digital pin 8
+#define TriggerPin PIO_PC22_IDX
 
 long sensordistance = 0;
 
