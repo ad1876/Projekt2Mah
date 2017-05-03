@@ -18,6 +18,7 @@ void task_blink(void *pvParameters){
 	ioport_set_pin_dir(BlinkPib,IOPORT_DIR_OUTPUT);
 	uint8_t counter = 0;
 	while (1){
+		puts("Task BLINKA");
 		ioport_set_pin_level(BlinkPib,counter);
 		//vTaskDelay(xTimeIncrement);
 		counter = ~counter;

@@ -39,6 +39,18 @@
 #include "Task/task_blink.h"
 #include "Task/task_motor.h"
 
+static void configure_console(void)
+/* Enables feedback through the USB-cable back to terminal within Atmel Studio */
+{
+	const usart_serial_options_t uart_serial_options = {
+		.baudrate = CONF_UART_BAUDRATE,
+		.paritytype = CONF_UART_PARITY
+	};
+
+	/* Configure console UART. */
+	sysclk_enable_peripheral_clock(CONSOLE_UART_ID);
+	stdio_serial_init(CONF_UART, &uart_serial_options);
+}
 
 int main (void)
 {
@@ -49,12 +61,16 @@ int main (void)
 	delayInit();
 	initMotor2();
 	ioport_init();
+	configure_console();
 	
 	xTaskCreate(task_motor,(const signed char* const) "Motor",TASK_MOTOR_STACK_SIZE,NULL,TASK_MOTOR_PRIORITY,NULL);
 	xTaskCreate(task_soundsensor,(const signed char* const) "Soundsensor",TASK_SOUNDSENSOR_STACK_SIZE,NULL,TASK_SOUNDSENSOR_STACK_PRIORITY,NULL);
-	xTaskCreate(task_blink,(const signed char* const) "BlINK",TASK_BLINK_STACK_SIZE,NULL,TASK_BLINK_PRIORITY,NULL);
+	//xTaskCreate(task_blink,(const signed char* const) "BlINK",TASK_BLINK_STACK_SIZE,NULL,TASK_BLINK_PRIORITY,NULL);
 	vTaskStartScheduler();
 	
-	while(1){};
+	
+	while(1){
+		
+		};
 	
 }

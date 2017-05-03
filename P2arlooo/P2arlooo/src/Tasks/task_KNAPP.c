@@ -8,7 +8,6 @@
 #include <FreeRTOS.h>
 #include "task_KNAPP.h"
 
-
 xSemaphoreHandle signal_semafor = 0;
 
 void task_KNAPP(void *pvParameters)
@@ -25,7 +24,7 @@ void task_KNAPP(void *pvParameters)
 			ioport_set_pin_level(BlinkaGreen,HIGH);
 			ioport_set_pin_level(BlinkaRed,LOW);
 			xSemaphoreGiveFromISR(signal_semafor, &xHigherPriorityTaskWoken);
-			//knapp_handler(); // FUNGERAR INTERRUPT NU F?!?!?!? NEJ VAD ÄR DETTA FÖR SKIT JAG KALLAR JU PÅ METODEN?
+			knapp_handler(); // FUNGERAR INTERRUPT NU F?!?!?!? NEJ VAD ÄR DETTA FÖR SKIT JAG KALLAR JU PÅ METODEN?
 			//portYIELD();
 			
 		}
@@ -35,26 +34,30 @@ void task_KNAPP(void *pvParameters)
 			puts("Knappen ------------ ej intryckt!");
 			xSemaphoreGiveFromISR(signal_semafor, &xHigherPriorityTaskWoken);
 		}
-		vTaskDelay(1); //vTaskDelay(xTimeIncrement);
+		vTaskDelay(100); //vTaskDelay(xTimeIncrement);
 	}
 	vTaskDelete( NULL );  // För en clean exit av tasken ( Kanske ej behövs)
 }
+
 
 
 void knapp_handler(){
 	puts("123123213");
 	pmc_enable_periph_clk(ID_PIOA);
 	pio_set_input(PIOA, Knapp, PIO_PULLUP);
-	pio_handler_set(PIOA, ID_PIOA, Knapp, PIO_IT_RISE_EDGE, task_KNAPP);
+	pio_handler_set(PIOA, ID_PIOA, Knapp, PIO_IT_RISE_EDGE, pin_edge_handler);
 	pio_enable_interrupt(PIOA, Knapp);
 	NVIC_EnableIRQ(PIOA_IRQn);
 	puts("FÅR JAG ETT INTERRUPT DÅadasdasdasdasdasd?!!!!");
 }
 
+
+
 void pin_edge_handler(const uint32_t id, const uint32_t index)
 {
 	if ((id == ID_PIOA) && (index == Knapp)){
-		void task_KNAPP(void *pvParameters);
-		puts("FÅR JAG ETT INTERRUPT DÅadasdasdasdasdasd?!!!!");
+		 if (pio_get(PIOA, PIO_TYPE_PIO_INPUT, Knapp)){
+			 puts("lal");
 	}
+}
 }

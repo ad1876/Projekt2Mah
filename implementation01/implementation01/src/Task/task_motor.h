@@ -9,7 +9,7 @@
 #ifndef TASK_MOTOR_H_
 #define TASK_MOTOR_H_
 #define TASK_MOTOR_STACK_SIZE 1024/(sizeof(portSTACK_TYPE))
-#define TASK_MOTOR_PRIORITY (6)
+#define TASK_MOTOR_PRIORITY (4)
 
 void task_motor(void *pvParameters);
 

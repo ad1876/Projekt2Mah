@@ -66,17 +66,17 @@ int main (void)
 	xTaskCreate(task_KNAPP, (const signed char * const) "KNAPP", TASK_KNAPP_STACK_SIZE, NULL, TASK_KNAPP_STACK_PRIORITY, NULL);
 	
 	//Task med näst högst prioritet
-	if (xTaskCreate(task_VinkelGivare, (const signed char * const) "VINKELGIVARE", TASK_VINKELGIVARE_STACK_SIZE, NULL, TASK_VINKELGIVARE_STACK_PRIORITY, NULL) != pdPASS) {
-		printf("Failed the VinkelGivare Task\r\n");
-	}
+// 	if (xTaskCreate(task_VinkelGivare, (const signed char * const) "VINKELGIVARE", TASK_VINKELGIVARE_STACK_SIZE, NULL, TASK_VINKELGIVARE_STACK_PRIORITY, NULL) != pdPASS) {
+// 		printf("Failed the VinkelGivare Task\r\n");
+// 	}
 	//Task med näst lägst prioritet
-	if (xTaskCreate(task_LED, (const signed char * const) "LED", TASK_LED_STACK_SIZE, NULL, TASK_LED_STACK_PRIORITY, NULL) != pdPASS) {
-		printf("Failed the LED Task\r\n");
-	}
+// 	if (xTaskCreate(task_LED, (const signed char * const) "LED", TASK_LED_STACK_SIZE, NULL, TASK_LED_STACK_PRIORITY, NULL) != pdPASS) {
+// 		printf("Failed the LED Task\r\n");
+// 	}
 	//Task med lägst prioritet
-	if (xTaskCreate(task_BLINKA, (const signed char * const) "BLINKA", TASK_BLINKA_STACK_SIZE, NULL, TASK_BLINKA_STACK_PRIORITY, NULL) != pdPASS) {
-		printf("Failed the BLINKA Task\r\n");
-	}
+// 	if (xTaskCreate(task_BLINKA, (const signed char * const) "BLINKA", TASK_BLINKA_STACK_SIZE, NULL, TASK_BLINKA_STACK_PRIORITY, NULL) != pdPASS) {
+// 		printf("Failed the BLINKA Task\r\n");
+// 	}
 	//Ser till att köra tasken.
 	vTaskStartScheduler();
 }

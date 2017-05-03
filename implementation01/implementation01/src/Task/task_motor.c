@@ -18,7 +18,8 @@ void task_motor(void *pvParameters){
 	xLastWakeTime = xTaskGetTickCount();
 	while (1)
 	{
-		if(sensordistance<20){
+		puts("Task MOTORRRRRRR");
+		if(sensordistance<30){
 			moveForward1(1500,1500);
 			}else{
 			pidCompute(0);
@@ -27,3 +28,5 @@ void task_motor(void *pvParameters){
 		vTaskDelayUntil(&xLastWakeTime,xTimeIncrement);
 	}
 }
+
+

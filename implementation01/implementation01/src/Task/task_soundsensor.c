@@ -18,6 +18,7 @@
 #define EchoPin PIO_PC23_IDX
 //digital pin 8
 #define TriggerPin PIO_PC22_IDX
+#define Channel2
 
 long sensordistance = 0;
 
@@ -52,6 +53,7 @@ void task_soundsensor(void *pvParameters){
 	init_sensor();
 	
 	 while (1){
+		 puts("Task SENSORRRRR");
 		long duration;
 		ioport_set_pin_level(TriggerPin,HIGH);
 		delayMicroseconds(10000);

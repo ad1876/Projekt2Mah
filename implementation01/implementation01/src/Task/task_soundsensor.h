@@ -9,7 +9,7 @@
 #ifndef TASK_SOUNDSENSOR_H_
 #define TASK_SOUNDSENSOR_H_
 #define TASK_SOUNDSENSOR_STACK_SIZE (1024/sizeof(portSTACK_TYPE))
-#define TASK_SOUNDSENSOR_STACK_PRIORITY (4)
+#define TASK_SOUNDSENSOR_STACK_PRIORITY (3)
 
 
 void task_soundsensor(void *pvParameters);

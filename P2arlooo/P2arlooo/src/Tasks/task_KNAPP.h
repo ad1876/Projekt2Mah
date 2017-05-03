@@ -22,4 +22,5 @@ void pin_edge_handler(const uint32_t id, const uint32_t index);
 void knapp_handler();
 
 
+
 #endif /* KNAPP_H_ */

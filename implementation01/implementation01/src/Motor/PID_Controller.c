@@ -13,9 +13,9 @@ double input, output;
 double error; 
 double dError;
 double iError;
-double K = 2.4; 
-double Ti = 1;
-double Td = 0.25;
+double K = 5; 
+double Ti = 1; //0.5 * period
+double Td = 0.25; //0.125 * 2
 double Ts = 0.12;
 double w = 0;
 double last_err= 0;
@@ -75,15 +75,21 @@ void pidCompute(double setpoint){
 	r_speed1=speed1;
 	l_speed1=speed1;
 	
-	
-	input = (r_count - l_count);
-	error = (setpoint-input); //propotionella
-	w = (w + error);
-	iError = (w* (Ts/Ti)); //integral
-	dError = ((error-last_err)* (Td/Ts)); // derivative
-	output = (K * (error + iError + dError));
-	last_err = error;
-	
+// 		input = (r_count - l_count);
+// 		error = (setpoint-input); //propotionella
+// 			dError = Td*(error-last_err)/Ts; // d erivative
+// 			w=w+error;
+// 			iError=(Ts/Ti)*w;
+// 			output = K* (error + iError + dError);
+// 			last_err=error;
+
+			input = (r_count - l_count);
+		 	error = (setpoint-input); //propotionella
+		 	w = (w + error);
+		 	iError = (w* (Ts/Ti)); //integral
+		 	dError = ((error-last_err)* (Td/Ts)); // derivative
+		 	output = (K * (error + iError + dError));
+		 	last_err = error;
 	
 		if(output<0){
 			r_speed1=speed1+output;
@@ -93,6 +99,7 @@ void pidCompute(double setpoint){
 			r_speed1=speed1-output;
 			l_speed1=speed1+output;
 		}
+		
 	moveForward1(l_speed1,r_speed1);
 	ioport_set_pin_level(R_RESET,LOW);
 	ioport_set_pin_level(L_RESET,LOW);
