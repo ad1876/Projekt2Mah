@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include "task.h"
 #include <ioport.h>
+#include "FreeRTOS.h"
 #include "FreeRTOSConfig.h"
 #include "delay.h"
 #include "conf_board.h"
@@ -15,7 +16,6 @@
 #include "task_BLINKA.h"
 #include "task_VinkelGivare.h"
 #include "task_KNAPP.h"
-/*#include "Interrupt_Handler.h"*/
 
 //För att hålla reda vad de mappade pinnarna motsvarar i SAM3x pin namn.
 //https://www.arduino.cc/en/Hacking/PinMappingSAM3X
@@ -34,7 +34,6 @@ static void configure_console(void)
 		.baudrate = CONF_UART_BAUDRATE,
 		.paritytype = CONF_UART_PARITY
 	};
-	
 	/* Configure console UART. */
 	sysclk_enable_peripheral_clock(CONSOLE_UART_ID);
 	stdio_serial_init(CONF_UART, &uart_serial_options);
@@ -44,6 +43,7 @@ static void configure_console(void)
 	printf("-- Compiled: %s %s --\n\r", __DATE__, __TIME__);
 }
 
+knapp_handler();
 int main (void)
 {
 	// Initialisera Due kortet */
@@ -52,6 +52,7 @@ int main (void)
 	ioport_init();
 	delayInit();
 	configure_console();
+	
 	
 	// Sätter direction för pinnar, Utgångar / Ingångar.
 	ioport_set_pin_dir(BlinkaGreen,IOPORT_DIR_OUTPUT);	//Utgång
@@ -65,17 +66,17 @@ int main (void)
 	xTaskCreate(task_KNAPP, (const signed char * const) "KNAPP", TASK_KNAPP_STACK_SIZE, NULL, TASK_KNAPP_STACK_PRIORITY, NULL);
 	
 	//Task med näst högst prioritet
-// 	if (xTaskCreate(task_VinkelGivare, (const signed char * const) "VINKELGIVARE", TASK_VINKELGIVARE_STACK_SIZE, NULL, TASK_VINKELGIVARE_STACK_PRIORITY, NULL) != pdPASS) {
-// 		printf("Failed the VinkelGivare Task\r\n");
-// 	}
+	if (xTaskCreate(task_VinkelGivare, (const signed char * const) "VINKELGIVARE", TASK_VINKELGIVARE_STACK_SIZE, NULL, TASK_VINKELGIVARE_STACK_PRIORITY, NULL) != pdPASS) {
+		printf("Failed the VinkelGivare Task\r\n");
+	}
 	//Task med näst lägst prioritet
-// 	if (xTaskCreate(task_LED, (const signed char * const) "LED", TASK_LED_STACK_SIZE, NULL, TASK_LED_STACK_PRIORITY, NULL) != pdPASS) {
-// 		printf("Failed the LED Task\r\n");
-// 	}
+	if (xTaskCreate(task_LED, (const signed char * const) "LED", TASK_LED_STACK_SIZE, NULL, TASK_LED_STACK_PRIORITY, NULL) != pdPASS) {
+		printf("Failed the LED Task\r\n");
+	}
 	//Task med lägst prioritet
-// 	if (xTaskCreate(task_BLINKA, (const signed char * const) "BLINKA", TASK_BLINKA_STACK_SIZE, NULL, TASK_BLINKA_STACK_PRIORITY, NULL) != pdPASS) {
-// 		printf("Failed the BLINKA Task\r\n");
-// 	}
+	if (xTaskCreate(task_BLINKA, (const signed char * const) "BLINKA", TASK_BLINKA_STACK_SIZE, NULL, TASK_BLINKA_STACK_PRIORITY, NULL) != pdPASS) {
+		printf("Failed the BLINKA Task\r\n");
+	}
 	//Ser till att köra tasken.
 	vTaskStartScheduler();
 }

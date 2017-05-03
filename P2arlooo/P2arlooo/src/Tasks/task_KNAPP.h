@@ -6,7 +6,6 @@
  */ 
 
 
-
 #ifndef TASK_KNAPP_H_
 #define TASK_KNAPP_H_
 #define TASK_KNAPP_STACK_SIZE     (2048/sizeof(portSTACK_TYPE))
@@ -20,6 +19,7 @@
 
 void task_KNAPP(void *pvParameters);
 void pin_edge_handler(const uint32_t id, const uint32_t index);
-void hanldler();
+void knapp_handler();
+
 
 #endif /* KNAPP_H_ */

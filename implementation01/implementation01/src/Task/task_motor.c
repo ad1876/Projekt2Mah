@@ -20,7 +20,7 @@ void task_motor(void *pvParameters){
 	{
 		if(sensordistance<20){
 			moveForward1(1500,1500);
-		}else{
+			}else{
 			pidCompute(0);
 			//vTaskDelay(1000);
 		}

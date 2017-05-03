@@ -74,16 +74,17 @@ void pidCompute(double setpoint){
 	ioport_set_pin_level(L_RESET,HIGH);
 	r_speed1=speed1;
 	l_speed1=speed1;
+	
+	
 	input = (r_count - l_count);
-	error = setpoint-input; //propotionella
-	
-	dError = Td*(error-last_err)/Ts; // derivative
-	w = w + error;
-	iError = (Ts/Ti)*w; //integral
-	
-	output = K * (error + iError + dError);
-	
+	error = (setpoint-input); //propotionella
+	w = (w + error);
+	iError = (w* (Ts/Ti)); //integral
+	dError = ((error-last_err)* (Td/Ts)); // derivative
+	output = (K * (error + iError + dError));
 	last_err = error;
+	
+	
 		if(output<0){
 			r_speed1=speed1+output;
 			l_speed1=speed1-output;

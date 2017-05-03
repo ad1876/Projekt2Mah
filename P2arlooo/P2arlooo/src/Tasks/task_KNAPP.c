@@ -8,6 +8,7 @@
 #include <FreeRTOS.h>
 #include "task_KNAPP.h"
 
+
 xSemaphoreHandle signal_semafor = 0;
 
 void task_KNAPP(void *pvParameters)
@@ -24,6 +25,7 @@ void task_KNAPP(void *pvParameters)
 			ioport_set_pin_level(BlinkaGreen,HIGH);
 			ioport_set_pin_level(BlinkaRed,LOW);
 			xSemaphoreGiveFromISR(signal_semafor, &xHigherPriorityTaskWoken);
+			//knapp_handler(); // FUNGERAR INTERRUPT NU F?!?!?!? NEJ VAD ÄR DETTA FÖR SKIT JAG KALLAR JU PÅ METODEN?
 			//portYIELD();
 			
 		}
@@ -39,7 +41,7 @@ void task_KNAPP(void *pvParameters)
 }
 
 
-void hanldler(){
+void knapp_handler(){
 	puts("123123213");
 	pmc_enable_periph_clk(ID_PIOA);
 	pio_set_input(PIOA, Knapp, PIO_PULLUP);
@@ -51,9 +53,8 @@ void hanldler(){
 
 void pin_edge_handler(const uint32_t id, const uint32_t index)
 {
-	
-	
 	if ((id == ID_PIOA) && (index == Knapp)){
-void task_KNAPP(void *pvParameters);
+		void task_KNAPP(void *pvParameters);
+		puts("FÅR JAG ETT INTERRUPT DÅadasdasdasdasdasd?!!!!");
 	}
 }
