@@ -1,4 +1,4 @@
-/*
+/*,
  * task_motor.c
  *
  * Created: 2017-05-02 10:15:57
@@ -8,8 +8,10 @@
 
 #include "task_motor.h"
 #include "Motor/PID_Controller.h"
-
+#include "Motor/Motorfunctions.h"
 extern long sensordistance;
+int x_pos = 20;
+int x_dest = 25;
 
 void task_motor(void *pvParameters){
 	initMotor2();
@@ -19,12 +21,15 @@ void task_motor(void *pvParameters){
 	while (1)
 	{
 		puts("Task MOTORRRRRRR");
-		if(sensordistance<30){
+		if(sensordistance<30 || x_pos>x_dest){
 			moveForward1(1500,1500);
 			}else{
-			pidCompute(0);
+			//pidCompute(0);
+			P_regulator(2,2);	
+		//	stop(10);
 			//vTaskDelay(1000);
 		}
+				
 		vTaskDelayUntil(&xLastWakeTime,xTimeIncrement);
 	}
 }

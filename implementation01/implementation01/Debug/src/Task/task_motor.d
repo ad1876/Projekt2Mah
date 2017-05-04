@@ -150,7 +150,7 @@ src/Task/task_motor.d src/Task/task_motor.o: ../src/Task/task_motor.c \
  ../src/config/conf_uart_serial.h ../src/ASF/sam/drivers/tc/tc.h \
  ../src/ASF/sam/drivers/wdt/wdt.h \
  ../src/ASF/sam/drivers/pio/pio_handler.h ../src/Task/task_motor.h \
- ../src/Motor/PID_Controller.h
+ ../src/Motor/PID_Controller.h ../src/Motor/Motorfunctions.h
 
 ../src/asf.h:
 
@@ -467,3 +467,5 @@ c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu
 ../src/Task/task_motor.h:
 
 ../src/Motor/PID_Controller.h:
+
+../src/Motor/Motorfunctions.h:
