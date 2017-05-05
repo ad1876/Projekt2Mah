@@ -118,7 +118,7 @@ int main (void)
 		uint16_t x2 = 0;
 		uint16_t x3 = 0; //irrelevant
 		uint16_t x4 = 0; //irrelevant
-		n = x1+10;
+		n = x1;
 	while(1){	
 		str1[0] = rx[0];
 		str1[1] = rx[1];
@@ -147,7 +147,7 @@ int main (void)
 		ioport_set_pin_level(TESTPINOUT11,HIGH);
 	//	P_regulator(0);
 		//pidCompute(0);
-		P_regulator(n,x2);
+		P_regulator(200,x2);
 		delayMicroseconds(1000);
 		ioport_set_pin_level(TESTPINOUT11,LOW);
 		delayMicroseconds(500000);
