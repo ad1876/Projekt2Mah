@@ -6,6 +6,8 @@ src\ASF\common\utils\stdio\read.c
 
 src\ASF\sam\drivers\tc\tc.c
 
+src\Rotate.c
+
 src\Motorfunctions.c
 
 src\PID_Controller.c

@@ -14,6 +14,7 @@
 #include "conf_board.h"
 #include "Motorfunctions.h"
 #include "PID_Controller.h"
+#include "Rotate.h"
 //#define LED PIO_PB27_IDX
 
 #define LEFT PIO_PC4_IDX
@@ -83,7 +84,8 @@ int main (void)
 	while(1){	
 		ioport_set_pin_level(TESTPINOUT11,HIGH);
 	//	P_regulator(0);
-		pidCompute(0);
+		//pidCompute(0);
+		rotate(180);
 		delayMicroseconds(1000);
 		ioport_set_pin_level(TESTPINOUT11,LOW);
 		delayMicroseconds(500000);

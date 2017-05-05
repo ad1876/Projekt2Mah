@@ -493,6 +493,12 @@
     <Compile Include="src\ASF\sam\drivers\tc\tc.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\Rotate.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Rotate.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\Motorfunctions.c">
       <SubType>compile</SubType>
     </Compile>
