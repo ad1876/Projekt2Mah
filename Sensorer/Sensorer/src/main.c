@@ -49,7 +49,9 @@ void testSounSensor(void){
 }
 int main (void)
 {
-	
+	uint64_t *value;
+	uint64_t value1 = 64;
+	uint64_t value0 = 0x0000;
 	sysclk_init();
 	board_init();
 	ioport_init();
@@ -57,20 +59,37 @@ int main (void)
 	init_sensor();
 	configureConsole();
 	init_servo();
-	
 	ioport_set_pin_dir(LED,IOPORT_DIR_OUTPUT);
+	
+	
 			
 	//calculate_rut();
 		
-	uint64_t test = 0x0004000300020001;
+/*	uint64_t test = 0x0004000300020001;
 	struct allpositions coordinates;
 	coordinates.xpos1 = test;
 	coordinates.xpos2 = test;
 	coordinates.ypos1 = test;
 	coordinates.ypos2 = test;
 		
+		*/
+uint16_t *convertFrom64to16(uint64_t xy){
+/*	static uint16_t arrayData[8] = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
+	*(arrayData) = (data >> 16) & 0x00FF;
+	arrayData[1] = data & 0x00FF;
+	return arrayData;
+	*/
+uint16_t dataAll = 0x0000;
+dataAll = xy;
+dataAll = dataAll >> 64;
+
+return dataAll;
+
+}
 		
-		
+		value0 = convertFrom64to16(value1);
+		printf("value1:%02X\n", value1);
+		return 0;
 		
 	while (1)
 	{
@@ -93,3 +112,4 @@ int main (void)
 	}
 	
 }
+
