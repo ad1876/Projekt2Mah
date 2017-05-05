@@ -41,24 +41,53 @@
 
 #define TESTPINOUT11 PIO_PD7_IDX
 #define TESPININ12 PIO_PD8_IDX
+int n=0;
 
 
+uint8_t c_counter = 0;
+char rx[16];
 
 //int i=0;
 //int speed=1500;
+void USART1_Handler() {
+	CONF_UART->US_CR |= (1 << US_CR_RSTRX);
+	rx[c_counter++] = CONF_UART->US_RHR & US_RHR_RXCHR_Msk;
+	if (c_counter > 15)
+	{
+		c_counter = 0;
+	}
+	
+}
 
+void stringToInt(uint16_t *p_variable, char *p_string) {
+	*p_variable = (*p_string++ - '0') * 1000;
+	*p_variable = *p_variable + (*p_string++ - '0') * 100;
+	*p_variable = *p_variable + (*p_string++ - '0') * 10;
+	*p_variable = *p_variable + (*p_string - '0');
+}
 //int d=0;			//0=left, 1=right
 static void configure_console(void)
 /* Enables feedback through the USB-cable back to terminal within Atmel Studio */
 {
 	const usart_serial_options_t uart_serial_options = {
 		.baudrate = CONF_UART_BAUDRATE,
-		.paritytype = CONF_UART_PARITY
+		.paritytype = CONF_UART_PARITY,
+		.charlength = CONF_UART_CHAR_LENGTH,
+		.stopbits = CONF_UART_STOP_BITS
 	};
+	
 
 	/* Configure console UART. */
-	sysclk_enable_peripheral_clock(CONSOLE_UART_ID);
-	stdio_serial_init(CONF_UART, &uart_serial_options);
+	sysclk_enable_peripheral_clock(BOARD_USART1_BASE);
+	usart_serial_init(CONF_UART, &uart_serial_options);
+// 	const usart_serial_options_t uart_serial_options = {
+// 		.baudrate = CONF_UART_BAUDRATE,
+// 		.paritytype = CONF_UART_PARITY
+// 	};
+// 
+// 	/* Configure console UART. */
+// 	sysclk_enable_peripheral_clock(CONSOLE_UART_ID);
+// 	stdio_serial_init(CONF_UART, &uart_serial_options);
 }
 int main (void)
 {
@@ -81,11 +110,44 @@ int main (void)
 		ioport_set_pin_dir(TESPININ12,IOPORT_DIR_INPUT);
 		ioport_set_pin_level(TESTPINOUT11,HIGH);
 	//	int counter =0;*/
+		char str1[4];
+		char str2[4];
+		char str3[4];
+		char str4[4];
+		uint16_t x1 = 0;
+		uint16_t x2 = 0;
+		uint16_t x3 = 0; //irrelevant
+		uint16_t x4 = 0; //irrelevant
+		n = x1+10;
 	while(1){	
+		str1[0] = rx[0];
+		str1[1] = rx[1];
+		str1[2] = rx[2];
+		str1[3] = rx[3];
+		
+		str2[0] = rx[4];
+		str2[1] = rx[5];
+		str2[2] = rx[6];
+		str2[3] = rx[7];
+		
+		str3[0] = rx[8];
+		str3[1] = rx[9];
+		str3[2] = rx[10];
+		str3[3] = rx[11];
+		
+		str4[0] = rx[12];
+		str4[1] = rx[13];
+		str4[2] = rx[14];
+		str4[3] = rx[15];
+		
+		stringToInt(&x1, str1);
+		stringToInt(&x2, str2);
+		stringToInt(&x3, str3);
+		stringToInt(&x4, str4);
 		ioport_set_pin_level(TESTPINOUT11,HIGH);
 	//	P_regulator(0);
 		//pidCompute(0);
-		rotate(180);
+		P_regulator(n,x2);
 		delayMicroseconds(1000);
 		ioport_set_pin_level(TESTPINOUT11,LOW);
 		delayMicroseconds(500000);

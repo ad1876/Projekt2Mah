@@ -74,7 +74,7 @@ void P_regulator(int b,int u)
 				r_speed=speed-(e*Kp);
 				l_speed=speed+(e*Kp);
 				moveForward(l_speed,r_speed);
-				//delayMicroseconds(1000000);
+				
 			}
 			else if (e<0){		
 						
@@ -85,7 +85,7 @@ void P_regulator(int b,int u)
 			else{
 				moveForward(l_speed,r_speed);
 			}
-
+			delayMicroseconds(500000);
 	//moveForward(l_speed,r_speed);
 
 	ioport_set_pin_level(R_RESET,LOW);

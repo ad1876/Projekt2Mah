@@ -94,8 +94,8 @@ SUBDIRS :=  \
 C_SRCS +=  \
 ../src/ASF/common/utils/stdio/read.c \
 ../src/ASF/sam/drivers/tc/tc.c \
-../src/Rotate.c \
 ../src/Motorfunctions.c \
+../src/Rotate.c \
 ../src/PID_Controller.c \
 ../src/ASF/sam/drivers/usart/usart.c \
 ../src/ASF/common/utils/stdio/write.c \
@@ -127,8 +127,8 @@ ASM_SRCS +=
 OBJS +=  \
 src/ASF/common/utils/stdio/read.o \
 src/ASF/sam/drivers/tc/tc.o \
-src/Rotate.o \
 src/Motorfunctions.o \
+src/Rotate.o \
 src/PID_Controller.o \
 src/ASF/sam/drivers/usart/usart.o \
 src/ASF/common/utils/stdio/write.o \
@@ -153,8 +153,8 @@ src/main.o
 OBJS_AS_ARGS +=  \
 src/ASF/common/utils/stdio/read.o \
 src/ASF/sam/drivers/tc/tc.o \
-src/Rotate.o \
 src/Motorfunctions.o \
+src/Rotate.o \
 src/PID_Controller.o \
 src/ASF/sam/drivers/usart/usart.o \
 src/ASF/common/utils/stdio/write.o \
@@ -179,8 +179,8 @@ src/main.o
 C_DEPS +=  \
 src/ASF/common/utils/stdio/read.d \
 src/ASF/sam/drivers/tc/tc.d \
-src/Rotate.d \
 src/Motorfunctions.d \
+src/Rotate.d \
 src/PID_Controller.d \
 src/ASF/sam/drivers/usart/usart.d \
 src/ASF/common/utils/stdio/write.d \
@@ -205,8 +205,8 @@ src/main.d
 C_DEPS_AS_ARGS +=  \
 src/ASF/common/utils/stdio/read.d \
 src/ASF/sam/drivers/tc/tc.d \
-src/Rotate.d \
 src/Motorfunctions.d \
+src/Rotate.d \
 src/PID_Controller.d \
 src/ASF/sam/drivers/usart/usart.d \
 src/ASF/common/utils/stdio/write.d \
