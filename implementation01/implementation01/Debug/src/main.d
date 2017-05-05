@@ -152,7 +152,7 @@ src/main.d src/main.o: ../src/main.c ../src/asf.h \
  ../src/ASF/sam/drivers/pio/pio_handler.h ../src/Configs/DelayFunctions.h \
  ../src/Sensor/soundSensor.h ../src/Motor/PID_Controller.h \
  ../src/Task/task_soundsensor.h ../src/Task/task_blink.h \
- ../src/Task/task_motor.h
+ ../src/Task/task_motor.h ../src/StateM/stateMachine.h
 
 ../src/asf.h:
 
@@ -477,3 +477,5 @@ c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu
 ../src/Task/task_blink.h:
 
 ../src/Task/task_motor.h:
+
+../src/StateM/stateMachine.h:

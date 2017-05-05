@@ -539,6 +539,7 @@
     <Folder Include="src\config\" />
     <Folder Include="src\Motor" />
     <Folder Include="src\Configs" />
+    <Folder Include="src\StateM" />
     <Folder Include="src\Task" />
     <Folder Include="src\Sensor" />
   </ItemGroup>
@@ -571,6 +572,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\Sensor\soundSensor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\StateM\stateMachine.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\StateM\stateMachine.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\Task\task_blink.c">

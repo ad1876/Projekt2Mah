@@ -38,6 +38,7 @@
 #include "Task/task_soundsensor.h"
 #include "Task/task_blink.h"
 #include "Task/task_motor.h"
+#include "StateM/stateMachine.h"
 
 static void configure_console(void)
 /* Enables feedback through the USB-cable back to terminal within Atmel Studio */

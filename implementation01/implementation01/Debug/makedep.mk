@@ -12,6 +12,8 @@ src\Motor\PID_Controller.c
 
 src\Sensor\soundSensor.c
 
+src\StateM\stateMachine.c
+
 src\Task\task_blink.c
 
 src\Task\task_motor.c

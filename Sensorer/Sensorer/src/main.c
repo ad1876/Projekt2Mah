@@ -62,6 +62,16 @@ int main (void)
 			
 	//calculate_rut();
 		
+	uint64_t test = 0x0004000300020001;
+	struct allpositions coordinates;
+	coordinates.xpos1 = test;
+	coordinates.xpos2 = test;
+	coordinates.ypos1 = test;
+	coordinates.ypos2 = test;
+		
+		
+		
+		
 	while (1)
 	{
 		int sensorValue = 10;

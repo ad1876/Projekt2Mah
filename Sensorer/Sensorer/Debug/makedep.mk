@@ -2,6 +2,10 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
+src\ASF\sam\drivers\twi\twi.c
+
+src\Twi\Twifunctions.c
+
 src\ASF\common\services\delay\sam\cycle_counter.c
 
 src\ASF\common\services\serial\usart_serial.c
@@ -25,6 +29,8 @@ src\ConsoleFunctions.c
 src\DelayFunctions.c
 
 src\Navigation\Navi.c
+
+src\Sensor\Kompass.c
 
 src\Sensor\Servo.c
 
