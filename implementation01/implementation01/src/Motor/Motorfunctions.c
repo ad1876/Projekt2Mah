@@ -65,50 +65,29 @@ void initMotor(void){
 void P_regulator(int b,int u)
 {
 	
-/*	r_count = ioport_get_pin_level(R0)+ioport_get_pin_level(R1)*2+ioport_get_pin_level(R2)*4+ioport_get_pin_level(R3)*8
-	+ioport_get_pin_level(R4)*16+ioport_get_pin_level(R5)*32;   
-	ioport_set_pin_level(R_RESET,HIGH);	                                                          //hämta input värde frå pinnarna
-	l_count = ioport_get_pin_level(L0)+ioport_get_pin_level(L1)*2+ioport_get_pin_level(L2)*4+ioport_get_pin_level(L3)*8
-	+ioport_get_pin_level(L4)*16+ioport_get_pin_level(L5)*32;
-	ioport_set_pin_level(L_RESET,HIGH);	*/
 
-	//char str[20];
-	//sprintf(str,"högerhjul: %d\n",r_count);
-	//printf (str);
 	r_speed=speed;
 	l_speed=speed;
-			int e = b - u;
+			int e = b - u; //Felvärde = Börvärde - ärvärde
 			if(e > 0) {
 
-			r_speed=speed-(e*Kp);
-			l_speed=speed+(e*Kp);
+				r_speed=speed-(e*Kp);
+				l_speed=speed+(e*Kp);
+				moveForward(l_speed,r_speed);
 				//delayMicroseconds(1000000);
 			}
-			else if (e<0)
-			{				
-					r_speed=speed+(e*Kp);
-					l_speed=speed-(e*Kp);
+			else if (e<0){		
+						
+				r_speed=speed+(e*Kp);
+				l_speed=speed-(e*Kp);
+				moveForward(l_speed,r_speed);
 			}
-/*	int e = b-(r_count - l_count); //räkna felvärde
-	//int e = b-u;
-	
-		if(e>0){
-		r_speed=speed+(e*Kp);
-		l_speed=speed-(e*Kp);
-	}else if (e<0)
-	{
-		r_speed=speed-(e*Kp);
-		l_speed=speed+(e*Kp);
-	}*/
+			else{
+				moveForward(l_speed,r_speed);
+			}
 
-	//sprintf(str,"felvärde: %d\n",e);
-	//printf (str);
-	moveForward(l_speed,r_speed);
-	//delayMicroseconds(500000);
-	//sprintf(str,"r-speed: %d\n",r_speed);
-	//printf (str);
-	//sprintf(str,"l-speed: %d\n",l_speed);
-	//printf (str);
+	//moveForward(l_speed,r_speed);
+
 	ioport_set_pin_level(R_RESET,LOW);
 	ioport_set_pin_level(L_RESET,LOW);
 }

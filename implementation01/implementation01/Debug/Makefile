@@ -113,6 +113,7 @@ C_SRCS +=  \
 ../src/Configs/DelayFunctions.c \
 ../src/Motor/Motorfunctions.c \
 ../src/Motor/PID_Controller.c \
+../src/Motor/Rotate.c \
 ../src/Sensor/soundSensor.c \
 ../src/StateM/stateMachine.c \
 ../src/Task/task_blink.c \
@@ -158,6 +159,7 @@ src/ASF/sam/drivers/wdt/wdt.o \
 src/Configs/DelayFunctions.o \
 src/Motor/Motorfunctions.o \
 src/Motor/PID_Controller.o \
+src/Motor/Rotate.o \
 src/Sensor/soundSensor.o \
 src/StateM/stateMachine.o \
 src/Task/task_blink.o \
@@ -196,6 +198,7 @@ src/ASF/sam/drivers/wdt/wdt.o \
 src/Configs/DelayFunctions.o \
 src/Motor/Motorfunctions.o \
 src/Motor/PID_Controller.o \
+src/Motor/Rotate.o \
 src/Sensor/soundSensor.o \
 src/StateM/stateMachine.o \
 src/Task/task_blink.o \
@@ -234,6 +237,7 @@ src/ASF/sam/drivers/wdt/wdt.d \
 src/Configs/DelayFunctions.d \
 src/Motor/Motorfunctions.d \
 src/Motor/PID_Controller.d \
+src/Motor/Rotate.d \
 src/Sensor/soundSensor.d \
 src/StateM/stateMachine.d \
 src/Task/task_blink.d \
@@ -272,6 +276,7 @@ src/ASF/sam/drivers/wdt/wdt.d \
 src/Configs/DelayFunctions.d \
 src/Motor/Motorfunctions.d \
 src/Motor/PID_Controller.d \
+src/Motor/Rotate.d \
 src/Sensor/soundSensor.d \
 src/StateM/stateMachine.d \
 src/Task/task_blink.d \
@@ -320,6 +325,8 @@ LINKER_SCRIPT_DEP+=  \
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 

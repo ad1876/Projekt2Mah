@@ -10,6 +10,8 @@ src\Motor\Motorfunctions.c
 
 src\Motor\PID_Controller.c
 
+src\Motor\Rotate.c
+
 src\Sensor\soundSensor.c
 
 src\StateM\stateMachine.c
