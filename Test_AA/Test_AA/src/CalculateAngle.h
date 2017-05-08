@@ -6,8 +6,8 @@
  */ 
 
 
-#ifndef INCFILE1_H_
-#define INCFILE1_H_
+#ifndef CALCULATEANGLE_H_
+#define CALCULATEANGLE_H_
 
 int getX_diff(int pos, int dest);
 int getY_diff(int pos, int dest);

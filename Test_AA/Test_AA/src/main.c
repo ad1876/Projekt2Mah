@@ -7,15 +7,18 @@
  */
 
 
- 
+
 #include <asf.h>
 #include <ioport.h>
+#include <stdio.h>
 
-#include "CalculateAngle.h"
+
 #include "DelayFunctions.h"
+#include "CalculateAngle.h"
 #include "Regulator.h"
 #include "Motorfunctions.h"
 #include "Rotate.h"
+
 
 int n = 0;
 int x_diff = 0;
@@ -36,13 +39,23 @@ int main (void)
 	
 	
 	
-	while(n=0){
+	while(1){
+		
+		
 		x_diff = getX_diff(100,200);
 		y_diff = getY_diff(100,200);
 		angle = calculateAngle(x_diff,y_diff);
-		
 		rotate(angle);
 		n=1;
+		delayMicroseconds(500000);
+		
+		
+		x_diff = getX_diff(100,200);
+		y_diff = getY_diff(100,200);
+		angle = calculateAngle(x_diff,y_diff);
+		rotate(angle);
+		n=0;
+		delayMicroseconds(500000);
 	}
 	
 	

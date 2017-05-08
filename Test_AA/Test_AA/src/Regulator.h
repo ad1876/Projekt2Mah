@@ -6,8 +6,8 @@
  */ 
 
 
-#ifndef INCFILE1_H_
-#define INCFILE1_H_
+#ifndef REGULATOR_H_
+#define REGULATOR_H_
 
 void initRegulator(void);
 void P_regulator(int b,int u);

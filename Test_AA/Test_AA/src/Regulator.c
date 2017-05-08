@@ -24,6 +24,7 @@ int l_speed=0;
 
 
 void initRegulator(void){
+	
 			ioport_set_pin_dir(R_RESET,IOPORT_DIR_OUTPUT);
 			ioport_set_pin_dir(L_RESET,IOPORT_DIR_OUTPUT);
 }

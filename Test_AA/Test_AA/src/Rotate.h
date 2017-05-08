@@ -6,8 +6,8 @@
  */
 
 
-#ifndef INCFILE1_H_
-#define INCFILE1_H_
+#ifndef ROTATE_H_
+#define ROTATE_H_
 
 void rotate(int d);
 void initRotateMotor(void);
