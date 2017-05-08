@@ -29,5 +29,9 @@ int calculateAngle(int mot, int nar){				//mot = motstående, nar = närliggande
 	
 	int angle = atan(mot/nar) * (180/M_PI);
 	
+	char str[20];
+	sprintf(str,"Angle: %d\n",angle);
+	printf (str);
+	
 	return angle;
 }

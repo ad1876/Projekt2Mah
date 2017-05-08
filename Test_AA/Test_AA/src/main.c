@@ -20,10 +20,25 @@
 #include "Rotate.h"
 
 
-int n = 0;
+//int n = 0;
 int x_diff = 0;
 int y_diff = 0;
 int angle = 0;
+
+static void configure_console(void)
+{
+	const usart_serial_options_t uart_serial_options = {
+		.baudrate = CONF_UART_BAUDRATE,
+		.paritytype = CONF_UART_PARITY
+	};
+	/* Configure console UART. */
+	sysclk_enable_peripheral_clock(CONSOLE_UART_ID);
+	stdio_serial_init(CONF_UART, &uart_serial_options);
+	printf("Konsolen reado\n");
+	printf("===============\n");
+	printf("-- %s\n\r", BOARD_NAME);
+	printf("-- Compiled: %s %s --\n\r", __DATE__, __TIME__);
+}
 
 int main (void)
 {
@@ -35,29 +50,42 @@ int main (void)
 	initRegulator();
 	initMotor();
 	initRotateMotor();
+	configure_console();
 	
-	
+	char str[20];
+	sprintf(str,"Main while");
+	printf (str);
 	
 	
 	while(1){
 		
-		rotate(180);
-		delayMicroseconds(500000);
+// 		rotate(180);
+// 		delayMicroseconds(500000);
 		
-		x_diff = getX_diff(100,200);
-		y_diff = getY_diff(100,200);
-		angle = calculateAngle(100,100);
-		rotate(angle);
-		n=1;
-		delayMicroseconds(500000);
+// 		char str[20];
+// 		sprintf(str,"Main while");
+// 		printf (str);
 		
 		
-		x_diff = getX_diff(100,200);
+		x_diff = getX_diff(300,200);
 		y_diff = getY_diff(100,200);
 		angle = calculateAngle(x_diff,y_diff);
 		rotate(angle);
-		n=0;
+		//n=1;
 		delayMicroseconds(500000);
+		
+		sprintf(str,"efter första delay");
+		printf (str);
+		
+// 		x_diff = getX_diff(100,200);
+// 		y_diff = getY_diff(100,200);
+// 		angle = calculateAngle(x_diff,y_diff);
+// 		rotate(angle);
+// 		//n=0;
+// 		delayMicroseconds(500000);
+// 		
+// 		sprintf(str,"efter andra delay");
+// 		printf (str);
 	}
 	
 	

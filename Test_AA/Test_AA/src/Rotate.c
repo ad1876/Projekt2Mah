@@ -13,9 +13,7 @@
 #include "Motorfunctions.h"
 
 
-int r_count = 0;
-int l_count = 0;
-int count = 0;
+
 
 
 //högra räknare
@@ -36,6 +34,9 @@ int count = 0;
 #define L_RESET PIO_PA14_IDX
 
 
+int r_count = 0;
+int l_count = 0;
+
 void initRotateMotor(void){
     ioport_set_pin_dir(R_RESET,IOPORT_DIR_OUTPUT);
     ioport_set_pin_dir(L_RESET,IOPORT_DIR_OUTPUT);
@@ -51,9 +52,9 @@ void initRotateMotor(void){
     ioport_set_pin_dir(L3,IOPORT_DIR_INPUT);
     ioport_set_pin_dir(L4,IOPORT_DIR_INPUT);
     ioport_set_pin_dir(L5,IOPORT_DIR_INPUT);
-   
-    ioport_set_pin_level(L_RESET,HIGH);
-    ioport_set_pin_level(R_RESET,HIGH);
+
+	  
+    
 }
 
 void rotate(int d){
@@ -63,33 +64,44 @@ void rotate(int d){
     sprintf(str,"början: %d\n",ticks);
     printf (str);
    
+	ioport_set_pin_level(L_RESET,LOW);
+	ioport_set_pin_level(R_RESET,LOW);
    
     if(ticks>0){                    //Positivt ticks svänger höger
         while(l_count < abs(ticks)){
            
+			
             l_count = ioport_get_pin_level(L0)+ioport_get_pin_level(L1)*2+ioport_get_pin_level(L2)*4+ioport_get_pin_level(L3)*8
             +ioport_get_pin_level(L4)*16+ioport_get_pin_level(L5)*32;
-            //ioport_set_pin_level(L_RESET,HIGH);   
+            //ioport_set_pin_level(L_RESET,HIGH); 
            
             moveForward(1600,1400);
 
-            sprintf(str,"höger: %d\n",l_count);
+            sprintf(str,"åt höger: %d\n",l_count);
             printf (str);
         }
         moveForward(1500,1500);
+		
     }
     else if(ticks<0){                //Negativt ticks svänger vänster
         while(r_count < abs(ticks)){
-           
+			
+			
             r_count = ioport_get_pin_level(R0)+ioport_get_pin_level(R1)*2+ioport_get_pin_level(R2)*4+ioport_get_pin_level(R3)*8
             +ioport_get_pin_level(R4)*16+ioport_get_pin_level(R5)*32;
-            //ioport_set_pin_level(R_RESET,HIGH);           
+            //ioport_set_pin_level(R_RESET,HIGH);   
             
             moveForward(1400,1600);
-            sprintf(str,"vänster: %d\n",r_count);
+            sprintf(str,"åt vänster: %d\n",r_count);
             printf (str);
         }
         moveForward(1500,1500);
+		
     }
-    count=0;
+	l_count = 0;
+	r_count = 0;
+	
+	ioport_set_pin_level(L_RESET,HIGH);
+	ioport_set_pin_level(R_RESET,HIGH);	
+	
 }
