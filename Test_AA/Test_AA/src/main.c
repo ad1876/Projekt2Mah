@@ -20,7 +20,7 @@
 #include "Rotate.h"
 
 
-//int n = 0;
+
 int x_diff = 0;
 int y_diff = 0;
 int angle = 0;
@@ -67,25 +67,17 @@ int main (void)
 // 		printf (str);
 		
 		
-		x_diff = getX_diff(300,200);
-		y_diff = getY_diff(100,200);
+		
+		
+		x_diff = getX_diff(200,400);
+		y_diff = getY_diff(200,100);
 		angle = calculateAngle(x_diff,y_diff);
 		rotate(angle);
-		//n=1;
+		
 		delayMicroseconds(500000);
+
 		
-		sprintf(str,"efter första delay");
-		printf (str);
-		
-// 		x_diff = getX_diff(100,200);
-// 		y_diff = getY_diff(100,200);
-// 		angle = calculateAngle(x_diff,y_diff);
-// 		rotate(angle);
-// 		//n=0;
-// 		delayMicroseconds(500000);
-// 		
-// 		sprintf(str,"efter andra delay");
-// 		printf (str);
+
 	}
 	
 	

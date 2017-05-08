@@ -10,14 +10,14 @@
 #include <stdio.h>
 #include <math.h>
 
-int getX_diff(int pos, int dest){					//pos = current x position, dest = destination
+int getX_diff(int dest, int pos){					//pos = current x position, dest = destination
 	
 	int diffx = dest - pos;
 	
 	return diffx;
 }
 
-int getY_diff(int pos, int dest){					//pos = current y position, dest = destination
+int getY_diff(int dest, int pos){					//pos = current y position, dest = destination
 	
 	int diffy = dest - pos;
 	

@@ -57,7 +57,7 @@ void initRotateMotor(void){
     
 }
 
-void rotate(int d){
+void rotate(int d){					//Minimum d is 4
     int ticks = d * 0.25;
 
     char str[20];

@@ -5,7 +5,8 @@
  *  Author: André Ahlbertz
  */ 
 
-
+#include "Regulator.h"
+#include "Motorfunctions.h"
 
 #define X1 300
 #define Y1 300
@@ -19,3 +20,14 @@
 
 
 
+void driveTo(int x, int y){
+	
+	
+	while(){
+		
+		
+		P_regulator()
+	}
+		
+	
+}
