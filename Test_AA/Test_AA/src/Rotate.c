@@ -13,9 +13,6 @@
 #include "Motorfunctions.h"
 
 
-#define LEFT PIO_PC4_IDX
-#define RIGHT PIO_PC5_IDX
-
 int r_count = 0;
 int l_count = 0;
 int count = 0;
@@ -40,8 +37,6 @@ int count = 0;
 
 
 void initRotateMotor(void){
-    ioport_set_pin_dir(LEFT,IOPORT_DIR_OUTPUT);
-    ioport_set_pin_dir(RIGHT,IOPORT_DIR_OUTPUT);
     ioport_set_pin_dir(R_RESET,IOPORT_DIR_OUTPUT);
     ioport_set_pin_dir(L_RESET,IOPORT_DIR_OUTPUT);
     ioport_set_pin_dir(R0,IOPORT_DIR_INPUT);

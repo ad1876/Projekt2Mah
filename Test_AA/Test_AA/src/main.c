@@ -41,10 +41,12 @@ int main (void)
 	
 	while(1){
 		
+		rotate(180);
+		delayMicroseconds(500000);
 		
 		x_diff = getX_diff(100,200);
 		y_diff = getY_diff(100,200);
-		angle = calculateAngle(x_diff,y_diff);
+		angle = calculateAngle(100,100);
 		rotate(angle);
 		n=1;
 		delayMicroseconds(500000);
