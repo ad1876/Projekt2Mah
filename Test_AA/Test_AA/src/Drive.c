@@ -57,8 +57,8 @@ void testStuff(void){
 	
 	ioport_set_pin_level(R_RESET,LOW);
 	
-	while(newcount < 360){
-		moveForward(1600,1600);
+	while(newcount < 3600){
+		moveForward(1400,1600);
 		
 		count = ioport_get_pin_level(R0)+ioport_get_pin_level(R1)*2+ioport_get_pin_level(R2)*4+ioport_get_pin_level(R3)*8
 		+ioport_get_pin_level(R4)*16+ioport_get_pin_level(R5)*32;

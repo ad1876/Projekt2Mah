@@ -8075,7 +8075,7 @@ OUTPUT(Test_AA.elf elf32-littlearm)
  .debug_macro   0x00019657      0x120 src/ASF/sam/utils/syscalls/gcc/syscalls.o
  .debug_macro   0x00019777      0x652 src/main.o
 
-.debug_line     0x00000000    0x12cda
+.debug_line     0x00000000    0x12cdb
  .debug_line    0x00000000      0xd1b src/ASF/common/services/serial/usart_serial.o
  .debug_line    0x00000d1b      0xad9 src/ASF/common/utils/stdio/read.o
  .debug_line    0x000017f4      0xacf src/ASF/common/utils/stdio/write.o
@@ -8083,22 +8083,22 @@ OUTPUT(Test_AA.elf elf32-littlearm)
  .debug_line    0x00002f3d      0xc8f src/ASF/sam/drivers/uart/uart.o
  .debug_line    0x00003bcc     0x11a9 src/ASF/sam/drivers/usart/usart.o
  .debug_line    0x00004d75     0x108b src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.o
- .debug_line    0x00005e00      0xf5f src/Drive.o
- .debug_line    0x00006d5f      0xf0f src/Regulator.o
- .debug_line    0x00007c6e      0xeca src/DelayFunctions.o
- .debug_line    0x00008b38      0xf2c src/Motorfunctions.o
- .debug_line    0x00009a64      0xfd5 src/Rotate.o
- .debug_line    0x0000aa39      0xc48 src/ASF/common/services/clock/sam3x/sysclk.o
- .debug_line    0x0000b681      0xaf4 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
- .debug_line    0x0000c175      0xcda src/ASF/sam/boards/arduino_due_x/init.o
- .debug_line    0x0000ce4f      0xe42 src/ASF/sam/drivers/pio/pio.o
- .debug_line    0x0000dc91      0xb8d src/ASF/sam/drivers/pio/pio_handler.o
- .debug_line    0x0000e81e     0x1047 src/ASF/sam/drivers/pmc/pmc.o
- .debug_line    0x0000f865      0xab5 src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
- .debug_line    0x0001031a      0xb05 src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
- .debug_line    0x00010e1f      0xb22 src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
- .debug_line    0x00011941      0x39b src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_line    0x00011cdc      0xffe src/main.o
+ .debug_line    0x00005e00      0xf60 src/Drive.o
+ .debug_line    0x00006d60      0xf0f src/Regulator.o
+ .debug_line    0x00007c6f      0xeca src/DelayFunctions.o
+ .debug_line    0x00008b39      0xf2c src/Motorfunctions.o
+ .debug_line    0x00009a65      0xfd5 src/Rotate.o
+ .debug_line    0x0000aa3a      0xc48 src/ASF/common/services/clock/sam3x/sysclk.o
+ .debug_line    0x0000b682      0xaf4 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
+ .debug_line    0x0000c176      0xcda src/ASF/sam/boards/arduino_due_x/init.o
+ .debug_line    0x0000ce50      0xe42 src/ASF/sam/drivers/pio/pio.o
+ .debug_line    0x0000dc92      0xb8d src/ASF/sam/drivers/pio/pio_handler.o
+ .debug_line    0x0000e81f     0x1047 src/ASF/sam/drivers/pmc/pmc.o
+ .debug_line    0x0000f866      0xab5 src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
+ .debug_line    0x0001031b      0xb05 src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
+ .debug_line    0x00010e20      0xb22 src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
+ .debug_line    0x00011942      0x39b src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_line    0x00011cdd      0xffe src/main.o
 
 .debug_str      0x00000000    0x633ee
  .debug_str     0x00000000    0x5e0f5 src/ASF/common/services/serial/usart_serial.o

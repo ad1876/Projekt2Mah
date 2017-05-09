@@ -29,9 +29,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  12 .debug_macro  00019dc9  00000000  00000000  0002b116  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_line   00012cda  00000000  00000000  00044edf  2**0
+ 13 .debug_line   00012cdb  00000000  00000000  00044edf  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_str    000633ee  00000000  00000000  00057bb9  2**0
+ 14 .debug_str    000633ee  00000000  00000000  00057bba  2**0
                   CONTENTS, READONLY, DEBUGGING
  15 .debug_frame  000021b8  00000000  00000000  000bafa8  2**2
                   CONTENTS, READONLY, DEBUGGING
@@ -926,61 +926,60 @@ __always_inline static bool arch_ioport_get_pin_level(ioport_pin_t pin)
 	
 	ioport_set_pin_level(R_RESET,LOW);
 	
-	while(newcount < 360){
-		moveForward(1600,1600);
-   8042c:	f44f 60c8 	mov.w	r0, #1600	; 0x640
-   80430:	4601      	mov	r1, r0
-   80432:	4b19      	ldr	r3, [pc, #100]	; (80498 <testStuff+0x80>)
-   80434:	4798      	blx	r3
-   80436:	f8d7 803c 	ldr.w	r8, [r7, #60]	; 0x3c
-   8043a:	f8d4 c03c 	ldr.w	ip, [r4, #60]	; 0x3c
-   8043e:	6be0      	ldr	r0, [r4, #60]	; 0x3c
-   80440:	6be1      	ldr	r1, [r4, #60]	; 0x3c
-   80442:	6be2      	ldr	r2, [r4, #60]	; 0x3c
-   80444:	6bf3      	ldr	r3, [r6, #60]	; 0x3c
-   80446:	f3c8 38c0 	ubfx	r8, r8, #15, #1
-   8044a:	f3cc 0c40 	ubfx	ip, ip, #1, #1
+	while(newcount < 3600){
+		moveForward(1400,1600);
+   8042c:	f44f 60af 	mov.w	r0, #1400	; 0x578
+   80430:	f44f 61c8 	mov.w	r1, #1600	; 0x640
+   80434:	4b18      	ldr	r3, [pc, #96]	; (80498 <testStuff+0x80>)
+   80436:	4798      	blx	r3
+   80438:	f8d7 803c 	ldr.w	r8, [r7, #60]	; 0x3c
+   8043c:	f8d4 c03c 	ldr.w	ip, [r4, #60]	; 0x3c
+   80440:	6be0      	ldr	r0, [r4, #60]	; 0x3c
+   80442:	6be1      	ldr	r1, [r4, #60]	; 0x3c
+   80444:	6be2      	ldr	r2, [r4, #60]	; 0x3c
+   80446:	6bf3      	ldr	r3, [r6, #60]	; 0x3c
+   80448:	f3c8 38c0 	ubfx	r8, r8, #15, #1
+   8044c:	f3cc 0c40 	ubfx	ip, ip, #1, #1
 		
 		count = ioport_get_pin_level(R0)+ioport_get_pin_level(R1)*2+ioport_get_pin_level(R2)*4+ioport_get_pin_level(R3)*8
-   8044e:	eb08 0c4c 	add.w	ip, r8, ip, lsl #1
-   80452:	f3c0 00c0 	ubfx	r0, r0, #3, #1
-   80456:	eb0c 0080 	add.w	r0, ip, r0, lsl #2
-   8045a:	f3c1 2140 	ubfx	r1, r1, #9, #1
-   8045e:	eb00 01c1 	add.w	r1, r0, r1, lsl #3
-   80462:	f3c2 2280 	ubfx	r2, r2, #10, #1
+   80450:	eb08 0c4c 	add.w	ip, r8, ip, lsl #1
+   80454:	f3c0 00c0 	ubfx	r0, r0, #3, #1
+   80458:	eb0c 0080 	add.w	r0, ip, r0, lsl #2
+   8045c:	f3c1 2140 	ubfx	r1, r1, #9, #1
+   80460:	eb00 01c1 	add.w	r1, r0, r1, lsl #3
+   80464:	f3c2 2280 	ubfx	r2, r2, #10, #1
 		+ioport_get_pin_level(R4)*16+ioport_get_pin_level(R5)*32;
-   80466:	eb01 1202 	add.w	r2, r1, r2, lsl #4
-   8046a:	f3c3 0380 	ubfx	r3, r3, #2, #1
+   80468:	eb01 1202 	add.w	r2, r1, r2, lsl #4
+   8046c:	f3c3 0380 	ubfx	r3, r3, #2, #1
 	ioport_set_pin_level(R_RESET,LOW);
 	
-	while(newcount < 360){
-		moveForward(1600,1600);
+	while(newcount < 3600){
+		moveForward(1400,1600);
 		
 		count = ioport_get_pin_level(R0)+ioport_get_pin_level(R1)*2+ioport_get_pin_level(R2)*4+ioport_get_pin_level(R3)*8
-   8046e:	eb02 1343 	add.w	r3, r2, r3, lsl #5
+   80470:	eb02 1343 	add.w	r3, r2, r3, lsl #5
 		+ioport_get_pin_level(R4)*16+ioport_get_pin_level(R5)*32;
 		
 		newcount = newcount + count;
-   80472:	441d      	add	r5, r3
+   80474:	441d      	add	r5, r3
 	
 	
 	
 	ioport_set_pin_level(R_RESET,LOW);
 	
-	while(newcount < 360){
-   80474:	f5b5 7fb4 	cmp.w	r5, #360	; 0x168
-   80478:	dbd8      	blt.n	8042c <testStuff+0x14>
+	while(newcount < 3600){
+   80476:	f5b5 6f61 	cmp.w	r5, #3600	; 0xe10
+   8047a:	dbd7      	blt.n	8042c <testStuff+0x14>
 		bool level)
 {
 	Pio *base = arch_ioport_pin_to_base(pin);
 
 	if (level) {
 		base->PIO_SODR = arch_ioport_pin_to_mask(pin);
-   8047a:	f04f 6280 	mov.w	r2, #67108864	; 0x4000000
-   8047e:	4b02      	ldr	r3, [pc, #8]	; (80488 <testStuff+0x70>)
-   80480:	631a      	str	r2, [r3, #48]	; 0x30
-   80482:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
-   80486:	bf00      	nop
+   8047c:	f04f 6280 	mov.w	r2, #67108864	; 0x4000000
+   80480:	4b01      	ldr	r3, [pc, #4]	; (80488 <testStuff+0x70>)
+   80482:	631a      	str	r2, [r3, #48]	; 0x30
+   80484:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
    80488:	400e1000 	.word	0x400e1000
    8048c:	400e0e00 	.word	0x400e0e00
    80490:	400e1400 	.word	0x400e1400
