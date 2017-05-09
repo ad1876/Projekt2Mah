@@ -71,7 +71,7 @@ void initDrive(void){
 // 		
 // }
 
-void driveTo(int obj){
+void driveTo(int obj, uint16_t x, uint16_t y){
 	
 	int newcount = 0;
 	int r_count = 0;
@@ -85,6 +85,7 @@ void driveTo(int obj){
 		ioport_set_pin_level(R_RESET,LOW);
 		ioport_set_pin_level(L_RESET,LOW);
 		
+		delayMicroseconds(500000);
 		
 		r_count = ioport_get_pin_level(R0)+ioport_get_pin_level(R1)*2+ioport_get_pin_level(R2)*4+ioport_get_pin_level(R3)*8
 		+ioport_get_pin_level(R4)*16+ioport_get_pin_level(R5)*32;
@@ -99,7 +100,7 @@ void driveTo(int obj){
 		
 		P_regulator(0,disp);
 		
-		delayMicroseconds(500000);
+		//delayMicroseconds(400000);
 
 		newcount = newcount + r_count;
 		
@@ -109,6 +110,9 @@ void driveTo(int obj){
 
 		sprintf(str,"\nVänster: %d",l_count);
 		printf (str);
+		
+		sprintf(str,"\nTotal: %d",newcount);
+		printf (str);
 	 
 		r_count = 0;
 		l_count = 0;
@@ -117,9 +121,9 @@ void driveTo(int obj){
 		ioport_set_pin_level(L_RESET,HIGH);
 	}
 	
-	char str[20];
-	sprintf(str,"\nTotal: %d",newcount);
-	printf (str);
+// 	char str[20];
+// 	sprintf(str,"\nTotal: %d",newcount);
+// 	printf (str);
 	
 	newcount = 0;
 	moveForward(1500,1500);

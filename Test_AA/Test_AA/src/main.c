@@ -93,20 +93,22 @@ int main (void)
 		switch (n)
 		{
 		case 0:
-			rotate(-90);
+			driveTo(50, 0, 0);
 		case 1:
-			driveTo(50);
+			rotate(-90);
 			break;
 		case 2:
-			rotate(-90);
+			driveTo(50, 0, 0);
 		case 3:
-			driveTo(50);
-			break;	
+			rotate(-90);
+			break;
+		default:
+			moveForward(1500,1500);	
 		}
 		
 		
 		
-
+		
 	}
 	
 	
