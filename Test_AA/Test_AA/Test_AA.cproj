@@ -34,10 +34,15 @@
     <option id="common.services.ioport" value="Add" config="" content-id="Atmel.ASF" />
     <option id="common.utils.stdio.stdio_serial" value="Add" config="" content-id="Atmel.ASF" />
     <option id="sam.drivers.pio" value="Add" config="" content-id="Atmel.ASF" />
+    <option id="sam.drivers.pmc" value="Add" config="" content-id="Atmel.ASF" />
+    <option id="sam.drivers.rtc" value="Add" config="" content-id="Atmel.ASF" />
+    <option id="sam.drivers.rtt" value="Add" config="" content-id="Atmel.ASF" />
+    <option id="sam.drivers.tc" value="Add" config="" content-id="Atmel.ASF" />
     <option id="sam.drivers.tc.appnote" value="Add" config="" content-id="Atmel.ASF" />
     <option id="sam.drivers.uart" value="Add" config="" content-id="Atmel.ASF" />
+    <option id="sam.drivers.wdt" value="Add" config="" content-id="Atmel.ASF" />
     <option id="thirdparty.wireless.addons.sio2host" value="Add" config="uart" content-id="Atmel.ASF" />
-    <option id="sam.drivers.pmc" value="Add" config="" content-id="Atmel.ASF" />
+    <option id="common.services.basic.clock" value="Add" config="" content-id="Atmel.ASF" />
     <option id="common.applications.user_application" value="Add" config="" content-id="Atmel.ASF" />
     <option id="sam.utils.cmsis.sam3x.source.template" value="Add" config="" content-id="Atmel.ASF" />
   </options>
@@ -207,6 +212,12 @@
     <file path="src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.c" framework="" version="3.27.0" source="thirdparty\wireless\addons\sio2host\uart\sio2host.c" changed="False" content-id="Atmel.ASF" />
     <file path="src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.h" framework="" version="3.27.0" source="thirdparty\wireless\addons\sio2host\uart\sio2host.h" changed="False" content-id="Atmel.ASF" />
     <file path="src/Config/conf_sio2host.h" framework="" version="3.27.0" source="thirdparty\wireless\addons\sio2host\module_config\conf_sio2host.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam/drivers/rtc/rtc.c" framework="" version="3.27.0" source="sam\drivers\rtc\rtc.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam/drivers/rtc/rtc.h" framework="" version="3.27.0" source="sam\drivers\rtc\rtc.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam/drivers/rtt/rtt.c" framework="" version="3.27.0" source="sam\drivers\rtt\rtt.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam/drivers/rtt/rtt.h" framework="" version="3.27.0" source="sam\drivers\rtt\rtt.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam/drivers/wdt/wdt.c" framework="" version="3.27.0" source="sam\drivers\wdt\wdt.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam/drivers/wdt/wdt.h" framework="" version="3.27.0" source="sam\drivers\wdt\wdt.h" changed="False" content-id="Atmel.ASF" />
   </files>
   <documentation help="http://asf.atmel.com/docs/3.27.0/common.applications.user_application.arduino_due_x/html/index.html" />
   <offline-documentation help="" />
@@ -265,6 +276,9 @@
       <Value>../src/ASF/common/utils/stdio/stdio_serial</Value>
       <Value>../src/ASF/sam/drivers/usart</Value>
       <Value>../src/ASF/thirdparty/wireless/addons/sio2host/uart</Value>
+      <Value>../src/ASF/sam/drivers/rtt</Value>
+      <Value>../src/ASF/sam/drivers/rtc</Value>
+      <Value>../src/ASF/sam/drivers/wdt</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
@@ -288,7 +302,7 @@
   <armgcc.linker.miscellaneous.LinkerFlags>-Wl,--entry=Reset_Handler -Wl,--cref -mthumb -T../src/ASF/sam/utils/linker_scripts/sam3x/sam3x8/gcc/flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
   <armgcc.assembler.general.IncludePaths>
     <ListValues>
-      <Value>../src/ASF/thirdparty/wireless/addons/sio2host/uart</Value>
+      <Value>../src/ASF/sam/drivers/wdt</Value>
     </ListValues>
   </armgcc.assembler.general.IncludePaths>
   <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM3=true -DBOARD=ARDUINO_DUE_X -D__SAM3X8E__ -Dprintf=iprintf -Dscanf=iscanf</armgcc.preprocessingassembler.general.AssemblerFlags>
@@ -321,6 +335,9 @@
       <Value>../src/ASF/common/utils/stdio/stdio_serial</Value>
       <Value>../src/ASF/sam/drivers/usart</Value>
       <Value>../src/ASF/thirdparty/wireless/addons/sio2host/uart</Value>
+      <Value>../src/ASF/sam/drivers/rtt</Value>
+      <Value>../src/ASF/sam/drivers/rtc</Value>
+      <Value>../src/ASF/sam/drivers/wdt</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
 </ArmGcc>
@@ -373,6 +390,9 @@
       <Value>../src/ASF/common/utils/stdio/stdio_serial</Value>
       <Value>../src/ASF/sam/drivers/usart</Value>
       <Value>../src/ASF/thirdparty/wireless/addons/sio2host/uart</Value>
+      <Value>../src/ASF/sam/drivers/rtt</Value>
+      <Value>../src/ASF/sam/drivers/rtc</Value>
+      <Value>../src/ASF/sam/drivers/wdt</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
@@ -397,7 +417,7 @@
   <armgcc.linker.miscellaneous.LinkerFlags>-Wl,--entry=Reset_Handler -Wl,--cref -mthumb -T../src/ASF/sam/utils/linker_scripts/sam3x/sam3x8/gcc/flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
   <armgcc.assembler.general.IncludePaths>
     <ListValues>
-      <Value>../src/ASF/thirdparty/wireless/addons/sio2host/uart</Value>
+      <Value>../src/ASF/sam/drivers/wdt</Value>
     </ListValues>
   </armgcc.assembler.general.IncludePaths>
   <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
@@ -431,6 +451,9 @@
       <Value>../src/ASF/common/utils/stdio/stdio_serial</Value>
       <Value>../src/ASF/sam/drivers/usart</Value>
       <Value>../src/ASF/thirdparty/wireless/addons/sio2host/uart</Value>
+      <Value>../src/ASF/sam/drivers/rtt</Value>
+      <Value>../src/ASF/sam/drivers/rtc</Value>
+      <Value>../src/ASF/sam/drivers/wdt</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
   <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
@@ -438,6 +461,66 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Debug\" />
+    <Folder Include="Debug\src\" />
+    <Folder Include="Debug\src\ASF\" />
+    <Folder Include="Debug\src\ASF\common\" />
+    <Folder Include="Debug\src\ASF\common\boards\" />
+    <Folder Include="Debug\src\ASF\common\services\" />
+    <Folder Include="Debug\src\ASF\common\services\clock\" />
+    <Folder Include="Debug\src\ASF\common\services\clock\sam3x\" />
+    <Folder Include="Debug\src\ASF\common\services\gpio\" />
+    <Folder Include="Debug\src\ASF\common\services\gpio\sam_gpio\" />
+    <Folder Include="Debug\src\ASF\common\services\ioport\" />
+    <Folder Include="Debug\src\ASF\common\services\ioport\sam\" />
+    <Folder Include="Debug\src\ASF\common\services\serial\" />
+    <Folder Include="Debug\src\ASF\common\services\serial\sam_uart\" />
+    <Folder Include="Debug\src\ASF\common\utils\" />
+    <Folder Include="Debug\src\ASF\common\utils\interrupt\" />
+    <Folder Include="Debug\src\ASF\common\utils\stdio\" />
+    <Folder Include="Debug\src\ASF\common\utils\stdio\stdio_serial\" />
+    <Folder Include="Debug\src\ASF\sam\" />
+    <Folder Include="Debug\src\ASF\sam\boards\" />
+    <Folder Include="Debug\src\ASF\sam\boards\arduino_due_x\" />
+    <Folder Include="Debug\src\ASF\sam\drivers\" />
+    <Folder Include="Debug\src\ASF\sam\drivers\pio\" />
+    <Folder Include="Debug\src\ASF\sam\drivers\pmc\" />
+    <Folder Include="Debug\src\ASF\sam\drivers\rtc\" />
+    <Folder Include="Debug\src\ASF\sam\drivers\rtt\" />
+    <Folder Include="Debug\src\ASF\sam\drivers\tc\" />
+    <Folder Include="Debug\src\ASF\sam\drivers\tc\tc_capture_waveform_example\" />
+    <Folder Include="Debug\src\ASF\sam\drivers\uart\" />
+    <Folder Include="Debug\src\ASF\sam\drivers\usart\" />
+    <Folder Include="Debug\src\ASF\sam\drivers\wdt\" />
+    <Folder Include="Debug\src\ASF\sam\utils\" />
+    <Folder Include="Debug\src\ASF\sam\utils\cmsis\" />
+    <Folder Include="Debug\src\ASF\sam\utils\cmsis\sam3x\" />
+    <Folder Include="Debug\src\ASF\sam\utils\cmsis\sam3x\include\" />
+    <Folder Include="Debug\src\ASF\sam\utils\cmsis\sam3x\include\component\" />
+    <Folder Include="Debug\src\ASF\sam\utils\cmsis\sam3x\include\instance\" />
+    <Folder Include="Debug\src\ASF\sam\utils\cmsis\sam3x\include\pio\" />
+    <Folder Include="Debug\src\ASF\sam\utils\cmsis\sam3x\source\" />
+    <Folder Include="Debug\src\ASF\sam\utils\cmsis\sam3x\source\templates\" />
+    <Folder Include="Debug\src\ASF\sam\utils\cmsis\sam3x\source\templates\gcc\" />
+    <Folder Include="Debug\src\ASF\sam\utils\header_files\" />
+    <Folder Include="Debug\src\ASF\sam\utils\linker_scripts\" />
+    <Folder Include="Debug\src\ASF\sam\utils\linker_scripts\sam3x\" />
+    <Folder Include="Debug\src\ASF\sam\utils\linker_scripts\sam3x\sam3x8\" />
+    <Folder Include="Debug\src\ASF\sam\utils\linker_scripts\sam3x\sam3x8\gcc\" />
+    <Folder Include="Debug\src\ASF\sam\utils\make\" />
+    <Folder Include="Debug\src\ASF\sam\utils\preprocessor\" />
+    <Folder Include="Debug\src\ASF\sam\utils\syscalls\" />
+    <Folder Include="Debug\src\ASF\sam\utils\syscalls\gcc\" />
+    <Folder Include="Debug\src\ASF\thirdparty\" />
+    <Folder Include="Debug\src\ASF\thirdparty\CMSIS\" />
+    <Folder Include="Debug\src\ASF\thirdparty\CMSIS\Include\" />
+    <Folder Include="Debug\src\ASF\thirdparty\CMSIS\Lib\" />
+    <Folder Include="Debug\src\ASF\thirdparty\CMSIS\Lib\GCC\" />
+    <Folder Include="Debug\src\ASF\thirdparty\wireless\" />
+    <Folder Include="Debug\src\ASF\thirdparty\wireless\addons\" />
+    <Folder Include="Debug\src\ASF\thirdparty\wireless\addons\sio2host\" />
+    <Folder Include="Debug\src\ASF\thirdparty\wireless\addons\sio2host\uart\" />
+    <Folder Include="Debug\src\config\" />
     <Folder Include="src\" />
     <Folder Include="src\ASF\" />
     <Folder Include="src\ASF\common\" />
@@ -461,10 +544,13 @@
     <Folder Include="src\ASF\sam\drivers\" />
     <Folder Include="src\ASF\sam\drivers\pio\" />
     <Folder Include="src\ASF\sam\drivers\pmc\" />
+    <Folder Include="src\ASF\sam\drivers\rtc\" />
+    <Folder Include="src\ASF\sam\drivers\rtt\" />
     <Folder Include="src\ASF\sam\drivers\tc\" />
     <Folder Include="src\ASF\sam\drivers\tc\tc_capture_waveform_example\" />
     <Folder Include="src\ASF\sam\drivers\uart\" />
     <Folder Include="src\ASF\sam\drivers\usart\" />
+    <Folder Include="src\ASF\sam\drivers\wdt\" />
     <Folder Include="src\ASF\sam\utils\" />
     <Folder Include="src\ASF\sam\utils\cmsis\" />
     <Folder Include="src\ASF\sam\utils\cmsis\sam3x\" />
@@ -496,6 +582,198 @@
     <Folder Include="src\config\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Debug\makedep.mk">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\Makefile">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\common\services\clock\sam3x\sysclk.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\common\services\clock\sam3x\sysclk.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\common\services\serial\usart_serial.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\common\services\serial\usart_serial.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\common\utils\interrupt\interrupt_sam_nvic.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\common\utils\interrupt\interrupt_sam_nvic.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\common\utils\stdio\read.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\common\utils\stdio\read.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\common\utils\stdio\write.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\common\utils\stdio\write.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\boards\arduino_due_x\init.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\boards\arduino_due_x\init.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\pio\pio.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\pio\pio.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\pio\pio_handler.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\pio\pio_handler.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\pmc\pmc.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\pmc\pmc.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\pmc\sleep.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\pmc\sleep.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\rtc\rtc.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\rtc\rtc.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\rtt\rtt.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\rtt\rtt.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\tc\tc.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\tc\tc.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\uart\uart.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\uart\uart.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\usart\usart.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\usart\usart.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\wdt\wdt.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\drivers\wdt\wdt.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\utils\cmsis\sam3x\source\templates\exceptions.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\utils\cmsis\sam3x\source\templates\exceptions.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\utils\cmsis\sam3x\source\templates\gcc\startup_sam3x.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\utils\cmsis\sam3x\source\templates\gcc\startup_sam3x.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\utils\cmsis\sam3x\source\templates\system_sam3x.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\utils\cmsis\sam3x\source\templates\system_sam3x.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\utils\syscalls\gcc\syscalls.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\sam\utils\syscalls\gcc\syscalls.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\thirdparty\wireless\addons\sio2host\uart\sio2host.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\ASF\thirdparty\wireless\addons\sio2host\uart\sio2host.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\CalculateAngle.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\CalculateAngle.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\DelayFunctions.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\DelayFunctions.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\Drive.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\Drive.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\main.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\main.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\Motorfunctions.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\Motorfunctions.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\Regulator.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\Regulator.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\Rotate.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\src\Rotate.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\Test_AA.bin">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\Test_AA.eep">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\Test_AA.hex">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\Test_AA.lss">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\Test_AA.map">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\Test_AA.srec">
+      <SubType>compile</SubType>
+    </None>
     <None Include="src\ASF\common\services\serial\sam_uart\uart_serial.h">
       <SubType>compile</SubType>
     </None>
@@ -514,6 +792,18 @@
     <Compile Include="src\ASF\common\utils\stdio\write.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\ASF\sam\drivers\rtc\rtc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\sam\drivers\rtc\rtc.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\sam\drivers\rtt\rtt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\sam\drivers\rtt\rtt.h">
+      <SubType>compile</SubType>
+    </None>
     <Compile Include="src\ASF\sam\drivers\tc\tc.c">
       <SubType>compile</SubType>
     </Compile>
@@ -533,6 +823,12 @@
       <SubType>compile</SubType>
     </Compile>
     <None Include="src\ASF\sam\drivers\usart\usart.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\sam\drivers\wdt\wdt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\sam\drivers\wdt\wdt.h">
       <SubType>compile</SubType>
     </None>
     <Compile Include="src\ASF\thirdparty\wireless\addons\sio2host\uart\sio2host.c">

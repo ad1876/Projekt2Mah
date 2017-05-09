@@ -8,11 +8,17 @@ src\ASF\common\utils\stdio\read.c
 
 src\ASF\common\utils\stdio\write.c
 
+src\ASF\sam\drivers\rtc\rtc.c
+
+src\ASF\sam\drivers\rtt\rtt.c
+
 src\ASF\sam\drivers\tc\tc.c
 
 src\ASF\sam\drivers\uart\uart.c
 
 src\ASF\sam\drivers\usart\usart.c
+
+src\ASF\sam\drivers\wdt\wdt.c
 
 src\ASF\thirdparty\wireless\addons\sio2host\uart\sio2host.c
 

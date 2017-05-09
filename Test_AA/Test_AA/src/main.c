@@ -11,13 +11,15 @@
 #include <asf.h>
 #include <ioport.h>
 #include <stdio.h>
-
+#include <time.h>
 
 #include "DelayFunctions.h"
 #include "CalculateAngle.h"
 #include "Regulator.h"
 #include "Motorfunctions.h"
 #include "Rotate.h"
+#include "Drive.h"
+
 
 
 
@@ -51,6 +53,7 @@ int main (void)
 	initMotor();
 	initRotateMotor();
 	configure_console();
+	initDrive();
 	
 	char str[20];
 	sprintf(str,"Main while");
@@ -66,15 +69,27 @@ int main (void)
 // 		sprintf(str,"Main while");
 // 		printf (str);
 		
+// 		clock_t start, end;
+// 		double cpu_time_used;
+// 		
+// 		start = clock();
 		
 		
+		testStuff();
 		
-		x_diff = getX_diff(200,400);
-		y_diff = getY_diff(200,100);
-		angle = calculateAngle(x_diff,y_diff);
-		rotate(angle);
+		moveForward(1500,1500);
 		
-		delayMicroseconds(500000);
+// 		end = clock();
+// 		cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+// 		
+// 		printf("testStuff() took %f seconds to execute \n", cpu_time_used);
+		
+// 		x_diff = getX_diff(200,400);
+// 		y_diff = getY_diff(200,100);
+// 		angle = calculateAngle(x_diff,y_diff);
+// 		rotate(angle);
+// 		
+ 		delayMicroseconds(500000);
 
 		
 

@@ -9,7 +9,8 @@
 #ifndef DRIVE_H_
 #define DRIVE_H_
 
-
+void initDrive(void);
+void testStuff(void);
 
 
 
