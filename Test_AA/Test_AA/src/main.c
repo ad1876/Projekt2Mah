@@ -11,7 +11,6 @@
 #include <asf.h>
 #include <ioport.h>
 #include <stdio.h>
-#include <time.h>
 
 #include "DelayFunctions.h"
 #include "CalculateAngle.h"
@@ -59,38 +58,53 @@ int main (void)
 	sprintf(str,"Main while");
 	printf (str);
 	
+	int n=0;
+	int i=0;
 	
 	while(1){
 		
 // 		rotate(180);
 // 		delayMicroseconds(500000);
 		
-// 		char str[20];
-// 		sprintf(str,"Main while");
-// 		printf (str);
 		
-// 		clock_t start, end;
-// 		double cpu_time_used;
-// 		
-// 		start = clock();
-		
-		
-		testStuff();
-		
-		moveForward(1500,1500);
-		
-// 		end = clock();
-// 		cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-// 		
-// 		printf("testStuff() took %f seconds to execute \n", cpu_time_used);
-		
+// 		testStuff();
+// 
+// 		delayMicroseconds(1000000);
 // 		x_diff = getX_diff(200,400);
 // 		y_diff = getY_diff(200,100);
 // 		angle = calculateAngle(x_diff,y_diff);
 // 		rotate(angle);
 // 		
- 		delayMicroseconds(500000);
-
+  		
+// 		x_diff = getX_diff(200,400);
+//  		y_diff = getY_diff(200,100);
+//  		angle = calculateAngle(x_diff,y_diff);
+		
+		if(i){
+			n=2;
+			i=0;
+		}else{
+			n=0;
+			i=1;
+		}
+		
+		
+		
+		switch (n)
+		{
+		case 0:
+			rotate(-90);
+		case 1:
+			driveTo(50);
+			break;
+		case 2:
+			rotate(-90);
+		case 3:
+			driveTo(50);
+			break;	
+		}
+		
+		
 		
 
 	}

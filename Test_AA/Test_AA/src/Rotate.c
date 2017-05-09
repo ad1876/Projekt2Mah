@@ -58,11 +58,11 @@ void initRotateMotor(void){
 }
 
 void rotate(int d){					//Minimum d is 4
-    int ticks = d * 0.25;
+    double ticks = d * 0.25;
 
-    char str[20];
-    sprintf(str,"början: %d\n",ticks);
-    printf (str);
+//     char str[20];
+//     sprintf(str,"början: %d\n",ticks);
+//     printf (str);
    
 	ioport_set_pin_level(L_RESET,LOW);
 	ioport_set_pin_level(R_RESET,LOW);
@@ -77,8 +77,8 @@ void rotate(int d){					//Minimum d is 4
            
             moveForward(1600,1400);
 
-            sprintf(str,"åt höger: %d\n",l_count);
-            printf (str);
+//             sprintf(str,"åt höger: %d\n",l_count);
+//             printf (str);
         }
         moveForward(1500,1500);
 		
@@ -92,8 +92,8 @@ void rotate(int d){					//Minimum d is 4
             //ioport_set_pin_level(R_RESET,HIGH);   
             
             moveForward(1400,1600);
-            sprintf(str,"åt vänster: %d\n",r_count);
-            printf (str);
+//             sprintf(str,"åt vänster: %d\n",r_count);
+//             printf (str);
         }
         moveForward(1500,1500);
 		
@@ -103,5 +103,11 @@ void rotate(int d){					//Minimum d is 4
 	
 	ioport_set_pin_level(L_RESET,HIGH);
 	ioport_set_pin_level(R_RESET,HIGH);	
+	
+	char str[20];
+	sprintf(str,"\nVinkel: %d",d);
+	printf (str);
+	sprintf(str,"\nTicks: %f",ticks);
+	printf (str);
 	
 }

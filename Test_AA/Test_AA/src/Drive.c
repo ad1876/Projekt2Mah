@@ -14,6 +14,7 @@
 #include "DelayFunctions.h"
 #include "Drive.h"
 
+//Höger
 #define R0 PIO_PA15_IDX
 #define R1 PIO_PD1_IDX
 #define R2 PIO_PD3_IDX
@@ -22,8 +23,14 @@
 #define R5 PIO_PC2_IDX
 #define R_RESET PIO_PB26_IDX
 
-
-
+//Vänster
+#define L0 PIO_PD0_IDX
+#define L1 PIO_PD2_IDX
+#define L2 PIO_PD6_IDX
+#define L3 PIO_PA7_IDX
+#define L4 PIO_PC1_IDX
+#define L5 PIO_PC3_IDX
+#define L_RESET PIO_PA14_IDX
 
 #define X1 300
 #define Y1 300
@@ -35,53 +42,85 @@
 #define YBOX 300
 
 
+
+
+
+
+
 void initDrive(void){
 	ioport_set_pin_dir(R_RESET,IOPORT_DIR_OUTPUT);
+	ioport_set_pin_dir(L_RESET,IOPORT_DIR_OUTPUT);
 	ioport_set_pin_dir(R0,IOPORT_DIR_INPUT);
 	ioport_set_pin_dir(R1,IOPORT_DIR_INPUT);
 	ioport_set_pin_dir(R2,IOPORT_DIR_INPUT);
 	ioport_set_pin_dir(R3,IOPORT_DIR_INPUT);
 	ioport_set_pin_dir(R4,IOPORT_DIR_INPUT);
 	ioport_set_pin_dir(R5,IOPORT_DIR_INPUT);
+	ioport_set_pin_dir(L0,IOPORT_DIR_INPUT);
+	ioport_set_pin_dir(L1,IOPORT_DIR_INPUT);
+	ioport_set_pin_dir(L2,IOPORT_DIR_INPUT);
+	ioport_set_pin_dir(L3,IOPORT_DIR_INPUT);
+	ioport_set_pin_dir(L4,IOPORT_DIR_INPUT);
+	ioport_set_pin_dir(L5,IOPORT_DIR_INPUT);
 }
 
 
-void testStuff(void){
+// void testStuff(void){
+// 	
+// 	
+// 		
+// }
+
+void driveTo(int obj){
 	
-	int count =0;
 	int newcount = 0;
-	
-	
-	
-	
+	int r_count = 0;
+	int l_count = 0;
 	
 	ioport_set_pin_level(R_RESET,LOW);
+	ioport_set_pin_level(L_RESET,LOW);
 	
-	while(newcount < 3600){
-		moveForward(1400,1600);
+	while(newcount < obj){
+				
+		ioport_set_pin_level(R_RESET,LOW);
+		ioport_set_pin_level(L_RESET,LOW);
 		
-		count = ioport_get_pin_level(R0)+ioport_get_pin_level(R1)*2+ioport_get_pin_level(R2)*4+ioport_get_pin_level(R3)*8
+		
+		r_count = ioport_get_pin_level(R0)+ioport_get_pin_level(R1)*2+ioport_get_pin_level(R2)*4+ioport_get_pin_level(R3)*8
 		+ioport_get_pin_level(R4)*16+ioport_get_pin_level(R5)*32;
 		
-		newcount = newcount + count;
 		
-		count = 0;
+		
+		l_count = ioport_get_pin_level(L0)+ioport_get_pin_level(L1)*2+ioport_get_pin_level(L2)*4+ioport_get_pin_level(L3)*8
+		+ioport_get_pin_level(L4)*16+ioport_get_pin_level(L5)*32;
+		
+		
+		int disp = r_count - l_count;
+		
+		P_regulator(0,disp);
+		
+		delayMicroseconds(500000);
+
+		newcount = newcount + r_count;
+		
+		char str[20];
+		sprintf(str,"\nHöger: %d",r_count);
+		printf (str);
+
+		sprintf(str,"\nVänster: %d",l_count);
+		printf (str);
+	 
+		r_count = 0;
+		l_count = 0;
+
+		ioport_set_pin_level(R_RESET,HIGH);
+		ioport_set_pin_level(L_RESET,HIGH);
 	}
 	
-	newcount = 0;
-	ioport_set_pin_level(R_RESET,HIGH);
+	char str[20];
+	sprintf(str,"\nTotal: %d",newcount);
+	printf (str);
 	
-		
+	newcount = 0;
+	moveForward(1500,1500);
 }
-
-// void driveTo(int x, int y){
-// 	
-// 	
-// 	while(){
-// 		
-// 		
-// 		P_regulator()
-// 	}
-// 		
-// 	
-// }

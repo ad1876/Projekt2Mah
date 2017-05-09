@@ -27,11 +27,19 @@ int getY_diff(int dest, int pos){					//pos = current y position, dest = destina
 
 int calculateAngle(int mot, int nar){				//mot = motstående, nar = närliggande
 	
-	int angle = atan(mot/nar) * (180/M_PI);
+	int angle = acos(nar/(sqrt((mot*mot)+(nar*nar)))) * (180/M_PI);
 	
 	char str[20];
 	sprintf(str,"Angle: %d\n",angle);
 	printf (str);
 	
 	return angle;
+}
+
+
+int calculateSetPoint(int y_pos, int y_dest){							//Räkna ut börvärde
+	
+	int set_point = y_pos - y_dest;
+	
+	return set_point;
 }
