@@ -26,6 +26,11 @@ int x_diff = 0;
 int y_diff = 0;
 int angle = 0;
 
+uint16_t x1 = 200;
+uint16_t x2 = 200;
+
+int direction = 0;
+
 static void configure_console(void)
 {
 	const usart_serial_options_t uart_serial_options = {
@@ -41,6 +46,7 @@ static void configure_console(void)
 	printf("-- Compiled: %s %s --\n\r", __DATE__, __TIME__);
 }
 
+
 int main (void)
 {
 	
@@ -54,32 +60,42 @@ int main (void)
 	configure_console();
 	initDrive();
 	
-	char str[20];
-	sprintf(str,"Main while");
-	printf (str);
+	
 	
 	int n=0;
 	int i=0;
+	int j=0;
+		
+	uint16_t firstx = x1;
+	uint16_t firsty = x2;
+	
+	while(j<80){
+		moveForward(1650,1650);
+		x1=x1+1;
+		x2=x2-1;
+		j++;
+	}
+	
+	
+	moveForward(1500,1500);
+		
+	uint16_t secondx = x1;
+	uint16_t secondy = x2;
+	
+	int xdiff = getX_diff(secondx,firstx);
+	int ydiff = getY_diff(secondy,firsty);
+	
+	direction = calculateAngle(ydiff,xdiff);
+	
+	
+	char str[20];
+	sprintf(str,"xdiff: %d\nydiff: %d\ndirection: %d\n",xdiff, ydiff, direction);
+	printf (str);
+	
 	
 	while(1){
 		
-// 		rotate(180);
-// 		delayMicroseconds(500000);
-		
-		
-// 		testStuff();
-// 
-// 		delayMicroseconds(1000000);
-// 		x_diff = getX_diff(200,400);
-// 		y_diff = getY_diff(200,100);
-// 		angle = calculateAngle(x_diff,y_diff);
-// 		rotate(angle);
-// 		
-  		
-// 		x_diff = getX_diff(200,400);
-//  		y_diff = getY_diff(200,100);
-//  		angle = calculateAngle(x_diff,y_diff);
-		
+			
 		if(i){
 			n=2;
 			i=0;
@@ -88,8 +104,7 @@ int main (void)
 			i=1;
 		}
 		
-		
-		
+			
 		switch (n)
 		{
 		case 0:
@@ -106,16 +121,8 @@ int main (void)
 			moveForward(1500,1500);	
 		}
 		
-		
-		
-		
 	}
-	
-	
-	
-		
-		
-	
+
 
 }
 

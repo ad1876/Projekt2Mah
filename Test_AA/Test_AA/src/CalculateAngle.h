@@ -9,9 +9,9 @@
 #ifndef CALCULATEANGLE_H_
 #define CALCULATEANGLE_H_
 
-int getX_diff(int pos, int dest);
-int getY_diff(int pos, int dest);
-int calculateAngle(int mot, int hyp);
+int getX_diff(int dest, int pos);
+int getY_diff(int dest, int pos);
+int calculateAngle(int mot, int nar);
 int calculateSetPoint(int y_pos, int y_dest);
 
 #endif /* INCFILE1_H_ */
