@@ -19,15 +19,23 @@
 #include "Rotate.h"
 #include "Drive.h"
 
+#define OBJ1_X 300
+#define OBJ1_Y 300
+#define OBJ2_X 300
+#define OBJ2_Y 300
+#define OBJ3_X 300
+#define OBJ3_Y 300
+
+#define BOX_X 300
+#define BOX_Y 300
 
 
+// int x_diff = 0;
+// int y_diff = 0;
+// int angle = 0;
 
-int x_diff = 0;
-int y_diff = 0;
-int angle = 0;
-
-uint16_t x1 = 200;
-uint16_t x2 = 200;
+// uint16_t x1 = 200;
+// uint16_t x2 = 200;
 
 uint8_t c_counter = 0;
 char rx[16];
@@ -95,21 +103,22 @@ int main (void)
 	uint16_t x4 = 0; //irrelevant
 	
 	
-	
-	int n=0;
-	int i=0;
-	int j=0;
+// 	int i=0;
+// 	int j=0;
 		
 	uint16_t firstx = x1;
 	uint16_t firsty = x2;
 	
-	while(j<80){
-		moveForward(1650,1650);
-		x1=x1+1;
-		x2=x2-1;
-		j++;
-	}
+// 	while(j<80){
+// 		moveForward(1650,1650);
+// 		x1=x1+1;
+// 		x2=x2-1;
+// 		j++;
+// 	}
 	
+	moveForward(1650,1650);
+	
+	delayMicroseconds(1000000);
 	
 	moveForward(1500,1500);
 		
@@ -155,32 +164,50 @@ int main (void)
 		stringToInt(&x2, str2);
 		stringToInt(&x3, str3);
 		stringToInt(&x4, str4);
-			
-		if(i){
-			n=2;
-			i=0;
-		}else{
-			n=0;
-			i=1;
-		}
+		
 		
 			
+// 		if(i){
+// 			n=2;
+// 			i=0;
+// 		}else{
+// 			n=0;
+// 			i=1;
+// 		}
+// 		
+		int n=0;
+
 		switch (n)
 		{
 		case 0:
-			driveTo(50, 0, 0);
+			rotate(calculateAngle(getY_diff(OBJ1_Y,x2),getX_diff(OBJ1_X,x1)));
+			
+			driveTo(calculateDistance(getY_diff(OBJ1_Y,x2),getX_diff(OBJ1_X,x1)));
+			
+			break;
 		case 1:
-			rotate(-90);
+			rotate(calculateAngle(getY_diff(OBJ2_Y,x2),getX_diff(OBJ2_X,x1)));		
+				
+			driveTo(calculateDistance(getY_diff(OBJ2_Y,x2),getX_diff(OBJ2_X,x1)));
+			
 			break;
 		case 2:
-			driveTo(50, 0, 0);
+			rotate(calculateAngle(getY_diff(OBJ3_Y,x2),getX_diff(OBJ3_X,x1)));		
+				
+			driveTo(calculateDistance(getY_diff(OBJ3_Y,x2),getX_diff(OBJ3_X,x1)));		
+				
+			break;
 		case 3:
-			rotate(-90);
+			rotate(calculateAngle(getY_diff(BOX_Y,x2),getX_diff(BOX_X,x1)));
+			
+			driveTo(calculateDistance(getY_diff(BOX_Y,x2),getX_diff(BOX_X,x1)));
+			
 			break;
 		default:
 			moveForward(1500,1500);	
 		}
 		
+		n++;
 	}
 
 

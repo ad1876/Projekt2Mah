@@ -10,7 +10,7 @@
 #define DRIVE_H_
 
 void initDrive(void);
-void driveTo(int obj, uint16_t x, uint16_t y);
+void driveTo(int obj);
 
 
 

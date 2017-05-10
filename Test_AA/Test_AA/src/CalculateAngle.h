@@ -13,5 +13,6 @@ int getX_diff(int dest, int pos);
 int getY_diff(int dest, int pos);
 int calculateAngle(int mot, int nar);
 int calculateSetPoint(int y_pos, int y_dest);
+int calculateDistance(int mot, int nar);
 
 #endif /* INCFILE1_H_ */

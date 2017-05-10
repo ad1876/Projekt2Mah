@@ -50,3 +50,12 @@ int calculateSetPoint(int y_pos, int y_dest){							//Räkna ut börvärde
 	
 	return set_point;
 }
+
+
+int calculateDistance(int mot, int nar){
+	
+	int dist = sqrt((mot*mot)+(nar*nar));
+	
+	return dist;
+}
+

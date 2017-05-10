@@ -32,16 +32,6 @@
 #define L5 PIO_PC3_IDX
 #define L_RESET PIO_PA14_IDX
 
-#define X1 300
-#define Y1 300
-#define X2 300
-#define Y2 300
-#define X3 300
-#define Y3 300
-#define XBOX 300
-#define YBOX 300
-
-
 
 
 
@@ -71,7 +61,7 @@ void initDrive(void){
 // 		
 // }
 
-void driveTo(int obj, uint16_t x, uint16_t y){
+void driveTo(int obj){
 	
 	int newcount = 0;
 	int r_count = 0;
@@ -104,15 +94,15 @@ void driveTo(int obj, uint16_t x, uint16_t y){
 
 		newcount = newcount + r_count;
 		
-		char str[20];
-		sprintf(str,"\nHöger: %d",r_count);
-		printf (str);
-
-		sprintf(str,"\nVänster: %d",l_count);
-		printf (str);
-		
-		sprintf(str,"\nTotal: %d",newcount);
-		printf (str);
+// 		char str[20];
+// 		sprintf(str,"\nHöger: %d",r_count);
+// 		printf (str);
+// 
+// 		sprintf(str,"\nVänster: %d",l_count);
+// 		printf (str);
+// 		
+// 		sprintf(str,"\nTotal: %d",newcount);
+// 		printf (str);
 	 
 		r_count = 0;
 		l_count = 0;
@@ -128,3 +118,5 @@ void driveTo(int obj, uint16_t x, uint16_t y){
 	newcount = 0;
 	moveForward(1500,1500);
 }
+
+
