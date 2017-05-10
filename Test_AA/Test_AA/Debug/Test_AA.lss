@@ -2053,7 +2053,7 @@ __always_inline static bool arch_ioport_get_pin_level(ioport_pin_t pin)
    80982:	47b0      	blx	r6
    80984:	2800      	cmp	r0, #0
    80986:	d04e      	beq.n	80a26 <rotate+0x182>
-        while(r_count < (abs(ticks) + direction/4)){
+        while(r_count < (abs(ticks) - direction/4)){
    80988:	4620      	mov	r0, r4
    8098a:	4629      	mov	r1, r5
    8098c:	4b3c      	ldr	r3, [pc, #240]	; (80a80 <rotate+0x1dc>)
@@ -2065,7 +2065,7 @@ __always_inline static bool arch_ioport_get_pin_level(ioport_pin_t pin)
    8099c:	2b00      	cmp	r3, #0
    8099e:	bfb8      	it	lt
    809a0:	3303      	addlt	r3, #3
-   809a2:	eb07 03a3 	add.w	r3, r7, r3, asr #2
+   809a2:	eba7 03a3 	sub.w	r3, r7, r3, asr #2
    809a6:	4a3d      	ldr	r2, [pc, #244]	; (80a9c <rotate+0x1f8>)
    809a8:	6812      	ldr	r2, [r2, #0]
    809aa:	4293      	cmp	r3, r2
@@ -2096,7 +2096,7 @@ __always_inline static bool arch_ioport_get_pin_level(ioport_pin_t pin)
    809f2:	eb03 1242 	add.w	r2, r3, r2, lsl #5
     }
     else if(ticks<0){                //Negativt ticks svänger vänster
-        while(r_count < (abs(ticks) + direction/4)){
+        while(r_count < (abs(ticks) - direction/4)){
 			
 			
             r_count = ioport_get_pin_level(R0)+ioport_get_pin_level(R1)*2+ioport_get_pin_level(R2)*4+ioport_get_pin_level(R3)*8
@@ -2115,13 +2115,13 @@ __always_inline static bool arch_ioport_get_pin_level(ioport_pin_t pin)
 		
     }
     else if(ticks<0){                //Negativt ticks svänger vänster
-        while(r_count < (abs(ticks) + direction/4)){
+        while(r_count < (abs(ticks) - direction/4)){
    80a06:	4b1f      	ldr	r3, [pc, #124]	; (80a84 <rotate+0x1e0>)
    80a08:	681b      	ldr	r3, [r3, #0]
    80a0a:	2b00      	cmp	r3, #0
    80a0c:	bfb8      	it	lt
    80a0e:	3303      	addlt	r3, #3
-   80a10:	eb07 03a3 	add.w	r3, r7, r3, asr #2
+   80a10:	eba7 03a3 	sub.w	r3, r7, r3, asr #2
    80a14:	4a21      	ldr	r2, [pc, #132]	; (80a9c <rotate+0x1f8>)
    80a16:	6812      	ldr	r2, [r2, #0]
    80a18:	4293      	cmp	r3, r2
