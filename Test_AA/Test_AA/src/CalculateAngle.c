@@ -25,9 +25,20 @@ int getY_diff(int dest, int pos){					//pos = current y position, dest = destina
 }
 
 
-int calculateAngle(int mot, int nar){				//mot = motstående, nar = närliggande
+int calculateAngle(int mot, int nar){				//mot = motstående (y), nar = närliggande (x)
+	
 	
 	int angle = acos(nar/(sqrt((mot*mot)+(nar*nar)))) * (180/M_PI);
+	
+	if(nar < 0 && mot > 0){
+		angle = angle + 90;
+	}
+	else if(nar < 0 && mot < 0){
+		angle = angle + 180;
+	}
+	else if(nar > 0 && mot < 0){
+		angle = angle + 270;
+	}
 	
 	return angle;
 }
