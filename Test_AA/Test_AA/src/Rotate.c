@@ -75,7 +75,7 @@ void rotate(int d){					//Minimum d is 4
 	ioport_set_pin_level(R_RESET,LOW);
    
     if(ticks>0){                    //Positivt ticks svänger höger
-        while(l_count < (abs(ticks) + direction)){
+        while(l_count < (abs(ticks) + direction/4)){
            
 			
             l_count = ioport_get_pin_level(L0)+ioport_get_pin_level(L1)*2+ioport_get_pin_level(L2)*4+ioport_get_pin_level(L3)*8
@@ -91,7 +91,7 @@ void rotate(int d){					//Minimum d is 4
 		
     }
     else if(ticks<0){                //Negativt ticks svänger vänster
-        while(r_count < (abs(ticks) + 360 - direction)){
+        while(r_count < (abs(ticks) + direction/4)){
 			
 			
             r_count = ioport_get_pin_level(R0)+ioport_get_pin_level(R1)*2+ioport_get_pin_level(R2)*4+ioport_get_pin_level(R3)*8
