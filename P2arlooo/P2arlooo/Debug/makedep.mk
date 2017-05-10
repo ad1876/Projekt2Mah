@@ -4,6 +4,8 @@
 
 src\Delays\DelayFunctions.c
 
+src\main.c
+
 src\Motorfunctions.c
 
 src\Tasks\task_KNAPP.c
@@ -65,6 +67,4 @@ src\ASF\thirdparty\freertos\freertos-7.3.0\source\queue.c
 src\ASF\thirdparty\freertos\freertos-7.3.0\source\tasks.c
 
 src\ASF\thirdparty\freertos\freertos-7.3.0\source\timers.c
-
-src\main.c
 

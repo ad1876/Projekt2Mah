@@ -33,7 +33,7 @@
 #define LED3 PIO_PC29_IDX  //pin10
 #define k1 PIO_PC28_IDX 
 	float a = 7;
-	float b = 8;
+	float b = 10;
 	float c = 5;
 	float d = 6;
 	float distance;
@@ -62,19 +62,23 @@ int main (void)
 	ioport_init();
 	delayInit();
 	configure_console();
+	moveForward(1650,1650);
+	while(1){
+		
 	float getDistance(float x1,float x2,float y1,float y2);
-	float updateOdometry(float x_before, float y_before);
-	int state;
+	float updateOdometry(float x1, float y1);
+//	int state;
 	// Sätter direction för pinnar, Utgångar / Ingångar.
-	ioport_set_pin_dir(BlinkaGreen,IOPORT_DIR_OUTPUT);	//Utgång
-	ioport_set_pin_dir(BlinkaYellow,IOPORT_DIR_OUTPUT);	//Utgång
-	ioport_set_pin_dir(BlinkaRed,IOPORT_DIR_OUTPUT);	//Utgång
-	ioport_set_pin_dir(LED,IOPORT_DIR_OUTPUT);			//Utgång
-	ioport_set_pin_dir(Knapp,IOPORT_DIR_INPUT);			//Ingång
-	ioport_set_pin_dir(k1,IOPORT_DIR_INPUT);			//Ingång
-	ioport_set_pin_dir(LED1,IOPORT_DIR_OUTPUT);		
-	ioport_set_pin_level(LED1,LOW);
-	moveForward(1850,1850);
+// 	ioport_set_pin_dir(BlinkaGreen,IOPORT_DIR_OUTPUT);	//Utgång
+// 	ioport_set_pin_dir(BlinkaYellow,IOPORT_DIR_OUTPUT);	//Utgång
+// 	ioport_set_pin_dir(BlinkaRed,IOPORT_DIR_OUTPUT);	//Utgång
+// 	ioport_set_pin_dir(LED,IOPORT_DIR_OUTPUT);			//Utgång
+// 	ioport_set_pin_dir(Knapp,IOPORT_DIR_INPUT);			//Ingång
+// 	ioport_set_pin_dir(k1,IOPORT_DIR_INPUT);			//Ingång
+// 	ioport_set_pin_dir(LED1,IOPORT_DIR_OUTPUT);		
+// 	ioport_set_pin_level(LED1,LOW);
+
+
 	//Skapar tasken nedan.
 	//Task med högst prioritet
 	float di = getDistance(a,b,c,d);
@@ -82,12 +86,12 @@ int main (void)
 	sprintf(str,"distans: %f\n",di);
 	printf("hej");
 	printf (str);
-	float odo = updateOdometry(a,b);
-	sprintf(str,"odometry: %f\n",odo);
+	updateOdometry(a,b);
+	sprintf(str,"odometry: %f\n",a,b);
 	printf(str);
 	
 	printf ("hello its me");
-	bool knapp;
+/*	bool knapp;
 	knapp = ioport_get_pin_level(k1);
 	if (knapp==true)
 	{
@@ -110,7 +114,7 @@ int main (void)
 		case 1:
 		//P_regulator(2,2);
 		break;
-	}
+	}*/
 	xTaskCreate(task_KNAPP, (const signed char * const) "KNAPP", TASK_KNAPP_STACK_SIZE, NULL, TASK_KNAPP_STACK_PRIORITY, NULL);
 	
 	//Task med näst högst prioritet
@@ -131,7 +135,7 @@ int main (void)
 	
 }
 
-
+	}
 
 float getDistance(float x1,float x2,float y1,float y2){
 	
@@ -139,19 +143,19 @@ float getDistance(float x1,float x2,float y1,float y2){
 	return distance;
 }
 
-float updateOdometry(float x_before, float y_before){
-float anglepos;
-	float sr = distance * (a-x_before);
-	float sl = distance * (b-y_before);
-	x_before = a;
-	y_before = b;
-	float distansdtraveled = (sl+sr)/2;
-	float anglechange = 2*(sr-sl)/2;
-	anglepos += anglechange;
-	float xChange = distansdtraveled*cos(anglepos);
-	float yChange = distansdtraveled*sin(anglepos);
-	a +=xChange;
-	b +=yChange;
-	
+float updateOdometry(float x1, float y1){
+	float anglepos = 2.75; //vinkel
+	float sr = distance * (a-x1); // för x
+	float sl = distance * (b-y1); // för y
+	x1 = a;
+	y1 = b;
+	float distansdtraveled = (sl+sr)/2; 
+	float anglechange = 2*(sr-sl)/2;		//vinkeländring
+	anglepos += anglechange; //vinkelfrån början plus ändring av vinkeln
+	float xChange = distansdtraveled*cos(anglepos); //ändring av xposition 
+	float yChange = distansdtraveled*sin(anglepos); //ändring av yposition
+	a +=xChange; // ändring av xpos tillförhållande till invärde
+	b +=yChange; //ändring av ypos tillförhållande till invärde 
+	return a,b;
 	
 }

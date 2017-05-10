@@ -103,6 +103,7 @@ SUBDIRS :=  \
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../src/Delays/DelayFunctions.c \
+../src/main.c \
 ../src/Motorfunctions.c \
 ../src/Tasks/task_KNAPP.c \
 ../src/Tasks/task_BLINKA.c \
@@ -133,8 +134,7 @@ C_SRCS +=  \
 ../src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.c \
 ../src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.c \
 ../src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.c \
-../src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.c \
-../src/main.c
+../src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.c
 
 
 PREPROCESSING_SRCS += 
@@ -145,6 +145,7 @@ ASM_SRCS +=
 
 OBJS +=  \
 src/Delays/DelayFunctions.o \
+src/main.o \
 src/Motorfunctions.o \
 src/Tasks/task_KNAPP.o \
 src/Tasks/task_BLINKA.o \
@@ -175,11 +176,11 @@ src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o \
 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o \
 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o \
 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o \
-src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o \
-src/main.o
+src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
 
 OBJS_AS_ARGS +=  \
 src/Delays/DelayFunctions.o \
+src/main.o \
 src/Motorfunctions.o \
 src/Tasks/task_KNAPP.o \
 src/Tasks/task_BLINKA.o \
@@ -210,11 +211,11 @@ src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.o \
 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.o \
 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.o \
 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.o \
-src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o \
-src/main.o
+src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.o
 
 C_DEPS +=  \
 src/Delays/DelayFunctions.d \
+src/main.d \
 src/Motorfunctions.d \
 src/Tasks/task_KNAPP.d \
 src/Tasks/task_BLINKA.d \
@@ -245,11 +246,11 @@ src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.d \
 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.d \
 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.d \
 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.d \
-src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.d \
-src/main.d
+src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.d
 
 C_DEPS_AS_ARGS +=  \
 src/Delays/DelayFunctions.d \
+src/main.d \
 src/Motorfunctions.d \
 src/Tasks/task_KNAPP.d \
 src/Tasks/task_BLINKA.d \
@@ -280,8 +281,7 @@ src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/gcc/sam/port.d \
 src/ASF/thirdparty/freertos/freertos-7.3.0/source/portable/memmang/heap_4.d \
 src/ASF/thirdparty/freertos/freertos-7.3.0/source/queue.d \
 src/ASF/thirdparty/freertos/freertos-7.3.0/source/tasks.d \
-src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.d \
-src/main.d
+src/ASF/thirdparty/freertos/freertos-7.3.0/source/timers.d
 
 OUTPUT_FILE_PATH +=P2arlooo.elf
 

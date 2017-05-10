@@ -17,7 +17,7 @@ void task_BLINKA(void *pvParameters)
 	while(1){
 		vTaskDelayUntil(&xLastWakeTime, xTimeIncrement); /*Wait for the next cycle. */
 	//	if(xSemaphoreTake(signal_semafor,100)){
-			puts("BLINKA TASKEN");
+		//	puts("BLINKA TASKEN");
 		//	ioport_set_pin_level(BlinkaGreen,HIGH);
 			ioport_set_pin_level(BlinkaYellow,HIGH);
 		//	ioport_set_pin_level(BlinkaRed,HIGH);

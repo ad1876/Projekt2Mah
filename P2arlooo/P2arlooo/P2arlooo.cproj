@@ -474,6 +474,9 @@
     <Compile Include="src\Delays\DelayFunctions.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\main.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\Motorfunctions.c">
       <SubType>compile</SubType>
     </Compile>
@@ -1047,9 +1050,6 @@
     <None Include="src\config\FreeRTOSConfig.h">
       <SubType>compile</SubType>
     </None>
-    <Compile Include="src\main.c">
-      <SubType>compile</SubType>
-    </Compile>
     <None Include="src\ASF\thirdparty\CMSIS\Lib\GCC\libarm_cortexM3l_math.a">
       <SubType>compile</SubType>
     </None>

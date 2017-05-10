@@ -20,7 +20,7 @@ void task_KNAPP(void *pvParameters)
 		short xHigherPriorityTaskWoken = pdFALSE;
 		vTaskDelayUntil(&xLastWakeTime, xTimeIncrement); /*Wait for the next cycle. */
 		if(xSemaphoreTakeFromISR(signal_semafor,100)&&(ioport_get_pin_level(Knapp)==1)){
-			puts("Knappen-------------INTRYCKT");
+		//	puts("Knappen-------------INTRYCKT");
 			ioport_set_pin_level(BlinkaGreen,HIGH);
 			ioport_set_pin_level(BlinkaRed,LOW);
 			xSemaphoreGiveFromISR(signal_semafor, &xHigherPriorityTaskWoken);
@@ -31,7 +31,7 @@ void task_KNAPP(void *pvParameters)
 		else{
 			ioport_set_pin_level(BlinkaGreen,LOW);
 			ioport_set_pin_level(BlinkaRed,HIGH);
-			puts("Knappen ------------ ej intryckt!");
+		//	puts("Knappen ------------ ej intryckt!");
 			xSemaphoreGiveFromISR(signal_semafor, &xHigherPriorityTaskWoken);
 		}
 		vTaskDelay(100); //vTaskDelay(xTimeIncrement);
@@ -48,7 +48,7 @@ void knapp_handler(){
 	pio_handler_set(PIOA, ID_PIOA, Knapp, PIO_IT_RISE_EDGE, pin_edge_handler);
 	pio_enable_interrupt(PIOA, Knapp);
 	NVIC_EnableIRQ(PIOA_IRQn);
-	puts("FÅR JAG ETT INTERRUPT DÅadasdasdasdasdasd?!!!!");
+//	puts("FÅR JAG ETT INTERRUPT DÅadasdasdasdasdasd?!!!!");
 }
 
 
@@ -57,7 +57,7 @@ void pin_edge_handler(const uint32_t id, const uint32_t index)
 {
 	if ((id == ID_PIOA) && (index == Knapp)){
 		 if (pio_get(PIOA, PIO_TYPE_PIO_INPUT, Knapp)){
-			 puts("lal");
+		//	 puts("lal");
 	}
 }
 }
