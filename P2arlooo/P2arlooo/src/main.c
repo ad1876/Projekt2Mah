@@ -31,6 +31,11 @@
 #define LED1 PIO_PC22_IDX
 #define LED3 PIO_PC29_IDX  //pin10
 #define k1 PIO_PC28_IDX 
+	float a = 7;
+	float b = 8;
+	float c = 5;
+	float d = 6;
+	float distance;
 /*Tillåter feedback till terminafönstret */
 static void configure_console(void)
 {
@@ -57,10 +62,7 @@ int main (void)
 	delayInit();
 	configure_console();
 	float getDistance(float x1,float x2,float y1,float y2);
-	float a = 7;
-	float b = 8;
-	float c = 5;
-	float d = 6;
+
 	int state;
 	// Sätter direction för pinnar, Utgångar / Ingångar.
 	ioport_set_pin_dir(BlinkaGreen,IOPORT_DIR_OUTPUT);	//Utgång
@@ -129,7 +131,23 @@ int main (void)
 
 
 float getDistance(float x1,float x2,float y1,float y2){
-	float distance;
+	
 	distance =  sqrt((x1-y1)*(x1-y1)+(x2-y2)*(x2-y2));
 	return distance;
+}
+
+float updateOdometry(float x_before, float y_before){
+float anglepos;
+	float sr = distance * (a-x_before);
+	float sl = distance * (b-y_before);
+	x_before = a;
+	y_before = b;
+	float distansdtraveled = (sl+sr)/2;
+	float anglechange = 2*(sr-sl)/2;
+	 anglepos += anglechange;
+	float xChange = distansdtraveled*cos(anglepos);
+	float yChange = distansdtraveled*sin(anglepos);
+	a +=xChange;
+	b +=yChange;
+	
 }
