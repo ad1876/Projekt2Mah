@@ -129,7 +129,8 @@ src/Rotate.d src/Rotate.o: ../src/Rotate.c ../src/asf.h \
  ../src/ASF/sam/drivers/wdt/wdt.h \
  ../src/ASF/sam/drivers/pio/pio_handler.h \
  c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\inttypes.h \
- ../src/Rotate.h ../src/DelayFunctions.h ../src/Motorfunctions.h
+ ../src/Rotate.h ../src/DelayFunctions.h ../src/Motorfunctions.h \
+ ../src/CalculateAngle.h
 
 ../src/asf.h:
 
@@ -410,3 +411,5 @@ c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu
 ../src/DelayFunctions.h:
 
 ../src/Motorfunctions.h:
+
+../src/CalculateAngle.h:

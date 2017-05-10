@@ -11,6 +11,7 @@
 #include "Rotate.h"
 #include "DelayFunctions.h"
 #include "Motorfunctions.h"
+#include "CalculateAngle.h"
 
 
 
@@ -33,9 +34,14 @@
 #define L5 PIO_PC3_IDX
 #define L_RESET PIO_PA14_IDX
 
-
+int direction = 0;
 int r_count = 0;
 int l_count = 0;
+
+uint16_t firstx = 0;
+uint16_t firsty = 0;
+uint16_t secondx = 0;
+uint16_t secondy = 0;
 
 void initRotateMotor(void){
     ioport_set_pin_dir(R_RESET,IOPORT_DIR_OUTPUT);
@@ -63,12 +69,13 @@ void rotate(int d){					//Minimum d is 4
 //     char str[20];
 //     sprintf(str,"början: %d\n",ticks);
 //     printf (str);
-   
+	
+	
 	ioport_set_pin_level(L_RESET,LOW);
 	ioport_set_pin_level(R_RESET,LOW);
    
     if(ticks>0){                    //Positivt ticks svänger höger
-        while(l_count < abs(ticks)){
+        while(l_count < (abs(ticks) + direction)){
            
 			
             l_count = ioport_get_pin_level(L0)+ioport_get_pin_level(L1)*2+ioport_get_pin_level(L2)*4+ioport_get_pin_level(L3)*8
@@ -84,7 +91,7 @@ void rotate(int d){					//Minimum d is 4
 		
     }
     else if(ticks<0){                //Negativt ticks svänger vänster
-        while(r_count < abs(ticks)){
+        while(r_count < (abs(ticks) + 360 - direction)){
 			
 			
             r_count = ioport_get_pin_level(R0)+ioport_get_pin_level(R1)*2+ioport_get_pin_level(R2)*4+ioport_get_pin_level(R3)*8
@@ -104,10 +111,32 @@ void rotate(int d){					//Minimum d is 4
 	ioport_set_pin_level(L_RESET,HIGH);
 	ioport_set_pin_level(R_RESET,HIGH);	
 	
+	updateDirection(d);
+	
 	char str[20];
 	sprintf(str,"\nVinkel: %d",d);
 	printf (str);
 	sprintf(str,"\nTicks: %f",ticks);
 	printf (str);
 	
+}
+
+void updateDirection(int new_rotation){
+	direction = direction + new_rotation;
+}
+
+
+void startupMeasure1(uint16_t x1,uint16_t x2){
+	firstx = x1;
+	firsty = x2;
+}
+
+void startupMeasure2(uint16_t x1,uint16_t x2){
+	secondx = x1;
+	secondy = x2;
+	
+	int xdiff = getX_diff(secondx,firstx);
+	int ydiff = getY_diff(secondy,firsty);
+	
+	direction = calculateAngle(ydiff,xdiff);
 }

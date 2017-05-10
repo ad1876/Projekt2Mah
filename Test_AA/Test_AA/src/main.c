@@ -40,7 +40,7 @@
 uint8_t c_counter = 0;
 char rx[16];
 
-int direction = 0;
+/*int direction = 0;*/
 
 static void configure_console(void)
 /* Enables feedback through the USB-cable back to terminal within Atmel Studio */
@@ -106,8 +106,8 @@ int main (void)
 // 	int i=0;
 // 	int j=0;
 		
-	uint16_t firstx = x1;
-	uint16_t firsty = x2;
+// 	uint16_t firstx = x1;
+// 	uint16_t firsty = x2;
 	
 // 	while(j<80){
 // 		moveForward(1650,1650);
@@ -116,25 +116,27 @@ int main (void)
 // 		j++;
 // 	}
 	
+	startupMeasure1(x1,x2);
+	
 	moveForward(1650,1650);
-	
 	delayMicroseconds(1000000);
-	
 	moveForward(1500,1500);
+	
+	startupMeasure2(x1,x2);
 		
-	uint16_t secondx = x1;
-	uint16_t secondy = x2;
-	
-	int xdiff = getX_diff(secondx,firstx);
-	int ydiff = getY_diff(secondy,firsty);
-	
-	direction = calculateAngle(ydiff,xdiff);
-	
-	
-	char str[20];
-	sprintf(str,"xdiff: %d\nydiff: %d\ndirection: %d\n",xdiff, ydiff, direction);
-	printf (str);
-	
+// 	uint16_t secondx = x1;
+// 	uint16_t secondy = x2;
+// 	
+// 	int xdiff = getX_diff(secondx,firstx);
+// 	int ydiff = getY_diff(secondy,firsty);
+// 	
+// 	direction = calculateAngle(ydiff,xdiff);
+// 	
+// 	
+// 	char str[20];
+// 	sprintf(str,"xdiff: %d\nydiff: %d\ndirection: %d\n",xdiff, ydiff, direction);
+// 	printf (str);
+// 	
 	
 	
 	
