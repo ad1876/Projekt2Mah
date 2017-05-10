@@ -468,10 +468,16 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="src\Delays\delay.c">
+    <Compile Include="src\Delays\DelayFunctions.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\Delays\delay.h">
+    <Compile Include="src\Delays\DelayFunctions.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Motorfunctions.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Motorfunctions.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\Tasks\task_KNAPP.c">

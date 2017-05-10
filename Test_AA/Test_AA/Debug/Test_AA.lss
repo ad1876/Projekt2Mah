@@ -31,9 +31,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  13 .debug_line   00013048  00000000  00000000  0004dc3b  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_str    00063fb1  00000000  00000000  00060c83  2**0
+ 14 .debug_str    00063ff1  00000000  00000000  00060c83  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_frame  00002758  00000000  00000000  000c4c34  2**2
+ 15 .debug_frame  00002758  00000000  00000000  000c4c74  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -1700,192 +1700,50 @@ void moveForward(int l,int r){
    807fc:	00080759 	.word	0x00080759
 
 00080800 <initRotateMotor>:
-uint16_t firstx = 0;
-uint16_t firsty = 0;
-uint16_t secondx = 0;
-uint16_t secondy = 0;
-
-void initRotateMotor(void){
    80800:	b470      	push	{r4, r5, r6}
-		enum ioport_direction dir)
-{
-	Pio *base = arch_ioport_pin_to_base(pin);
-
-	if (dir == IOPORT_DIR_OUTPUT) {
-		base->PIO_OER = arch_ioport_pin_to_mask(pin);
    80802:	4b20      	ldr	r3, [pc, #128]	; (80884 <initRotateMotor+0x84>)
    80804:	f04f 6280 	mov.w	r2, #67108864	; 0x4000000
    80808:	611a      	str	r2, [r3, #16]
-	} else if (dir == IOPORT_DIR_INPUT) {
-		base->PIO_ODR = arch_ioport_pin_to_mask(pin);
-	}
-
-	base->PIO_OWER = arch_ioport_pin_to_mask(pin);
    8080a:	f8c3 20a0 	str.w	r2, [r3, #160]	; 0xa0
-		enum ioport_direction dir)
-{
-	Pio *base = arch_ioport_pin_to_base(pin);
-
-	if (dir == IOPORT_DIR_OUTPUT) {
-		base->PIO_OER = arch_ioport_pin_to_mask(pin);
    8080e:	491e      	ldr	r1, [pc, #120]	; (80888 <initRotateMotor+0x88>)
    80810:	f44f 4380 	mov.w	r3, #16384	; 0x4000
    80814:	610b      	str	r3, [r1, #16]
-	} else if (dir == IOPORT_DIR_INPUT) {
-		base->PIO_ODR = arch_ioport_pin_to_mask(pin);
-	}
-
-	base->PIO_OWER = arch_ioport_pin_to_mask(pin);
    80816:	f8c1 30a0 	str.w	r3, [r1, #160]	; 0xa0
-	Pio *base = arch_ioport_pin_to_base(pin);
-
-	if (dir == IOPORT_DIR_OUTPUT) {
-		base->PIO_OER = arch_ioport_pin_to_mask(pin);
-	} else if (dir == IOPORT_DIR_INPUT) {
-		base->PIO_ODR = arch_ioport_pin_to_mask(pin);
    8081a:	f44f 4300 	mov.w	r3, #32768	; 0x8000
    8081e:	614b      	str	r3, [r1, #20]
-	}
-
-	base->PIO_OWER = arch_ioport_pin_to_mask(pin);
    80820:	f8c1 30a0 	str.w	r3, [r1, #160]	; 0xa0
-	Pio *base = arch_ioport_pin_to_base(pin);
-
-	if (dir == IOPORT_DIR_OUTPUT) {
-		base->PIO_OER = arch_ioport_pin_to_mask(pin);
-	} else if (dir == IOPORT_DIR_INPUT) {
-		base->PIO_ODR = arch_ioport_pin_to_mask(pin);
    80824:	4b19      	ldr	r3, [pc, #100]	; (8088c <initRotateMotor+0x8c>)
    80826:	2402      	movs	r4, #2
    80828:	615c      	str	r4, [r3, #20]
-	}
-
-	base->PIO_OWER = arch_ioport_pin_to_mask(pin);
    8082a:	f8c3 40a0 	str.w	r4, [r3, #160]	; 0xa0
-	Pio *base = arch_ioport_pin_to_base(pin);
-
-	if (dir == IOPORT_DIR_OUTPUT) {
-		base->PIO_OER = arch_ioport_pin_to_mask(pin);
-	} else if (dir == IOPORT_DIR_INPUT) {
-		base->PIO_ODR = arch_ioport_pin_to_mask(pin);
    8082e:	2008      	movs	r0, #8
    80830:	6158      	str	r0, [r3, #20]
-	}
-
-	base->PIO_OWER = arch_ioport_pin_to_mask(pin);
    80832:	f8c3 00a0 	str.w	r0, [r3, #160]	; 0xa0
-	Pio *base = arch_ioport_pin_to_base(pin);
-
-	if (dir == IOPORT_DIR_OUTPUT) {
-		base->PIO_OER = arch_ioport_pin_to_mask(pin);
-	} else if (dir == IOPORT_DIR_INPUT) {
-		base->PIO_ODR = arch_ioport_pin_to_mask(pin);
    80836:	f44f 7200 	mov.w	r2, #512	; 0x200
    8083a:	615a      	str	r2, [r3, #20]
-	}
-
-	base->PIO_OWER = arch_ioport_pin_to_mask(pin);
    8083c:	f8c3 20a0 	str.w	r2, [r3, #160]	; 0xa0
-	Pio *base = arch_ioport_pin_to_base(pin);
-
-	if (dir == IOPORT_DIR_OUTPUT) {
-		base->PIO_OER = arch_ioport_pin_to_mask(pin);
-	} else if (dir == IOPORT_DIR_INPUT) {
-		base->PIO_ODR = arch_ioport_pin_to_mask(pin);
    80840:	f44f 6280 	mov.w	r2, #1024	; 0x400
    80844:	615a      	str	r2, [r3, #20]
-	}
-
-	base->PIO_OWER = arch_ioport_pin_to_mask(pin);
    80846:	f8c3 20a0 	str.w	r2, [r3, #160]	; 0xa0
-	Pio *base = arch_ioport_pin_to_base(pin);
-
-	if (dir == IOPORT_DIR_OUTPUT) {
-		base->PIO_OER = arch_ioport_pin_to_mask(pin);
-	} else if (dir == IOPORT_DIR_INPUT) {
-		base->PIO_ODR = arch_ioport_pin_to_mask(pin);
    8084a:	4a11      	ldr	r2, [pc, #68]	; (80890 <initRotateMotor+0x90>)
    8084c:	2504      	movs	r5, #4
    8084e:	6155      	str	r5, [r2, #20]
-	}
-
-	base->PIO_OWER = arch_ioport_pin_to_mask(pin);
    80850:	f8c2 50a0 	str.w	r5, [r2, #160]	; 0xa0
-	Pio *base = arch_ioport_pin_to_base(pin);
-
-	if (dir == IOPORT_DIR_OUTPUT) {
-		base->PIO_OER = arch_ioport_pin_to_mask(pin);
-	} else if (dir == IOPORT_DIR_INPUT) {
-		base->PIO_ODR = arch_ioport_pin_to_mask(pin);
    80854:	2601      	movs	r6, #1
    80856:	615e      	str	r6, [r3, #20]
-	}
-
-	base->PIO_OWER = arch_ioport_pin_to_mask(pin);
    80858:	f8c3 60a0 	str.w	r6, [r3, #160]	; 0xa0
-	Pio *base = arch_ioport_pin_to_base(pin);
-
-	if (dir == IOPORT_DIR_OUTPUT) {
-		base->PIO_OER = arch_ioport_pin_to_mask(pin);
-	} else if (dir == IOPORT_DIR_INPUT) {
-		base->PIO_ODR = arch_ioport_pin_to_mask(pin);
    8085c:	615d      	str	r5, [r3, #20]
-	}
-
-	base->PIO_OWER = arch_ioport_pin_to_mask(pin);
    8085e:	f8c3 50a0 	str.w	r5, [r3, #160]	; 0xa0
-	Pio *base = arch_ioport_pin_to_base(pin);
-
-	if (dir == IOPORT_DIR_OUTPUT) {
-		base->PIO_OER = arch_ioport_pin_to_mask(pin);
-	} else if (dir == IOPORT_DIR_INPUT) {
-		base->PIO_ODR = arch_ioport_pin_to_mask(pin);
    80862:	2540      	movs	r5, #64	; 0x40
    80864:	615d      	str	r5, [r3, #20]
-	}
-
-	base->PIO_OWER = arch_ioport_pin_to_mask(pin);
    80866:	f8c3 50a0 	str.w	r5, [r3, #160]	; 0xa0
-	Pio *base = arch_ioport_pin_to_base(pin);
-
-	if (dir == IOPORT_DIR_OUTPUT) {
-		base->PIO_OER = arch_ioport_pin_to_mask(pin);
-	} else if (dir == IOPORT_DIR_INPUT) {
-		base->PIO_ODR = arch_ioport_pin_to_mask(pin);
    8086a:	2380      	movs	r3, #128	; 0x80
    8086c:	614b      	str	r3, [r1, #20]
-	}
-
-	base->PIO_OWER = arch_ioport_pin_to_mask(pin);
    8086e:	f8c1 30a0 	str.w	r3, [r1, #160]	; 0xa0
-	Pio *base = arch_ioport_pin_to_base(pin);
-
-	if (dir == IOPORT_DIR_OUTPUT) {
-		base->PIO_OER = arch_ioport_pin_to_mask(pin);
-	} else if (dir == IOPORT_DIR_INPUT) {
-		base->PIO_ODR = arch_ioport_pin_to_mask(pin);
    80872:	6154      	str	r4, [r2, #20]
-	}
-
-	base->PIO_OWER = arch_ioport_pin_to_mask(pin);
    80874:	f8c2 40a0 	str.w	r4, [r2, #160]	; 0xa0
-	Pio *base = arch_ioport_pin_to_base(pin);
-
-	if (dir == IOPORT_DIR_OUTPUT) {
-		base->PIO_OER = arch_ioport_pin_to_mask(pin);
-	} else if (dir == IOPORT_DIR_INPUT) {
-		base->PIO_ODR = arch_ioport_pin_to_mask(pin);
    80878:	6150      	str	r0, [r2, #20]
-	}
-
-	base->PIO_OWER = arch_ioport_pin_to_mask(pin);
    8087a:	f8c2 00a0 	str.w	r0, [r2, #160]	; 0xa0
-    ioport_set_pin_dir(L4,IOPORT_DIR_INPUT);
-    ioport_set_pin_dir(L5,IOPORT_DIR_INPUT);
-
-	  
-    
-}
    8087e:	bc70      	pop	{r4, r5, r6}
    80880:	4770      	bx	lr
    80882:	bf00      	nop
@@ -1895,12 +1753,6 @@ void initRotateMotor(void){
    80890:	400e1200 	.word	0x400e1200
 
 00080894 <updateDirection>:
-	printf (str);
-	
-}
-
-void updateDirection(int new_rotation){
-	direction = direction + new_rotation;
    80894:	4b02      	ldr	r3, [pc, #8]	; (808a0 <updateDirection+0xc>)
    80896:	681a      	ldr	r2, [r3, #0]
    80898:	4410      	add	r0, r2
@@ -1910,16 +1762,9 @@ void updateDirection(int new_rotation){
    808a0:	20070aac 	.word	0x20070aac
 
 000808a4 <rotate>:
-
-	  
-    
-}
-
-void rotate(int d){					//Minimum d is 4
    808a4:	e92d 47f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
    808a8:	b086      	sub	sp, #24
    808aa:	4682      	mov	sl, r0
-    double ticks = d * 0.25;
    808ac:	4b6f      	ldr	r3, [pc, #444]	; (80a6c <rotate+0x1c8>)
    808ae:	4798      	blx	r3
    808b0:	2200      	movs	r2, #0
@@ -1928,31 +1773,18 @@ void rotate(int d){					//Minimum d is 4
    808b6:	47a0      	blx	r4
    808b8:	4604      	mov	r4, r0
    808ba:	460d      	mov	r5, r1
-	Pio *base = arch_ioport_pin_to_base(pin);
-
-	if (level) {
-		base->PIO_SODR = arch_ioport_pin_to_mask(pin);
-	} else {
-		base->PIO_CODR = arch_ioport_pin_to_mask(pin);
    808bc:	f44f 4280 	mov.w	r2, #16384	; 0x4000
    808c0:	4b6d      	ldr	r3, [pc, #436]	; (80a78 <rotate+0x1d4>)
    808c2:	635a      	str	r2, [r3, #52]	; 0x34
    808c4:	f04f 6280 	mov.w	r2, #67108864	; 0x4000000
    808c8:	f503 7300 	add.w	r3, r3, #512	; 0x200
    808cc:	635a      	str	r2, [r3, #52]	; 0x34
-	
-	
-	ioport_set_pin_level(L_RESET,LOW);
-	ioport_set_pin_level(R_RESET,LOW);
-   
-    if(ticks>0){                    //Positivt ticks svänger höger
    808ce:	2200      	movs	r2, #0
    808d0:	2300      	movs	r3, #0
    808d2:	4e6a      	ldr	r6, [pc, #424]	; (80a7c <rotate+0x1d8>)
    808d4:	47b0      	blx	r6
    808d6:	2800      	cmp	r0, #0
    808d8:	d04e      	beq.n	80978 <rotate+0xd4>
-        while(l_count < (abs(ticks) + direction/4)){
    808da:	4620      	mov	r0, r4
    808dc:	4629      	mov	r1, r5
    808de:	4b68      	ldr	r3, [pc, #416]	; (80a80 <rotate+0x1dc>)
@@ -1969,12 +1801,6 @@ void rotate(int d){					//Minimum d is 4
    808fa:	6812      	ldr	r2, [r2, #0]
    808fc:	4293      	cmp	r3, r2
    808fe:	dd35      	ble.n	8096c <rotate+0xc8>
-	base->PIO_CODR = mask & ~level;
-}
-
-__always_inline static bool arch_ioport_get_pin_level(ioport_pin_t pin)
-{
-	return arch_ioport_pin_to_base(pin)->PIO_PDSR & arch_ioport_pin_to_mask(pin);
    80900:	4e62      	ldr	r6, [pc, #392]	; (80a8c <rotate+0x1e8>)
    80902:	f8df 9174 	ldr.w	r9, [pc, #372]	; 80a78 <rotate+0x1d4>
    80906:	4f62      	ldr	r7, [pc, #392]	; (80a90 <rotate+0x1ec>)
@@ -1986,41 +1812,21 @@ __always_inline static bool arch_ioport_get_pin_level(ioport_pin_t pin)
    80918:	6bfa      	ldr	r2, [r7, #60]	; 0x3c
    8091a:	f00c 0c01 	and.w	ip, ip, #1
    8091e:	f3ce 0e80 	ubfx	lr, lr, #2, #1
-           
-			
-            l_count = ioport_get_pin_level(L0)+ioport_get_pin_level(L1)*2+ioport_get_pin_level(L2)*4+ioport_get_pin_level(L3)*8
    80922:	eb0c 0e4e 	add.w	lr, ip, lr, lsl #1
    80926:	f3c0 1080 	ubfx	r0, r0, #6, #1
    8092a:	eb0e 0080 	add.w	r0, lr, r0, lsl #2
    8092e:	f3c1 11c0 	ubfx	r1, r1, #7, #1
    80932:	eb00 01c1 	add.w	r1, r0, r1, lsl #3
    80936:	f3c3 0340 	ubfx	r3, r3, #1, #1
-            +ioport_get_pin_level(L4)*16+ioport_get_pin_level(L5)*32;
    8093a:	eb01 1303 	add.w	r3, r1, r3, lsl #4
    8093e:	f3c2 02c0 	ubfx	r2, r2, #3, #1
    80942:	eb03 1242 	add.w	r2, r3, r2, lsl #5
-   
-    if(ticks>0){                    //Positivt ticks svänger höger
-        while(l_count < (abs(ticks) + direction/4)){
-           
-			
-            l_count = ioport_get_pin_level(L0)+ioport_get_pin_level(L1)*2+ioport_get_pin_level(L2)*4+ioport_get_pin_level(L3)*8
    80946:	4b50      	ldr	r3, [pc, #320]	; (80a88 <rotate+0x1e4>)
    80948:	601a      	str	r2, [r3, #0]
-            +ioport_get_pin_level(L4)*16+ioport_get_pin_level(L5)*32;
-            //ioport_set_pin_level(L_RESET,HIGH); 
-           
-            moveForward(1600,1400);
    8094a:	f44f 60c8 	mov.w	r0, #1600	; 0x640
    8094e:	f44f 61af 	mov.w	r1, #1400	; 0x578
    80952:	4b50      	ldr	r3, [pc, #320]	; (80a94 <rotate+0x1f0>)
    80954:	4798      	blx	r3
-	
-	ioport_set_pin_level(L_RESET,LOW);
-	ioport_set_pin_level(R_RESET,LOW);
-   
-    if(ticks>0){                    //Positivt ticks svänger höger
-        while(l_count < (abs(ticks) + direction/4)){
    80956:	4b4b      	ldr	r3, [pc, #300]	; (80a84 <rotate+0x1e0>)
    80958:	681b      	ldr	r3, [r3, #0]
    8095a:	2b00      	cmp	r3, #0
@@ -2031,20 +1837,11 @@ __always_inline static bool arch_ioport_get_pin_level(ioport_pin_t pin)
    80966:	6812      	ldr	r2, [r2, #0]
    80968:	4293      	cmp	r3, r2
    8096a:	dccd      	bgt.n	80908 <rotate+0x64>
-            moveForward(1600,1400);
-
-//             sprintf(str,"åt höger: %d\n",l_count);
-//             printf (str);
-        }
-        moveForward(1500,1500);
    8096c:	f240 50dc 	movw	r0, #1500	; 0x5dc
    80970:	4601      	mov	r1, r0
    80972:	4b48      	ldr	r3, [pc, #288]	; (80a94 <rotate+0x1f0>)
    80974:	4798      	blx	r3
    80976:	e056      	b.n	80a26 <rotate+0x182>
-		
-    }
-    else if(ticks<0){                //Negativt ticks svänger vänster
    80978:	4620      	mov	r0, r4
    8097a:	4629      	mov	r1, r5
    8097c:	2200      	movs	r2, #0
@@ -2053,7 +1850,6 @@ __always_inline static bool arch_ioport_get_pin_level(ioport_pin_t pin)
    80982:	47b0      	blx	r6
    80984:	2800      	cmp	r0, #0
    80986:	d04e      	beq.n	80a26 <rotate+0x182>
-        while(r_count < (abs(ticks) - direction/4)){
    80988:	4620      	mov	r0, r4
    8098a:	4629      	mov	r1, r5
    8098c:	4b3c      	ldr	r3, [pc, #240]	; (80a80 <rotate+0x1dc>)
@@ -2081,41 +1877,21 @@ __always_inline static bool arch_ioport_get_pin_level(ioport_pin_t pin)
    809c6:	f8d8 203c 	ldr.w	r2, [r8, #60]	; 0x3c
    809ca:	f3cc 3cc0 	ubfx	ip, ip, #15, #1
    809ce:	f3ce 0e40 	ubfx	lr, lr, #1, #1
-			
-			
-            r_count = ioport_get_pin_level(R0)+ioport_get_pin_level(R1)*2+ioport_get_pin_level(R2)*4+ioport_get_pin_level(R3)*8
    809d2:	eb0c 0e4e 	add.w	lr, ip, lr, lsl #1
    809d6:	f3c0 00c0 	ubfx	r0, r0, #3, #1
    809da:	eb0e 0080 	add.w	r0, lr, r0, lsl #2
    809de:	f3c1 2140 	ubfx	r1, r1, #9, #1
    809e2:	eb00 01c1 	add.w	r1, r0, r1, lsl #3
    809e6:	f3c3 2380 	ubfx	r3, r3, #10, #1
-            +ioport_get_pin_level(R4)*16+ioport_get_pin_level(R5)*32;
    809ea:	eb01 1303 	add.w	r3, r1, r3, lsl #4
    809ee:	f3c2 0280 	ubfx	r2, r2, #2, #1
    809f2:	eb03 1242 	add.w	r2, r3, r2, lsl #5
-    }
-    else if(ticks<0){                //Negativt ticks svänger vänster
-        while(r_count < (abs(ticks) - direction/4)){
-			
-			
-            r_count = ioport_get_pin_level(R0)+ioport_get_pin_level(R1)*2+ioport_get_pin_level(R2)*4+ioport_get_pin_level(R3)*8
    809f6:	4b29      	ldr	r3, [pc, #164]	; (80a9c <rotate+0x1f8>)
    809f8:	601a      	str	r2, [r3, #0]
-            +ioport_get_pin_level(R4)*16+ioport_get_pin_level(R5)*32;
-            //ioport_set_pin_level(R_RESET,HIGH);   
-            
-            moveForward(1400,1600);
    809fa:	f44f 60af 	mov.w	r0, #1400	; 0x578
    809fe:	f44f 61c8 	mov.w	r1, #1600	; 0x640
    80a02:	4b24      	ldr	r3, [pc, #144]	; (80a94 <rotate+0x1f0>)
    80a04:	4798      	blx	r3
-        }
-        moveForward(1500,1500);
-		
-    }
-    else if(ticks<0){                //Negativt ticks svänger vänster
-        while(r_count < (abs(ticks) - direction/4)){
    80a06:	4b1f      	ldr	r3, [pc, #124]	; (80a84 <rotate+0x1e0>)
    80a08:	681b      	ldr	r3, [r3, #0]
    80a0a:	2b00      	cmp	r3, #0
@@ -2126,68 +1902,39 @@ __always_inline static bool arch_ioport_get_pin_level(ioport_pin_t pin)
    80a16:	6812      	ldr	r2, [r2, #0]
    80a18:	4293      	cmp	r3, r2
    80a1a:	dccd      	bgt.n	809b8 <rotate+0x114>
-            
-            moveForward(1400,1600);
-//             sprintf(str,"åt vänster: %d\n",r_count);
-//             printf (str);
-        }
-        moveForward(1500,1500);
    80a1c:	f240 50dc 	movw	r0, #1500	; 0x5dc
    80a20:	4601      	mov	r1, r0
    80a22:	4b1c      	ldr	r3, [pc, #112]	; (80a94 <rotate+0x1f0>)
    80a24:	4798      	blx	r3
-		
-    }
-	l_count = 0;
    80a26:	2300      	movs	r3, #0
    80a28:	4a17      	ldr	r2, [pc, #92]	; (80a88 <rotate+0x1e4>)
    80a2a:	6013      	str	r3, [r2, #0]
-	r_count = 0;
    80a2c:	4a1b      	ldr	r2, [pc, #108]	; (80a9c <rotate+0x1f8>)
    80a2e:	6013      	str	r3, [r2, #0]
-		bool level)
-{
-	Pio *base = arch_ioport_pin_to_base(pin);
-
-	if (level) {
-		base->PIO_SODR = arch_ioport_pin_to_mask(pin);
    80a30:	f44f 4280 	mov.w	r2, #16384	; 0x4000
    80a34:	4b10      	ldr	r3, [pc, #64]	; (80a78 <rotate+0x1d4>)
    80a36:	631a      	str	r2, [r3, #48]	; 0x30
    80a38:	f04f 6280 	mov.w	r2, #67108864	; 0x4000000
    80a3c:	f503 7300 	add.w	r3, r3, #512	; 0x200
    80a40:	631a      	str	r2, [r3, #48]	; 0x30
-	
-	ioport_set_pin_level(L_RESET,HIGH);
-	ioport_set_pin_level(R_RESET,HIGH);	
-	
-	updateDirection(d);
    80a42:	4650      	mov	r0, sl
    80a44:	4b16      	ldr	r3, [pc, #88]	; (80aa0 <rotate+0x1fc>)
    80a46:	4798      	blx	r3
-	
-	char str[20];
-	sprintf(str,"\nVinkel: %d",d);
    80a48:	a801      	add	r0, sp, #4
    80a4a:	4916      	ldr	r1, [pc, #88]	; (80aa4 <rotate+0x200>)
    80a4c:	4652      	mov	r2, sl
    80a4e:	4f16      	ldr	r7, [pc, #88]	; (80aa8 <rotate+0x204>)
    80a50:	47b8      	blx	r7
-	printf (str);
    80a52:	a801      	add	r0, sp, #4
    80a54:	4e15      	ldr	r6, [pc, #84]	; (80aac <rotate+0x208>)
    80a56:	47b0      	blx	r6
-	sprintf(str,"\nTicks: %f",ticks);
    80a58:	a801      	add	r0, sp, #4
    80a5a:	4915      	ldr	r1, [pc, #84]	; (80ab0 <rotate+0x20c>)
    80a5c:	4622      	mov	r2, r4
    80a5e:	462b      	mov	r3, r5
    80a60:	47b8      	blx	r7
-	printf (str);
    80a62:	a801      	add	r0, sp, #4
    80a64:	47b0      	blx	r6
-	
-}
    80a66:	b006      	add	sp, #24
    80a68:	e8bd 87f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, pc}
    80a6c:	00081f05 	.word	0x00081f05
@@ -2210,15 +1957,8 @@ __always_inline static bool arch_ioport_get_pin_level(ioport_pin_t pin)
    80ab0:	00088004 	.word	0x00088004
 
 00080ab4 <startupMeasure1>:
-	direction = direction + new_rotation;
-}
-
-
-void startupMeasure1(uint16_t x1,uint16_t x2){
-	firstx = x1;
    80ab4:	4b02      	ldr	r3, [pc, #8]	; (80ac0 <startupMeasure1+0xc>)
    80ab6:	8018      	strh	r0, [r3, #0]
-	firsty = x2;
    80ab8:	4b02      	ldr	r3, [pc, #8]	; (80ac4 <startupMeasure1+0x10>)
    80aba:	8019      	strh	r1, [r3, #0]
    80abc:	4770      	bx	lr
@@ -2227,31 +1967,21 @@ void startupMeasure1(uint16_t x1,uint16_t x2){
    80ac4:	20070aa4 	.word	0x20070aa4
 
 00080ac8 <startupMeasure2>:
-}
-
-void startupMeasure2(uint16_t x1,uint16_t x2){
    80ac8:	b538      	push	{r3, r4, r5, lr}
-	secondx = x1;
    80aca:	4b0a      	ldr	r3, [pc, #40]	; (80af4 <startupMeasure2+0x2c>)
    80acc:	8018      	strh	r0, [r3, #0]
-	secondy = x2;
    80ace:	4c0a      	ldr	r4, [pc, #40]	; (80af8 <startupMeasure2+0x30>)
    80ad0:	8021      	strh	r1, [r4, #0]
-	
-	int xdiff = getX_diff(secondx,firstx);
    80ad2:	4b0a      	ldr	r3, [pc, #40]	; (80afc <startupMeasure2+0x34>)
    80ad4:	8819      	ldrh	r1, [r3, #0]
    80ad6:	4b0a      	ldr	r3, [pc, #40]	; (80b00 <startupMeasure2+0x38>)
    80ad8:	4798      	blx	r3
    80ada:	4605      	mov	r5, r0
-	int ydiff = getY_diff(secondy,firsty);
    80adc:	8820      	ldrh	r0, [r4, #0]
    80ade:	4b09      	ldr	r3, [pc, #36]	; (80b04 <startupMeasure2+0x3c>)
    80ae0:	8819      	ldrh	r1, [r3, #0]
    80ae2:	4b09      	ldr	r3, [pc, #36]	; (80b08 <startupMeasure2+0x40>)
    80ae4:	4798      	blx	r3
-	
-	direction = calculateAngle(ydiff,xdiff);
    80ae6:	4629      	mov	r1, r5
    80ae8:	4b08      	ldr	r3, [pc, #32]	; (80b0c <startupMeasure2+0x44>)
    80aea:	4798      	blx	r3
@@ -3916,17 +3646,10 @@ extern int _lseek(int file, int ptr, int dir)
    8121e:	4770      	bx	lr
 
 00081220 <USART1_Handler>:
-	sysclk_enable_peripheral_clock(BOARD_USART1_BASE);
-	usart_serial_init(CONF_UART, &uart_serial_options);
-}
-
-void USART1_Handler() {
-	CONF_UART->US_CR |= (1 << US_CR_RSTRX);
    81220:	4b09      	ldr	r3, [pc, #36]	; (81248 <USART1_Handler+0x28>)
    81222:	681a      	ldr	r2, [r3, #0]
    81224:	f042 0210 	orr.w	r2, r2, #16
    81228:	601a      	str	r2, [r3, #0]
-	rx[c_counter++] = CONF_UART->US_RHR & US_RHR_RXCHR_Msk;
    8122a:	4808      	ldr	r0, [pc, #32]	; (8124c <USART1_Handler+0x2c>)
    8122c:	7801      	ldrb	r1, [r0, #0]
    8122e:	1c4a      	adds	r2, r1, #1
@@ -3935,11 +3658,8 @@ void USART1_Handler() {
    81234:	6998      	ldr	r0, [r3, #24]
    81236:	4b06      	ldr	r3, [pc, #24]	; (81250 <USART1_Handler+0x30>)
    81238:	5458      	strb	r0, [r3, r1]
-	if (c_counter > 15)
    8123a:	2a0f      	cmp	r2, #15
    8123c:	d902      	bls.n	81244 <USART1_Handler+0x24>
-	{
-		c_counter = 0;
    8123e:	2200      	movs	r2, #0
    81240:	4b02      	ldr	r3, [pc, #8]	; (8124c <USART1_Handler+0x2c>)
    81242:	701a      	strb	r2, [r3, #0]
@@ -3950,12 +3670,6 @@ void USART1_Handler() {
    81250:	20070b74 	.word	0x20070b74
 
 00081254 <stringToInt>:
-	}
-	
-}
-
-void stringToInt(uint16_t *p_variable, char *p_string) {
-			*p_variable = (*p_string++ - '0') * 1000;
    81254:	780b      	ldrb	r3, [r1, #0]
    81256:	3b30      	subs	r3, #48	; 0x30
    81258:	ebc3 1243 	rsb	r2, r3, r3, lsl #5
@@ -3963,7 +3677,6 @@ void stringToInt(uint16_t *p_variable, char *p_string) {
    81260:	00db      	lsls	r3, r3, #3
    81262:	b29b      	uxth	r3, r3
    81264:	8003      	strh	r3, [r0, #0]
-			*p_variable = *p_variable + (*p_string++ - '0') * 100;
    81266:	784a      	ldrb	r2, [r1, #1]
    81268:	3a30      	subs	r2, #48	; 0x30
    8126a:	eb02 0282 	add.w	r2, r2, r2, lsl #2
@@ -3971,14 +3684,12 @@ void stringToInt(uint16_t *p_variable, char *p_string) {
    81272:	eb03 0282 	add.w	r2, r3, r2, lsl #2
    81276:	b292      	uxth	r2, r2
    81278:	8002      	strh	r2, [r0, #0]
-			*p_variable = *p_variable + (*p_string++ - '0') * 10;
    8127a:	788b      	ldrb	r3, [r1, #2]
    8127c:	3b30      	subs	r3, #48	; 0x30
    8127e:	eb03 0383 	add.w	r3, r3, r3, lsl #2
    81282:	eb02 0343 	add.w	r3, r2, r3, lsl #1
    81286:	b29b      	uxth	r3, r3
    81288:	8003      	strh	r3, [r0, #0]
-			*p_variable = *p_variable + (*p_string - '0');
    8128a:	78ca      	ldrb	r2, [r1, #3]
    8128c:	3a30      	subs	r2, #48	; 0x30
    8128e:	4413      	add	r3, r2
@@ -3986,18 +3697,10 @@ void stringToInt(uint16_t *p_variable, char *p_string) {
    81292:	4770      	bx	lr
 
 00081294 <main>:
-}
-
-
-int main (void)
-{
    81294:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
    81298:	b08c      	sub	sp, #48	; 0x30
-	
-	sysclk_init();
    8129a:	4b5a      	ldr	r3, [pc, #360]	; (81404 <main+0x170>)
    8129c:	4798      	blx	r3
-	board_init();
    8129e:	4b5a      	ldr	r3, [pc, #360]	; (81408 <main+0x174>)
    812a0:	4798      	blx	r3
    812a2:	200b      	movs	r0, #11
@@ -4009,214 +3712,110 @@ int main (void)
    812ae:	47a8      	blx	r5
    812b0:	200e      	movs	r0, #14
    812b2:	47a8      	blx	r5
-	ioport_init();
-	delayInit();
    812b4:	4b56      	ldr	r3, [pc, #344]	; (81410 <main+0x17c>)
    812b6:	4798      	blx	r3
-	initRegulator();
    812b8:	4b56      	ldr	r3, [pc, #344]	; (81414 <main+0x180>)
    812ba:	4798      	blx	r3
-	initMotor();
    812bc:	4b56      	ldr	r3, [pc, #344]	; (81418 <main+0x184>)
    812be:	4798      	blx	r3
-	initRotateMotor();
    812c0:	4b56      	ldr	r3, [pc, #344]	; (8141c <main+0x188>)
    812c2:	4798      	blx	r3
    812c4:	4e56      	ldr	r6, [pc, #344]	; (81420 <main+0x18c>)
    812c6:	4630      	mov	r0, r6
    812c8:	47a8      	blx	r5
-	uart_settings.ul_baudrate = opt->baudrate;
-	uart_settings.ul_mode = opt->paritytype;
-#endif
-
-	sam_usart_opt_t usart_settings;
-	usart_settings.baudrate = opt->baudrate;
    812ca:	f44f 5316 	mov.w	r3, #9600	; 0x2580
    812ce:	9300      	str	r3, [sp, #0]
-	usart_settings.char_length = opt->charlength;
    812d0:	23c0      	movs	r3, #192	; 0xc0
    812d2:	9301      	str	r3, [sp, #4]
-	usart_settings.parity_type = opt->paritytype;
    812d4:	f44f 6300 	mov.w	r3, #2048	; 0x800
    812d8:	9302      	str	r3, [sp, #8]
-	usart_settings.stop_bits= opt->stopbits;
    812da:	2400      	movs	r4, #0
    812dc:	9403      	str	r4, [sp, #12]
-	usart_settings.channel_mode= US_MR_CHMODE_NORMAL;
    812de:	9404      	str	r4, [sp, #16]
    812e0:	2012      	movs	r0, #18
    812e2:	47a8      	blx	r5
-		flexcom_set_opmode(FLEXCOM1, FLEXCOM_USART);
-#else
-		sysclk_enable_peripheral_clock(ID_USART1);
-#endif
-		/* Configure USART */
-		usart_init_rs232(p_usart, &usart_settings,
    812e4:	4630      	mov	r0, r6
    812e6:	4669      	mov	r1, sp
    812e8:	4a4e      	ldr	r2, [pc, #312]	; (81424 <main+0x190>)
    812ea:	4b4f      	ldr	r3, [pc, #316]	; (81428 <main+0x194>)
    812ec:	4798      	blx	r3
-		/* Configure USART */
-		usart_init_rs232(p_usart, &usart_settings,
-				sysclk_get_peripheral_bus_hz(p_usart));
-#endif
-		/* Enable the receiver and transmitter. */
-		usart_enable_tx(p_usart);
    812ee:	4630      	mov	r0, r6
    812f0:	4b4e      	ldr	r3, [pc, #312]	; (8142c <main+0x198>)
    812f2:	4798      	blx	r3
-		usart_enable_rx(p_usart);
    812f4:	4630      	mov	r0, r6
    812f6:	4b4e      	ldr	r3, [pc, #312]	; (81430 <main+0x19c>)
    812f8:	4798      	blx	r3
-	configure_console();
-	initDrive();
    812fa:	4b4e      	ldr	r3, [pc, #312]	; (81434 <main+0x1a0>)
    812fc:	4798      	blx	r3
-	
-	char str1[4];
-	char str2[4];
-	char str3[4];
-	char str4[4];
-	uint16_t x1 = 0;
    812fe:	f8ad 401e 	strh.w	r4, [sp, #30]
-	uint16_t x2 = 0;
    81302:	f8ad 401c 	strh.w	r4, [sp, #28]
-	uint16_t x3 = 0; //irrelevant
    81306:	f8ad 401a 	strh.w	r4, [sp, #26]
-	uint16_t x4 = 0; //irrelevant
    8130a:	f8ad 4018 	strh.w	r4, [sp, #24]
-// 		x1=x1+1;
-// 		x2=x2-1;
-// 		j++;
-// 	}
-	
-	startupMeasure1(x1,x2);
    8130e:	4620      	mov	r0, r4
    81310:	4621      	mov	r1, r4
    81312:	4b49      	ldr	r3, [pc, #292]	; (81438 <main+0x1a4>)
    81314:	4798      	blx	r3
-	
-	moveForward(1650,1650);
    81316:	f240 6072 	movw	r0, #1650	; 0x672
    8131a:	4601      	mov	r1, r0
    8131c:	4c47      	ldr	r4, [pc, #284]	; (8143c <main+0x1a8>)
    8131e:	47a0      	blx	r4
-	delayMicroseconds(1000000);
    81320:	4847      	ldr	r0, [pc, #284]	; (81440 <main+0x1ac>)
    81322:	4b48      	ldr	r3, [pc, #288]	; (81444 <main+0x1b0>)
    81324:	4798      	blx	r3
-	moveForward(1500,1500);
    81326:	f240 50dc 	movw	r0, #1500	; 0x5dc
    8132a:	4601      	mov	r1, r0
    8132c:	47a0      	blx	r4
-	
-	startupMeasure2(x1,x2);
    8132e:	f8bd 001e 	ldrh.w	r0, [sp, #30]
    81332:	f8bd 101c 	ldrh.w	r1, [sp, #28]
    81336:	4b44      	ldr	r3, [pc, #272]	; (81448 <main+0x1b4>)
    81338:	4798      	blx	r3
-	
-	
-	
-	while(1){
-		
-		str1[0] = rx[0];
    8133a:	4c44      	ldr	r4, [pc, #272]	; (8144c <main+0x1b8>)
-		str4[0] = rx[12];
-		str4[1] = rx[13];
-		str4[2] = rx[14];
-		str4[3] = rx[15];
-		
-		stringToInt(&x1, str1);
    8133c:	4d44      	ldr	r5, [pc, #272]	; (81450 <main+0x1bc>)
-		int n=0;
-
-		switch (n)
-		{
-		case 0:
-			rotate(calculateAngle(getY_diff(OBJ1_Y,x2),getX_diff(OBJ1_X,x1)));
    8133e:	4f45      	ldr	r7, [pc, #276]	; (81454 <main+0x1c0>)
-	
-	
-	
-	while(1){
-		
-		str1[0] = rx[0];
    81340:	7823      	ldrb	r3, [r4, #0]
    81342:	f88d 302c 	strb.w	r3, [sp, #44]	; 0x2c
-		str1[1] = rx[1];
    81346:	7863      	ldrb	r3, [r4, #1]
    81348:	f88d 302d 	strb.w	r3, [sp, #45]	; 0x2d
-		str1[2] = rx[2];
    8134c:	78a3      	ldrb	r3, [r4, #2]
    8134e:	f88d 302e 	strb.w	r3, [sp, #46]	; 0x2e
-		str1[3] = rx[3];
    81352:	78e3      	ldrb	r3, [r4, #3]
    81354:	f88d 302f 	strb.w	r3, [sp, #47]	; 0x2f
-		
-		str2[0] = rx[4];
    81358:	7923      	ldrb	r3, [r4, #4]
    8135a:	f88d 3028 	strb.w	r3, [sp, #40]	; 0x28
-		str2[1] = rx[5];
    8135e:	7963      	ldrb	r3, [r4, #5]
    81360:	f88d 3029 	strb.w	r3, [sp, #41]	; 0x29
-		str2[2] = rx[6];
    81364:	79a3      	ldrb	r3, [r4, #6]
    81366:	f88d 302a 	strb.w	r3, [sp, #42]	; 0x2a
-		str2[3] = rx[7];
    8136a:	79e3      	ldrb	r3, [r4, #7]
    8136c:	f88d 302b 	strb.w	r3, [sp, #43]	; 0x2b
-		
-		str3[0] = rx[8];
    81370:	7a23      	ldrb	r3, [r4, #8]
    81372:	f88d 3024 	strb.w	r3, [sp, #36]	; 0x24
-		str3[1] = rx[9];
    81376:	7a63      	ldrb	r3, [r4, #9]
    81378:	f88d 3025 	strb.w	r3, [sp, #37]	; 0x25
-		str3[2] = rx[10];
    8137c:	7aa3      	ldrb	r3, [r4, #10]
    8137e:	f88d 3026 	strb.w	r3, [sp, #38]	; 0x26
-		str3[3] = rx[11];
    81382:	7ae3      	ldrb	r3, [r4, #11]
    81384:	f88d 3027 	strb.w	r3, [sp, #39]	; 0x27
-		
-		str4[0] = rx[12];
    81388:	7b23      	ldrb	r3, [r4, #12]
    8138a:	f88d 3020 	strb.w	r3, [sp, #32]
-		str4[1] = rx[13];
    8138e:	7b63      	ldrb	r3, [r4, #13]
    81390:	f88d 3021 	strb.w	r3, [sp, #33]	; 0x21
-		str4[2] = rx[14];
    81394:	7ba3      	ldrb	r3, [r4, #14]
    81396:	f88d 3022 	strb.w	r3, [sp, #34]	; 0x22
-		str4[3] = rx[15];
    8139a:	7be3      	ldrb	r3, [r4, #15]
    8139c:	f88d 3023 	strb.w	r3, [sp, #35]	; 0x23
-		
-		stringToInt(&x1, str1);
    813a0:	f10d 001e 	add.w	r0, sp, #30
    813a4:	a90b      	add	r1, sp, #44	; 0x2c
    813a6:	47a8      	blx	r5
-		stringToInt(&x2, str2);
    813a8:	a807      	add	r0, sp, #28
    813aa:	a90a      	add	r1, sp, #40	; 0x28
    813ac:	47a8      	blx	r5
-		stringToInt(&x3, str3);
    813ae:	f10d 001a 	add.w	r0, sp, #26
    813b2:	a909      	add	r1, sp, #36	; 0x24
    813b4:	47a8      	blx	r5
-		stringToInt(&x4, str4);
    813b6:	a806      	add	r0, sp, #24
    813b8:	a908      	add	r1, sp, #32
    813ba:	47a8      	blx	r5
-		int n=0;
-
-		switch (n)
-		{
-		case 0:
-			rotate(calculateAngle(getY_diff(OBJ1_Y,x2),getX_diff(OBJ1_X,x1)));
    813bc:	f44f 7096 	mov.w	r0, #300	; 0x12c
    813c0:	f8bd 101c 	ldrh.w	r1, [sp, #28]
    813c4:	47b8      	blx	r7
@@ -4231,8 +3830,6 @@ int main (void)
    813da:	4798      	blx	r3
    813dc:	4b20      	ldr	r3, [pc, #128]	; (81460 <main+0x1cc>)
    813de:	4798      	blx	r3
-			
-			driveTo(calculateDistance(getY_diff(OBJ1_Y,x2),getX_diff(OBJ1_X,x1)));
    813e0:	f44f 7096 	mov.w	r0, #300	; 0x12c
    813e4:	f8bd 101c 	ldrh.w	r1, [sp, #28]
    813e8:	47b8      	blx	r7

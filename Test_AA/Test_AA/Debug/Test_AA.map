@@ -973,7 +973,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x45 src/ASF/sam/drivers/rtc/rtc.o
  .debug_macro   0x00000000      0x3ca src/ASF/sam/drivers/rtc/rtc.o
  .debug_line    0x00000000      0xc94 src/ASF/sam/drivers/rtc/rtc.o
- .debug_str     0x00000000    0x5a6d6 src/ASF/sam/drivers/rtc/rtc.o
+ .debug_str     0x00000000    0x5a6d8 src/ASF/sam/drivers/rtc/rtc.o
  .comment       0x00000000       0x5c src/ASF/sam/drivers/rtc/rtc.o
  .ARM.attributes
                 0x00000000       0x33 src/ASF/sam/drivers/rtc/rtc.o
@@ -1213,7 +1213,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x45 src/ASF/sam/drivers/rtt/rtt.o
  .debug_macro   0x00000000      0x3ca src/ASF/sam/drivers/rtt/rtt.o
  .debug_line    0x00000000      0xb3a src/ASF/sam/drivers/rtt/rtt.o
- .debug_str     0x00000000    0x5a469 src/ASF/sam/drivers/rtt/rtt.o
+ .debug_str     0x00000000    0x5a46b src/ASF/sam/drivers/rtt/rtt.o
  .comment       0x00000000       0x5c src/ASF/sam/drivers/rtt/rtt.o
  .ARM.attributes
                 0x00000000       0x33 src/ASF/sam/drivers/rtt/rtt.o
@@ -2347,7 +2347,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x45 src/ASF/sam/drivers/wdt/wdt.o
  .debug_macro   0x00000000      0x3ca src/ASF/sam/drivers/wdt/wdt.o
  .debug_line    0x00000000      0xb2e src/ASF/sam/drivers/wdt/wdt.o
- .debug_str     0x00000000    0x5a4b1 src/ASF/sam/drivers/wdt/wdt.o
+ .debug_str     0x00000000    0x5a4b3 src/ASF/sam/drivers/wdt/wdt.o
  .comment       0x00000000       0x5c src/ASF/sam/drivers/wdt/wdt.o
  .ARM.attributes
                 0x00000000       0x33 src/ASF/sam/drivers/wdt/wdt.o
@@ -5654,7 +5654,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x279 src/ASF/sam/drivers/pmc/sleep.o
  .debug_macro   0x00000000      0x790 src/ASF/sam/drivers/pmc/sleep.o
  .debug_line    0x00000000      0xc47 src/ASF/sam/drivers/pmc/sleep.o
- .debug_str     0x00000000    0x5dbb8 src/ASF/sam/drivers/pmc/sleep.o
+ .debug_str     0x00000000    0x5dbba src/ASF/sam/drivers/pmc/sleep.o
  .comment       0x00000000       0x5c src/ASF/sam/drivers/pmc/sleep.o
  .ARM.attributes
                 0x00000000       0x33 src/ASF/sam/drivers/pmc/sleep.o
@@ -8256,54 +8256,54 @@ OUTPUT(Test_AA.elf elf32-littlearm)
  .debug_line    0x00011d2e      0x39b src/ASF/sam/utils/syscalls/gcc/syscalls.o
  .debug_line    0x000120c9      0xf7f src/main.o
 
-.debug_str      0x00000000    0x63fb1
- .debug_str     0x00000000    0x5e139 src/ASF/common/services/serial/usart_serial.o
-                              0x5e472 (size before relaxing)
- .debug_str     0x0005e139       0x3f src/ASF/common/utils/stdio/read.o
-                              0x5a3a3 (size before relaxing)
- .debug_str     0x0005e178       0x2e src/ASF/common/utils/stdio/write.o
+.debug_str      0x00000000    0x63ff1
+ .debug_str     0x00000000    0x5e13b src/ASF/common/services/serial/usart_serial.o
+                              0x5e474 (size before relaxing)
+ .debug_str     0x0005e13b       0x3f src/ASF/common/utils/stdio/read.o
                               0x5a3a5 (size before relaxing)
- .debug_str     0x0005e1a6      0x3be src/ASF/sam/drivers/tc/tc.o
-                              0x5a74c (size before relaxing)
- .debug_str     0x0005e564      0x2aa src/ASF/sam/drivers/uart/uart.o
-                              0x5a769 (size before relaxing)
- .debug_str     0x0005e80e      0xa28 src/ASF/sam/drivers/usart/usart.o
-                              0x5b01a (size before relaxing)
- .debug_str     0x0005f236     0x1343 src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.o
-                              0x5f8a0 (size before relaxing)
- .debug_str     0x00060579      0xaa7 src/CalculateAngle.o
-                               0x5212 (size before relaxing)
- .debug_str     0x00061020     0x122f src/Drive.o
-                              0x60061 (size before relaxing)
- .debug_str     0x0006224f       0x3d src/Regulator.o
-                              0x5fbfd (size before relaxing)
- .debug_str     0x0006228c       0x34 src/DelayFunctions.o
-                              0x5eea8 (size before relaxing)
- .debug_str     0x000622c0       0x66 src/Motorfunctions.o
-                              0x5ff61 (size before relaxing)
- .debug_str     0x00062326       0x9f src/Rotate.o
+ .debug_str     0x0005e17a       0x2e src/ASF/common/utils/stdio/write.o
+                              0x5a3a7 (size before relaxing)
+ .debug_str     0x0005e1a8      0x3be src/ASF/sam/drivers/tc/tc.o
+                              0x5a74e (size before relaxing)
+ .debug_str     0x0005e566      0x2aa src/ASF/sam/drivers/uart/uart.o
+                              0x5a76b (size before relaxing)
+ .debug_str     0x0005e810      0xa28 src/ASF/sam/drivers/usart/usart.o
+                              0x5b01c (size before relaxing)
+ .debug_str     0x0005f238     0x1343 src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.o
+                              0x5f8a2 (size before relaxing)
+ .debug_str     0x0006057b      0xaa7 src/CalculateAngle.o
+                               0x5214 (size before relaxing)
+ .debug_str     0x00061022     0x122f src/Drive.o
+                              0x60063 (size before relaxing)
+ .debug_str     0x00062251       0x3d src/Regulator.o
+                              0x5fbff (size before relaxing)
+ .debug_str     0x0006228e       0x34 src/DelayFunctions.o
+                              0x5eeaa (size before relaxing)
+ .debug_str     0x000622c2       0x66 src/Motorfunctions.o
+                              0x5ff63 (size before relaxing)
+ .debug_str     0x00062328       0xdd src/Rotate.o
                               0x600ea (size before relaxing)
- .debug_str     0x000623c5      0x24c src/ASF/common/services/clock/sam3x/sysclk.o
-                              0x5e229 (size before relaxing)
- .debug_str     0x00062611       0x73 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
-                              0x5a3f4 (size before relaxing)
- .debug_str     0x00062684      0x200 src/ASF/sam/boards/arduino_due_x/init.o
-                              0x5ebc0 (size before relaxing)
- .debug_str     0x00062884      0x40e src/ASF/sam/drivers/pio/pio.o
-                              0x5ad48 (size before relaxing)
- .debug_str     0x00062c92      0x1bf src/ASF/sam/drivers/pio/pio_handler.o
-                              0x5ad90 (size before relaxing)
- .debug_str     0x00062e51      0x67e src/ASF/sam/drivers/pmc/pmc.o
-                              0x5adbe (size before relaxing)
- .debug_str     0x000634cf       0x4d src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
-                              0x5a3bd (size before relaxing)
- .debug_str     0x0006351c       0xb2 src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
-                              0x5a492 (size before relaxing)
- .debug_str     0x000635ce      0x1cd src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
-                              0x5a6a5 (size before relaxing)
- .debug_str     0x0006379b      0x73a src/ASF/sam/utils/syscalls/gcc/syscalls.o
-                               0x4f08 (size before relaxing)
- .debug_str     0x00063ed5       0xdc src/main.o
+ .debug_str     0x00062405      0x24c src/ASF/common/services/clock/sam3x/sysclk.o
+                              0x5e22b (size before relaxing)
+ .debug_str     0x00062651       0x73 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
+                              0x5a3f6 (size before relaxing)
+ .debug_str     0x000626c4      0x200 src/ASF/sam/boards/arduino_due_x/init.o
+                              0x5ebc2 (size before relaxing)
+ .debug_str     0x000628c4      0x40e src/ASF/sam/drivers/pio/pio.o
+                              0x5ad4a (size before relaxing)
+ .debug_str     0x00062cd2      0x1bf src/ASF/sam/drivers/pio/pio_handler.o
+                              0x5ad92 (size before relaxing)
+ .debug_str     0x00062e91      0x67e src/ASF/sam/drivers/pmc/pmc.o
+                              0x5adc0 (size before relaxing)
+ .debug_str     0x0006350f       0x4d src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
+                              0x5a3bf (size before relaxing)
+ .debug_str     0x0006355c       0xb2 src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
+                              0x5a494 (size before relaxing)
+ .debug_str     0x0006360e      0x1cd src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
+                              0x5a6a7 (size before relaxing)
+ .debug_str     0x000637db      0x73a src/ASF/sam/utils/syscalls/gcc/syscalls.o
+                               0x4f0a (size before relaxing)
+ .debug_str     0x00063f15       0xdc src/main.o
                               0x5f2f3 (size before relaxing)
 
 .debug_frame    0x00000000     0x2758

@@ -19,6 +19,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "Motorfunctions.h"
 //För att hålla reda vad de mappade pinnarna motsvarar i SAM3x pin namn.
 //https://www.arduino.cc/en/Hacking/PinMappingSAM3X
 
@@ -62,7 +63,7 @@ int main (void)
 	delayInit();
 	configure_console();
 	float getDistance(float x1,float x2,float y1,float y2);
-
+	float updateOdometry(float x_before, float y_before);
 	int state;
 	// Sätter direction för pinnar, Utgångar / Ingångar.
 	ioport_set_pin_dir(BlinkaGreen,IOPORT_DIR_OUTPUT);	//Utgång
@@ -73,7 +74,7 @@ int main (void)
 	ioport_set_pin_dir(k1,IOPORT_DIR_INPUT);			//Ingång
 	ioport_set_pin_dir(LED1,IOPORT_DIR_OUTPUT);		
 	ioport_set_pin_level(LED1,LOW);
-
+	moveForward(1850,1850);
 	//Skapar tasken nedan.
 	//Task med högst prioritet
 	float di = getDistance(a,b,c,d);
@@ -81,7 +82,9 @@ int main (void)
 	sprintf(str,"distans: %f\n",di);
 	printf("hej");
 	printf (str);
-	
+	float odo = updateOdometry(a,b);
+	sprintf(str,"odometry: %f\n",odo);
+	printf(str);
 	
 	printf ("hello its me");
 	bool knapp;
@@ -144,10 +147,11 @@ float anglepos;
 	y_before = b;
 	float distansdtraveled = (sl+sr)/2;
 	float anglechange = 2*(sr-sl)/2;
-	 anglepos += anglechange;
+	anglepos += anglechange;
 	float xChange = distansdtraveled*cos(anglepos);
 	float yChange = distansdtraveled*sin(anglepos);
 	a +=xChange;
 	b +=yChange;
+	
 	
 }

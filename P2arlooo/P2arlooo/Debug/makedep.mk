@@ -2,7 +2,9 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-src\Delays\delay.c
+src\Delays\DelayFunctions.c
+
+src\Motorfunctions.c
 
 src\Tasks\task_KNAPP.c
 
