@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "TwiProject", "TwiProject\TwiProject.cproj", "{7A1B03F8-A7FE-470A-BBDE-B6F37EDEC943}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Release|ARM = Release|ARM
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A1B03F8-A7FE-470A-BBDE-B6F37EDEC943}.Debug|ARM.ActiveCfg = Debug|ARM
+		{7A1B03F8-A7FE-470A-BBDE-B6F37EDEC943}.Debug|ARM.Build.0 = Debug|ARM
+		{7A1B03F8-A7FE-470A-BBDE-B6F37EDEC943}.Release|ARM.ActiveCfg = Release|ARM
+		{7A1B03F8-A7FE-470A-BBDE-B6F37EDEC943}.Release|ARM.Build.0 = Release|ARM
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
