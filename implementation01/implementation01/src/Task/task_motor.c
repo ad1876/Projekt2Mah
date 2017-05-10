@@ -85,10 +85,10 @@ void task_motor(void *pvParameters){
 		if(x1 == 300){
 			moveForward(1500,1500);
 		}else{
-			P_regulator(n,x2);	
+			//P_regulator(3,5);	
 		}
 		
-			
+		
 		vTaskDelayUntil(&xLastWakeTime,xTimeIncrement);
 	}
 }

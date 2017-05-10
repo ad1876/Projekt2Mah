@@ -15,6 +15,8 @@
 #include "Motorfunctions.h"
 #include "PID_Controller.h"
 #include "Rotate.h"
+#include "Position.h"
+#include "StateMachine.h"
 //#define LED PIO_PB27_IDX
 
 #define LEFT PIO_PC4_IDX
@@ -35,6 +37,9 @@
 #define L4 PIO_PC1_IDX
 #define L5 PIO_PC3_IDX
 #define L_RESET PIO_PA14_IDX
+#define k1 PIO_PC28_IDX 
+#define LED1 PIO_PC22_IDX 
+#define LED3 PIO_PC29_IDX  //pin10
 //definition för omvandling från bool till int
 #define TRUE 1 
 #define FALSE 0
@@ -42,7 +47,7 @@
 #define TESTPINOUT11 PIO_PD7_IDX
 #define TESPININ12 PIO_PD8_IDX
 int n=0;
-
+int state;
 
 uint8_t c_counter = 0;
 char rx[16];
@@ -97,6 +102,8 @@ int main (void)
 	delayInit();
 	configure_console();
 	initMotor();
+	initMotor3();
+	ioportinit();
 	//pulseOut(1850);
 	//delayMicroseconds(1100);
 	//pulseOut(1850);
@@ -147,31 +154,32 @@ int main (void)
 		ioport_set_pin_level(TESTPINOUT11,HIGH);
 	//	P_regulator(0);
 		//pidCompute(0);
-		P_regulator(200,x2);
+	//	P_regulator(2,4);
+		//rotate(180);
+		moveForward(1850,1850);
 		delayMicroseconds(1000);
 		ioport_set_pin_level(TESTPINOUT11,LOW);
 		delayMicroseconds(500000);
-		/*ioport_set_pin_level(TESTPINOUT11,HIGH);
-		delayMicroseconds(100);
-		ioport_set_pin_level(TESTPINOUT11,LOW);
-		delayMicroseconds(100);*/
-		//r_count = ioport_get_pin_level(R0)+(ioport_get_pin_level(R1)*2)+(ioport_get_pin_level(R2)*4)+(ioport_get_pin_level(R3)*8);
-		//char str[20];
-		//sprintf(str,"räknaren: %d\n",r_count);
-	//	printf (str);
-	/*	if(counter == 64){
-			ioport_set_pin_level(R_RESET,HIGH);
-			delayMicroseconds(100);
-			counter = 0;
-			ioport_set_pin_level(R_RESET,LOW);
+		int knapp;
+		knapp = ioport_get_pin_level(k1);
+		if (knapp==1)
+		{
+			//pushButton1(instance);
+			//ioport_set_pin_level(LED3,knapp);
+			int state =0;			
 		}
-		counter++;
-		delayMicroseconds(1000);
-	}*/
-	/*pulseOut(1500);
-	delayMicroseconds(1100);
-	pulseOut(1500);*/
-
+	if(knapp==2)
+	{
+		int state = 1;
+	}	
+		switch(state){
+			case 0:
+			ioport_set_pin_level(LED3,HIGH);
+			delayMicroseconds(100000);
+			case 1:
+			P_regulator(2,2);
+			break;
+		}
 	}
 
 }

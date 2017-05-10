@@ -1,5 +1,5 @@
-src/main.d src/main.o: ../src/main.c ../src/asf.h \
- ../src/ASF/sam/utils/compiler.h \
+src/Position.d src/Position.o: ../src/Position.c ../src/Position.h \
+ ../src/asf.h ../src/ASF/sam/utils/compiler.h \
  c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include\stddef.h \
  ../src/ASF/common/utils/parts.h \
  ../src/ASF/sam/utils/preprocessor/preprocessor.h \
@@ -129,9 +129,10 @@ src/main.d src/main.o: ../src/main.c ../src/asf.h \
  ../src/ASF/sam/drivers/uart/uart.h ../src/ASF/sam/drivers/usart/usart.h \
  ../src/config/conf_uart_serial.h ../src/ASF/sam/drivers/tc/tc.h \
  ../src/ASF/sam/drivers/pio/pio_handler.h ../src/DelayFunctions.h \
- ../src/config/conf_board.h ../src/Motorfunctions.h \
- ../src/PID_Controller.h ../src/Rotate.h ../src/Position.h \
+ c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\math.h \
  ../src/StateMachine.h
+
+../src/Position.h:
 
 ../src/asf.h:
 
@@ -407,14 +408,6 @@ c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu
 
 ../src/DelayFunctions.h:
 
-../src/config/conf_board.h:
-
-../src/Motorfunctions.h:
-
-../src/PID_Controller.h:
-
-../src/Rotate.h:
-
-../src/Position.h:
+c:\program\ files\ (x86)\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\math.h:
 
 ../src/StateMachine.h:

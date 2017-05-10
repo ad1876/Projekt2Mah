@@ -95,8 +95,10 @@ C_SRCS +=  \
 ../src/ASF/common/utils/stdio/read.c \
 ../src/ASF/sam/drivers/tc/tc.c \
 ../src/Motorfunctions.c \
+../src/Position.c \
 ../src/Rotate.c \
 ../src/PID_Controller.c \
+../src/StateMachine.c \
 ../src/ASF/sam/drivers/usart/usart.c \
 ../src/ASF/common/utils/stdio/write.c \
 ../src/ASF/common/services/serial/usart_serial.c \
@@ -128,8 +130,10 @@ OBJS +=  \
 src/ASF/common/utils/stdio/read.o \
 src/ASF/sam/drivers/tc/tc.o \
 src/Motorfunctions.o \
+src/Position.o \
 src/Rotate.o \
 src/PID_Controller.o \
+src/StateMachine.o \
 src/ASF/sam/drivers/usart/usart.o \
 src/ASF/common/utils/stdio/write.o \
 src/ASF/common/services/serial/usart_serial.o \
@@ -154,8 +158,10 @@ OBJS_AS_ARGS +=  \
 src/ASF/common/utils/stdio/read.o \
 src/ASF/sam/drivers/tc/tc.o \
 src/Motorfunctions.o \
+src/Position.o \
 src/Rotate.o \
 src/PID_Controller.o \
+src/StateMachine.o \
 src/ASF/sam/drivers/usart/usart.o \
 src/ASF/common/utils/stdio/write.o \
 src/ASF/common/services/serial/usart_serial.o \
@@ -180,8 +186,10 @@ C_DEPS +=  \
 src/ASF/common/utils/stdio/read.d \
 src/ASF/sam/drivers/tc/tc.d \
 src/Motorfunctions.d \
+src/Position.d \
 src/Rotate.d \
 src/PID_Controller.d \
+src/StateMachine.d \
 src/ASF/sam/drivers/usart/usart.d \
 src/ASF/common/utils/stdio/write.d \
 src/ASF/common/services/serial/usart_serial.d \
@@ -206,8 +214,10 @@ C_DEPS_AS_ARGS +=  \
 src/ASF/common/utils/stdio/read.d \
 src/ASF/sam/drivers/tc/tc.d \
 src/Motorfunctions.d \
+src/Position.d \
 src/Rotate.d \
 src/PID_Controller.d \
+src/StateMachine.d \
 src/ASF/sam/drivers/usart/usart.d \
 src/ASF/common/utils/stdio/write.d \
 src/ASF/common/services/serial/usart_serial.d \
@@ -243,6 +253,10 @@ LINKER_SCRIPT_DEP+=  \
 
 
 # AVR32/GNU C Compiler
+
+
+
+
 
 
 

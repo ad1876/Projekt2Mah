@@ -8,9 +8,13 @@ src\ASF\sam\drivers\tc\tc.c
 
 src\Motorfunctions.c
 
+src\Position.c
+
 src\Rotate.c
 
 src\PID_Controller.c
+
+src\StateMachine.c
 
 src\ASF\sam\drivers\usart\usart.c
 

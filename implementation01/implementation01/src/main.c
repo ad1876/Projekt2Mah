@@ -36,6 +36,7 @@
 #include "Sensor/soundSensor.h"
 #include "Motor/PID_Controller.h"
 #include "Motor/Rotate.h"
+#include "Motor/Motorfunctions.h"
 #include "Task/task_soundsensor.h"
 #include "Task/task_blink.h"
 #include "Task/task_motor.h"
@@ -100,6 +101,7 @@ int main (void)
 	initMotor2();
 	ioport_init();
 	configure_console();
+	P_regulator(3,5);
 	
 	xTaskCreate(task_motor,(const signed char* const) "Motor",TASK_MOTOR_STACK_SIZE,NULL,TASK_MOTOR_PRIORITY,NULL);
 	xTaskCreate(task_soundsensor,(const signed char* const) "Soundsensor",TASK_SOUNDSENSOR_STACK_SIZE,NULL,TASK_SOUNDSENSOR_STACK_PRIORITY,NULL);
@@ -117,6 +119,7 @@ int main (void)
 // 	uint16_t x4 = 0; //irrelevant
 	while (1)
 	{
+			
 // 		str1[0] = rx[0];
 // 		str1[1] = rx[1];
 // 		str1[2] = rx[2];
