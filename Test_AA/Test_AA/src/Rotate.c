@@ -64,67 +64,61 @@ void initRotateMotor(void){
 }
 
 void rotate(int d){					//Minimum d is 4
-    double ticks = d * 0.25;
-
-//     char str[20];
-//     sprintf(str,"början: %d\n",ticks);
-//     printf (str);
+    //double ticks = d * 0.25;
 	
+	int direct_angle = d - ((direction + 180) % 360);
 	
 	ioport_set_pin_level(L_RESET,LOW);
 	ioport_set_pin_level(R_RESET,LOW);
-   
-    if(ticks>0){                    //Positivt ticks svänger höger
-        while(l_count < (abs(ticks) + direction/4)){
-           
+	
+	if(direct_angle < 0){
+		while(r_count < ((abs(direct_angle) + direction) * 0.25)){
+			r_count = ioport_get_pin_level(R0)+ioport_get_pin_level(R1)*2+ioport_get_pin_level(R2)*4+ioport_get_pin_level(R3)*8
+			+ioport_get_pin_level(R4)*16+ioport_get_pin_level(R5)*32;
+			//ioport_set_pin_level(R_RESET,HIGH);
 			
-            l_count = ioport_get_pin_level(L0)+ioport_get_pin_level(L1)*2+ioport_get_pin_level(L2)*4+ioport_get_pin_level(L3)*8
-            +ioport_get_pin_level(L4)*16+ioport_get_pin_level(L5)*32;
-            //ioport_set_pin_level(L_RESET,HIGH); 
-           
-            moveForward(1600,1400);
+			moveForward(1400,1600);
+			
+		}
+		direction = (d + 360 - direction) % 360;
+		moveForward(1500,1500);	
+	}
+	
+	else if(direct_angle > 0){
+		while(l_count < ((abs(direct_angle) + direction) * 0.25)){			
+			l_count = ioport_get_pin_level(L0)+ioport_get_pin_level(L1)*2+ioport_get_pin_level(L2)*4+ioport_get_pin_level(L3)*8
+			+ioport_get_pin_level(L4)*16+ioport_get_pin_level(L5)*32;
+			//ioport_set_pin_level(L_RESET,HIGH);
+			
+			moveForward(1600,1400);
 
-//             sprintf(str,"åt höger: %d\n",l_count);
-//             printf (str);
-        }
-        moveForward(1500,1500);
-		
-    }
-    else if(ticks<0){                //Negativt ticks svänger vänster
-        while(r_count < (abs(ticks) - direction/4)){
-			
-			
-            r_count = ioport_get_pin_level(R0)+ioport_get_pin_level(R1)*2+ioport_get_pin_level(R2)*4+ioport_get_pin_level(R3)*8
-            +ioport_get_pin_level(R4)*16+ioport_get_pin_level(R5)*32;
-            //ioport_set_pin_level(R_RESET,HIGH);   
-            
-            moveForward(1400,1600);
-//             sprintf(str,"åt vänster: %d\n",r_count);
-//             printf (str);
-        }
-        moveForward(1500,1500);
-		
-    }
+		}
+		direction = (d + 360 - direction) % 360;
+		moveForward(1500,1500);	
+	}
+	
+	else{
+		moveForward(1500,1500);
+	}
+	
 	l_count = 0;
 	r_count = 0;
 	
 	ioport_set_pin_level(L_RESET,HIGH);
 	ioport_set_pin_level(R_RESET,HIGH);	
 	
-	updateDirection(d);
 	
-	char str[20];
-	sprintf(str,"\nVinkel: %d",d);
-	printf (str);
-	sprintf(str,"\nTicks: %f",ticks);
-	printf (str);
+	
+// 	char str[20];
+// 	sprintf(str,"\nVinkel: %d",d);
+// 	printf (str);
+// 	sprintf(str,"\nTicks: %f",ticks);
+// 	printf (str);
 	
 }
-
-void updateDirection(int new_rotation){
-	direction = direction + new_rotation;
+int getDirection(void){
+	return direction;
 }
-
 
 void startupMeasure1(uint16_t x1,uint16_t x2){
 	firstx = x1;
