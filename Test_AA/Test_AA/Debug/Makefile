@@ -158,7 +158,7 @@ SUBDIRS :=  \
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
-../src/Test/test_Regulator.c \
+../src/Test/test_CalculateAngle.c \
 ../src/Unity/unity.c \
 ../src/ASF/common/services/serial/usart_serial.c \
 ../src/ASF/common/utils/stdio/read.c \
@@ -197,7 +197,7 @@ ASM_SRCS +=
 
 
 OBJS +=  \
-src/Test/test_Regulator.o \
+src/Test/test_CalculateAngle.o \
 src/Unity/unity.o \
 src/ASF/common/services/serial/usart_serial.o \
 src/ASF/common/utils/stdio/read.o \
@@ -229,7 +229,7 @@ src/ASF/sam/utils/syscalls/gcc/syscalls.o \
 src/main.o
 
 OBJS_AS_ARGS +=  \
-src/Test/test_Regulator.o \
+src/Test/test_CalculateAngle.o \
 src/Unity/unity.o \
 src/ASF/common/services/serial/usart_serial.o \
 src/ASF/common/utils/stdio/read.o \
@@ -261,7 +261,7 @@ src/ASF/sam/utils/syscalls/gcc/syscalls.o \
 src/main.o
 
 C_DEPS +=  \
-src/Test/test_Regulator.d \
+src/Test/test_CalculateAngle.d \
 src/Unity/unity.d \
 src/ASF/common/services/serial/usart_serial.d \
 src/ASF/common/utils/stdio/read.d \
@@ -293,7 +293,7 @@ src/ASF/sam/utils/syscalls/gcc/syscalls.d \
 src/main.d
 
 C_DEPS_AS_ARGS +=  \
-src/Test/test_Regulator.d \
+src/Test/test_CalculateAngle.d \
 src/Unity/unity.d \
 src/ASF/common/services/serial/usart_serial.d \
 src/ASF/common/utils/stdio/read.d \

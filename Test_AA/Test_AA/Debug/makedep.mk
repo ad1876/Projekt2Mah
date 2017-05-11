@@ -2,7 +2,7 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-src\Test\test_Regulator.c
+src\Test\test_CalculateAngle.c
 
 src\Unity\unity.c
 
