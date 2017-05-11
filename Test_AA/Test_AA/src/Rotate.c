@@ -80,7 +80,8 @@ void rotate(int d){					//Minimum d is 4
 			moveForward(1400,1600);
 			
 		}
-		direction = (d + 360 - direction) % 360;
+		updateDirection(d);
+		//direction = (d + 360 - direction) % 360;
 		moveForward(1500,1500);	
 	}
 	
@@ -93,7 +94,8 @@ void rotate(int d){					//Minimum d is 4
 			moveForward(1600,1400);
 
 		}
-		direction = (d + 360 - direction) % 360;
+		updateDirection(d);
+		//direction = (d + 360 - direction) % 360;
 		moveForward(1500,1500);	
 	}
 	
@@ -133,4 +135,8 @@ void startupMeasure2(uint16_t x1,uint16_t x2){
 	int ydiff = getY_diff(secondy,firsty);
 	
 	direction = calculateAngle(ydiff,xdiff);
+}
+
+void updateDirection(int d){
+	direction = (d + 360 - direction) % 360;
 }
