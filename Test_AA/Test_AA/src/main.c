@@ -109,6 +109,10 @@ int main (void)
 	
 	UnityBegin("../Test/test_CalculateAngle.c");
 	RUN_TEST(test_getX_diff,10);
+	RUN_TEST(test_getY_diff,20);
+	RUN_TEST(test_CalculateAngle,30);
+	RUN_TEST(test_CalculatesetPoint,40);
+	RUN_TEST(test_CalculateDistance,50);
 	while(1){
 		
 // 		str1[0] = rx[0];

@@ -11,6 +11,10 @@
 
 
 void test_getX_diff(void);
+void test_getY_diff(void);
+void test_CalculateAngle(void);
+void test_CalculatesetPoint(void);
+void test_CalculateDistance(void);
 
 
 #endif /* TEST_REGULATOR_H_ */
