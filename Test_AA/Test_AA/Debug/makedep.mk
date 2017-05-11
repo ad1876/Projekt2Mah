@@ -2,6 +2,10 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
+src\Test\test_Regulator.c
+
+src\Unity\unity.c
+
 src\ASF\common\services\serial\usart_serial.c
 
 src\ASF\common\utils\stdio\read.c

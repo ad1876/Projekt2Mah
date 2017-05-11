@@ -570,8 +570,25 @@
     <Folder Include="src\ASF\thirdparty\wireless\addons\sio2host\" />
     <Folder Include="src\ASF\thirdparty\wireless\addons\sio2host\uart\" />
     <Folder Include="src\config\" />
+    <Folder Include="src\Test" />
+    <Folder Include="src\Unity" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Test\test_Regulator.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Test\test_Regulator.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Unity\unity.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Unity\unity.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Unity\unity_internals.h">
+      <SubType>compile</SubType>
+    </Compile>
     <None Include="Debug\makedep.mk">
       <SubType>compile</SubType>
     </None>
