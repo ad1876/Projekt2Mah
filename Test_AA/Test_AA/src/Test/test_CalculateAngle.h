@@ -10,7 +10,7 @@
 #define TEST_REGULATOR_H_
 
 
-
+void test_getX_diff(void);
 
 
 #endif /* TEST_REGULATOR_H_ */

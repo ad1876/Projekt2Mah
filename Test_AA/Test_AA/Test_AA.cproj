@@ -574,10 +574,19 @@
     <Folder Include="src\Unity" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\consoleFunctions.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\consoleFunctions.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\Test\test_CalculateAngle.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\Test\test_CalculateAngle.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Test\test_Runner.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\Unity\unity.c">

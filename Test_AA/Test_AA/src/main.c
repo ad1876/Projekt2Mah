@@ -10,6 +10,14 @@
 #include "Rotate.h"
 #include "Drive.h"
 
+#include <setjmp.h>
+#include <stdio_serial.h>
+#include "conf_board.h"
+#include "consoleFunctions.h"
+#include "../unity/unity.h"					/* Contains declarations of all functions that Unity provides */
+#include "../Test/test_CalculateAngle.h"
+
+
 int OB1x= 20;
 int OB1y = 30;
 int OB2x = 30;
@@ -99,7 +107,8 @@ int main (void)
 // 	uint16_t x3 = 0; //irrelevant
 // 	uint16_t x4 = 0; //irrelevant
 	
-
+	UnityBegin("../Test/test_CalculateAngle.c");
+	RUN_TEST(test_getX_diff,10);
 	while(1){
 		
 // 		str1[0] = rx[0];

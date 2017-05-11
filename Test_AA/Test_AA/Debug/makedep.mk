@@ -2,7 +2,11 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
+src\consoleFunctions.c
+
 src\Test\test_CalculateAngle.c
+
+src\Test\test_Runner.c
 
 src\Unity\unity.c
 
